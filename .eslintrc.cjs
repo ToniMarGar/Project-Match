@@ -19,4 +19,5 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  eslintConfig: { "extends": [ "react-app", "react-app/jest", "prettier" ] }
 }

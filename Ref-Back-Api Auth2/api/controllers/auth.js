@@ -1,3 +1,4 @@
+// Dependencias necesarias
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model.js'); 
 const { response } = require('express');
