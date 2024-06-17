@@ -5,21 +5,22 @@ const { DataTypes } = require("sequelize");
 const User = sequelize.define(
   "user",
   {
-    Name: {
+    username: {
       type: DataTypes.STRING,
+      unique: true,
     },
-    email: {
+    name: {
+      type: DataTypes.STRING,
+     },
+     surname: {
+      type: DataTypes.STRING,
+     },
+     email: {
       type: DataTypes.STRING,
       unique: true,
      },
-    role: {
-      type: DataTypes.ENUM("Admin", "Client"),
-      defaultValue:"Client",
-      allowNull: false,
-     },
    password: {
       type: DataTypes.STRING,
-      allowNull: false,
      },
   },
    {
