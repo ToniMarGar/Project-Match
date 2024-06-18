@@ -1,7 +1,6 @@
 import { createBrowserRouter ,redirect} from "react-router-dom";
 
-
-import User from "../pages/User";
+import Profile from "../pages/Profile";
 import SignUp from "../pages/SignUp";
 
 const router = createBrowserRouter([
@@ -11,8 +10,8 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/User",
-        element: <User />,
+        path: "/Profile",
+        element: <Profile />,
         loader: () => {
             if (localStorage.role != "Admin") {
                alert("No eres admin")
