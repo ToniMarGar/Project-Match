@@ -18,8 +18,9 @@ async function checkConnection(){
 
 async function syncModels(value){
     const state = {
-        alter: {alter: true},
-        force: {force: true},
+        alter: {alter: true}
+        //FORCE RESETEA ENTERO
+        //force: {force: true},
     }
 
     try {

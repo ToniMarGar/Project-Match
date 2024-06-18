@@ -1,13 +1,9 @@
-const { sequelize } = require("../../Api-Back/database/index.js");
+const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
 const Experience = sequelize.define(
   "experience",
   {
-    id: {
-      type: DataTypes.STRING,
-      unique: true,
-    },
     user: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -1,4 +1,17 @@
-const Result = require("../models/experience.model")
+const Result = require("../models/result.model")
+
+async function getOneResult(req, res) {
+  try {
+    const result = await Result.findByPk(req.params.id)
+    if (result) {
+      return res.status(200).json(result)
+    } else {
+      return res.status(404).send('Result not found')
+    }
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+}
 
 async function getAllResults(req, res) {
   try {
@@ -9,34 +22,20 @@ async function getAllResults(req, res) {
       return res.status(404).send('No results found')
     }
   } catch (error) {
-    //res.status(500).send(error.message)
-    console.log(error)
-  }
-}
-
-async function getOneResult(req, res) {
-  try {
-    const result = await Result.findByPk(req.params.id)
-    if (result) {
-      return res.status(200).json(user)
-    } else {
-      return res.status(404).send('Result not found')
-    }
-  } catch (error) {
-    //res.status(500).send(error.message)
-    console.log(error)
+    res.status(500).send(error.message)
   }
 }
 
 async function createResult(req, res) {
     try {
         const result = await Result.create({
-            name: req.body.name,
+            idQuizz: req.body.idQuizz,
+            idUsername: req.body.idUsername,
+            idDestination: req.body.idDestination,
         })
         return res.status(200).json({message: 'Result created', result: result})
     } catch (error) {
-        //res.status(500).send(error.message)
-        console.log(error)
+        res.status(500).send(error.message)
     }
 }
 
@@ -76,9 +75,9 @@ async function deleteResult(req, res) {
 }
 
 module.exports = {
-    getAllResults,
-    getOneResult,
-    createResult,
-    updateResult,
-    deleteResult,
+  getOneResult,
+  getAllResults,
+  createResult,
+  updateResult,
+  deleteResult,
 }

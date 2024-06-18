@@ -1,5 +1,4 @@
 
-
 const {
     getOneUser,
     getAllUsers,
@@ -16,6 +15,5 @@ router.get("/",/* checkAuth,checkAdmin, */getAllUsers);
 router.post("/",/* checkAuth,checkAdmin, */createUser);
 router.put("/:id",/* checkAuth,checkAdmin, */updateUser);
 router.delete("/:id",/* checkAuth,checkAdmin, */deleteUser);
-
 
 module.exports = router
