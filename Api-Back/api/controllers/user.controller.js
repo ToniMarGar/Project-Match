@@ -29,8 +29,15 @@ async function getAllUsers(req, res) {
 
 async function createUser(req, res) {
     try {
+      console.log("ENTRO", req.body.username)
+
         const user = await User.create({
+            username: req.body.username,
             name: req.body.name,
+            surname: req.body.surname,
+            role: req.body.role,
+            email: req.body.email,
+            password: req.body.password
         })
         return res.status(200).json({message: 'User created', user: user})
     } catch (error) {
