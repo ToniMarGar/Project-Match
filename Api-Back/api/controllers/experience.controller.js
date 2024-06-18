@@ -1,3 +1,4 @@
+// Se importa el modelo de Experience siendo usado este modelo para interactuar con la BD de experiencias
 const Experience = require("../models/experience.model")
 
 async function getAllExperiences(req, res) {
