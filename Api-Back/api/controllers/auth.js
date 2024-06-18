@@ -1,4 +1,3 @@
-// Dependencias necesarias
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model.js'); 
 const { response } = require('express');
@@ -40,6 +39,5 @@ if(comparePass) {
         return res.status(500).send(error.message);
     }
 }
-
 
 module.exports = {Signup , Login}

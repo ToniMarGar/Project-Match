@@ -1,29 +1,34 @@
-
 const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
 const User = sequelize.define(
-  "user",
-  {
+    "user",
+    {
     username: {
-      type: DataTypes.STRING,
-      unique: true,
+    type: DataTypes.STRING,
     },
     name: {
       type: DataTypes.STRING,
-     },
-     surname: {
-      type: DataTypes.STRING,
-     },
-     email: {
+    },
+    surname: {
       type: DataTypes.STRING,
       unique: true,
      },
-   password: {
-      type: DataTypes.STRING,
+    role: {
+      type: DataTypes.ENUM("Admin", "Client"),
+      defaultValue:"Client",
+      allowNull: false,
      },
-  },
-   {
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },
+    },
+    {
     	//opciones
       createdAt:false,
     	updatedAt: false,
