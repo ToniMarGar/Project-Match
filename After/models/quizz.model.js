@@ -1,4 +1,4 @@
-const { sequelize } = require("../../database/index.js");
+const { sequelize } = require("../../Api-Back/database/index.js");
 const { DataTypes } = require("sequelize");
 
 const Quizz = sequelize.define(

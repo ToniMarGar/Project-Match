@@ -32,7 +32,7 @@ async function createUser(req, res) {
         const user = await User.create({
             name: req.body.name,
         })
-        return res.status(200).json({message: 'User created', quizz: quizz})
+        return res.status(200).json({message: 'User created', user: user})
     } catch (error) {
         console.log(error)
     }

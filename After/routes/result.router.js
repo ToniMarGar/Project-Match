@@ -8,10 +8,10 @@ const {
     deleteResult,
 } = require('../controllers/result.controller')
 
-router.get('/', getAllResults)
-router.get('/:id', getOneResult)
-router.post('/', createResult)
-router.put('/:id', updateResult)
-router.delete('/:id', deleteResult)
+router.get('/ssss', getAllResults)
+router.get('/sss', getOneResult)
+router.post('/rrr', createResult)
+router.put('/ssssss', updateResult)
+router.delete('/sssssssssss', deleteResult)
 
 module.exports = router
