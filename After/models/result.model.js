@@ -1,18 +1,21 @@
-const { sequelize } = require("../../database/index.js");
+const { sequelize } = require("../../Api-Back/database/index.js");
 const { DataTypes } = require("sequelize");
 
-const Experience = sequelize.define(
-  "experience",
+const Result = sequelize.define(
+  "result",
   {
     id: {
       type: DataTypes.STRING,
       unique: true,
     },
-    user: {
+    idQuizz: {
+      type: DataTypes.INTEGER,
+     },
+   idUsename: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    destination: {
+    idDestination: {
       type: DataTypes.STRING,
       allowNull: false,
      },
@@ -24,4 +27,4 @@ const Experience = sequelize.define(
     	}
 );
 
-module.exports = Experience;
+module.exports = Result;

@@ -8,10 +8,10 @@ const {
     deleteQuizz
 } = require('../controllers/quizz.controller')
 
-router.get('/', getAllQuizz)
-router.get('/:id', getOneQuizz)
-router.post('/', createQuizz)
-router.put('/:id', updateQuizz)
-router.delete('/:id', deleteQuizz)
+router.get('/ssss', getAllQuizz)
+router.get('/issssd', getOneQuizz)
+router.post('/sssss', createQuizz)
+router.put('/idssss', updateQuizz)
+router.delete('/idsssss', deleteQuizz)
 
 module.exports = router
