@@ -4,14 +4,14 @@ const { DataTypes } = require("sequelize");
 const Result = sequelize.define(
   "result",
   {
-    id: {
+    /* id: {
       type: DataTypes.STRING,
       unique: true,
-    },
+    }, */
     idQuizz: {
       type: DataTypes.INTEGER,
      },
-   idUsename: {
+   idUsername: {
       type: DataTypes.STRING,
       allowNull: false,
      },

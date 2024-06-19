@@ -4,10 +4,6 @@ const { DataTypes } = require("sequelize");
 const Experience = sequelize.define(
   "experience",
   {
-    id: {
-      type: DataTypes.STRING,
-      unique: true,
-    },
     user: {
       type: DataTypes.STRING,
       allowNull: false,
