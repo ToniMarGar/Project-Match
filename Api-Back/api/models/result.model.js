@@ -8,14 +8,14 @@ const Result = sequelize.define(
       type: DataTypes.STRING,
       unique: true,
     }, */
-    idQuizz: {
+    resultQuizz: {
       type: DataTypes.INTEGER,
      },
-   idUsername: {
+    resultUsername: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    idDestination: {
+    resultDestination: {
       type: DataTypes.STRING,
       allowNull: false,
      },
