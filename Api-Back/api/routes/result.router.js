@@ -5,7 +5,7 @@ const {
     getAllResults,
     createResult,
     updateResult,
-    deleteResult,
+    deleteResult
 } = require('../controllers/result.controller')
 
 router.get('/:id', getOneResult)

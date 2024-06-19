@@ -4,6 +4,7 @@ async function getOneResult(req, res) {
   try {
     const result = await Result.findByPk(req.params.id)
     if (result) {
+
       return res.status(200).json(result)
     } else {
       return res.status(404).send('Result not found')
@@ -16,7 +17,7 @@ async function getOneResult(req, res) {
 async function getAllResults(req, res) {
   try {
     const results = await Result.findAll({ paranoid: false })
-    if (result) {
+    if (results) {
       return res.status(200).json(results)
     } else {
       return res.status(404).send('No results found')
@@ -75,8 +76,8 @@ async function deleteResult(req, res) {
 }
 
 module.exports = {
-  getOneResult,
   getAllResults,
+  getOneResult,
   createResult,
   updateResult,
   deleteResult,
