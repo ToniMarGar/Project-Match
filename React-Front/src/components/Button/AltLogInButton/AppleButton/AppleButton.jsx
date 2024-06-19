@@ -3,13 +3,13 @@ import '../CommonStyle.css'
 
 function LogAppleButton() {
   return (
-      <div>
+      <button>
         <img 
           loading="lazy" 
           src="../../../../assets/start-session-logos/apple.png" 
           alt="Log in with Apple" 
         />
-      </div>
+      </button>
   );
 }
 
