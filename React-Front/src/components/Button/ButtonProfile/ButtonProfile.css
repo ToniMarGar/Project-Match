@@ -1,0 +1,9 @@
+div{
+    background-color: #FC8C0C;
+    color: aliceblue;
+}
+
+div:hover{
+    background-color: #AE5A00;
+    font-weight: 600;
+}

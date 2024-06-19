@@ -1,0 +1,10 @@
+.button{
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.CTA{
+    border-radius: 8px;
+    padding: 12px 16px;
+}

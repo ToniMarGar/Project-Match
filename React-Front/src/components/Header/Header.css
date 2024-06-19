@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 64px 12px;
+    border: 1px solid rgba(9, 105, 255, 1);
+    gap: 20px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navigation {
+    display: flex;
+    gap: 24px;
+    margin: auto 0;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 16px;
+    margin: auto 0;
+}
