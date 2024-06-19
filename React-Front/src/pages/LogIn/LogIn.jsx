@@ -1,6 +1,9 @@
 import * as React from "react";
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import LogAppleButton from "../../components/Button/AltLogInButton/AppleButton/AppleButton";
+import LogFacebookButton from "../../components/Button/AltLogInButton/FacebookButton/FacebookButton";
+import LogGoogleButton from "../../components/Button/AltLogInButton/GoogleButton/GoogleButton";
 
 function LogIn() {
   return (
@@ -33,21 +36,9 @@ function LogIn() {
               />
 
               <div className="social-login">
-                <Icon
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/007bd5e93f1134b9a60d8b9f6c4ef17ab916ae6c1d110782ea254023c08b5a56?apiKey=d0e5275347df4fb3abc0d1041ed2568c&"
-                  alt="Facebook Login"
-                  className="social-icon"
-                />
-                <Icon
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/42555808cb1f7628e47d836d682fb301cc1cda72232f814cb423584e4f5eb083?apiKey=d0e5275347df4fb3abc0d1041ed2568c&"
-                  alt="Google Login"
-                  className="social-icon"
-                />
-                <Icon
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/361dcd216d7e9f7f94059a51536f39c72197b8ba2a533900a9ebe73ad76164be?apiKey=d0e5275347df4fb3abc0d1041ed2568c&"
-                  alt="Twitter Login"
-                  className="social-icon"
-                />
+                <LogAppleButton/>
+                <LogFacebookButton/>
+                <LogGoogleButton/>
               </div>
 
               <ButtonMain>Inicia sesión</ButtonMain>
