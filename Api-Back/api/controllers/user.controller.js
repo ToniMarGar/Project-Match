@@ -22,15 +22,12 @@ async function getAllUsers(req, res) {
       return res.status(404).send('No user found')
     }
   } catch (error) {
-    //res.status(500).send(error.message)
-    console.log(error)
+    res.status(500).send(error.message)
   }
 }
 
 async function createUser(req, res) {
     try {
-      console.log("ENTRO", req.body.username)
-
         const user = await User.create({
             username: req.body.username,
             name: req.body.name,

@@ -1,13 +1,13 @@
-const { sequelize } = require("../../Api-Back/database/index.js");
+const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
 const Quizz = sequelize.define(
   "quizz",
   {
-    id: {
+    /*id: {
       type: DataTypes.STRING,
       unique: true,
-    },
+    },*/
     travelers: {
       type: DataTypes.INTEGER,
      },
