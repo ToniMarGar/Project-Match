@@ -1,6 +1,19 @@
 // Se importa el modelo de Experience siendo usado este modelo para interactuar con la BD de experiencias
 const Experience = require("../models/experience.model")
 
+async function getOneExperience(req, res) {
+  try {
+    const experience = await Experience.findByPk(req.params.id)
+    if (experience) {
+      return res.status(200).json(experience)
+    } else {
+      return res.status(404).send('Experience not found')
+    }
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+}
+
 async function getAllExperiences(req, res) {
   try {
     const experiences = await Experience.findAll({ paranoid: false })
@@ -10,34 +23,20 @@ async function getAllExperiences(req, res) {
       return res.status(404).send('No experiences found')
     }
   } catch (error) {
-    //res.status(500).send(error.message)
-    console.log(error)
-  }
-}
-
-async function getOneExperience(req, res) {
-  try {
-    const experience = await Experience.findByPk(req.params.id)
-    if (experience) {
-      return res.status(200).json(user)
-    } else {
-      return res.status(404).send('Experience not found')
-    }
-  } catch (error) {
-    //res.status(500).send(error.message)
-    console.log(error)
+    res.status(500).send(error.message)
   }
 }
 
 async function createExperience(req, res) {
     try {
         const experience = await Experience.create({
-            name: req.body.name,
+          //id: req.body.id,
+          user: req.body.user,
+          destination: req.body.destination,
         })
         return res.status(200).json({message: 'Experience created', experience: experience})
     } catch (error) {
-        //res.status(500).send(error.message)
-        console.log(error)
+        res.status(500).send(error.message)
     }
 }
 

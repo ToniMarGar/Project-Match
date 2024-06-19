@@ -1,0 +1,16 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    
+}
+
+div:hover{
+    background: linear-gradient(
+        180deg,
+        rgba(205, 226, 255, 0) 34.5%,
+        #0969ff 100%
+      );
+}

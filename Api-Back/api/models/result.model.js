@@ -1,14 +1,21 @@
 const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
-const Experience = sequelize.define(
-  "experience",
+const Result = sequelize.define(
+  "result",
   {
-    userinExperience: {
+    /* id: {
+      type: DataTypes.STRING,
+      unique: true,
+    }, */
+    resultQuizz: {
+      type: DataTypes.INTEGER,
+     },
+    resultUsername: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    experienceDestination: {
+    resultDestination: {
       type: DataTypes.STRING,
       allowNull: false,
      },
@@ -20,4 +27,4 @@ const Experience = sequelize.define(
     	}
 );
 
-module.exports = Experience;
+module.exports = Result;

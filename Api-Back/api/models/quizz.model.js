@@ -4,26 +4,26 @@ const { DataTypes } = require("sequelize");
 const Quizz = sequelize.define(
   "quizz",
   {
-    id: {
+    /*id: {
       type: DataTypes.STRING,
       unique: true,
-    },
-    travelers: {
+    },*/
+    Qtravelers: {
       type: DataTypes.INTEGER,
      },
-   experience: {
+    Qexperience: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    weather: {
+    Qweather: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    location: {
+    Qlocation: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    continent: {
+    Qcontinent: {
       type: DataTypes.STRING,
       allowNull: false,
      },

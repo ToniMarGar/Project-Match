@@ -1,26 +1,31 @@
-
 const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
-const User = sequelize.define(
-  "user",
+const Destination = sequelize.define(
+  "destination",
   {
-    username: {
+    destinationName: {
       type: DataTypes.STRING,
       unique: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    travelers: {
+      type: DataTypes.INTEGER,
      },
-     surname: {
+   experience: {
       type: DataTypes.STRING,
+      allowNull: false,
      },
-     email: {
+    weather: {
       type: DataTypes.STRING,
-      unique: true,
+      allowNull: false,
      },
-   password: {
+    location: {
       type: DataTypes.STRING,
+      allowNull: false,
+     },
+    continent: {
+      type: DataTypes.STRING,
+      allowNull: false,
      },
   },
    {
@@ -30,4 +35,4 @@ const User = sequelize.define(
     	}
 );
 
-module.exports = User;
+module.exports = Destination;
