@@ -4,7 +4,7 @@ const { DataTypes } = require("sequelize");
 const Destination = sequelize.define(
   "destination",
   {
-    name: {
+    destinationName: {
       type: DataTypes.STRING,
       unique: true,
     },

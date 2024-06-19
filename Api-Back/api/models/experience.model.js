@@ -4,11 +4,11 @@ const { DataTypes } = require("sequelize");
 const Experience = sequelize.define(
   "experience",
   {
-    user: {
+    userinExperience: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    destination: {
+    experienceDestination: {
       type: DataTypes.STRING,
       allowNull: false,
      },
