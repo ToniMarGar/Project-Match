@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import './App.css'
+
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import './App.css'
 import Quizz from './pages/Survey/Survey'
 
 function App() {
