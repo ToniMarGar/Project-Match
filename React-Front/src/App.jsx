@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import LogIn from './pages/LogIn/LogIn'
 import './App.css'
+import Quizz from './pages/Survey/Survey'
 
 function App() {
 
   return (
     <>
     <Header/>
-    <LogIn/>
+    <Quizz/>
     <Footer/>
     </>
   )

@@ -4,6 +4,7 @@ import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecon
 import LogAppleButton from "../../components/Button/AltLogInButton/AppleButton/AppleButton";
 import LogFacebookButton from "../../components/Button/AltLogInButton/FacebookButton/FacebookButton";
 import LogGoogleButton from "../../components/Button/AltLogInButton/GoogleButton/GoogleButton";
+import './LogIn.css'
 
 const FormField = ({ label, inputId, placeholder }) => (
   <div className="form-control">
