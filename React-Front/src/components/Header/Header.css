@@ -1,5 +1,8 @@
 header {
+    margin: 0;
+    border: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 24px 64px 12px;
@@ -13,12 +16,14 @@ header {
 
 .navigation {
     display: flex;
+    flex-direction: row;
     gap: 24px;
     margin: auto 0;
 }
 
 .auth-actions {
     display: flex;
+    flex-direction: row;
     gap: 16px;
     margin: auto 0;
 }

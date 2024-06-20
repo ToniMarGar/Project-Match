@@ -3,7 +3,7 @@ import * as React from "react";
 function NavLink() {
   return (
       <div>
-          <p></p>
+          <a></a>
       </div>
   );
 }

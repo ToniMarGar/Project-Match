@@ -1,27 +1,32 @@
 import * as React from "react";
+import Router from 'react-router-dom'
+
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../Link/Link";
-import './Header.css'
 
+import './Header.css'
 
 function Header() {
   return (
     <header>
-            <div href="#" className="logo"/>
+      <div href="#" className="logo">
+        <img href='logo.png'/>
+      </div>
 
-            <nav className="navigation">
-                <NavLink><a href="#">Home</a></NavLink>
-                <NavLink><a href="#">Cuestionario</a></NavLink>
-                <NavLink><a href="#">Hazte premium</a></NavLink>
-            </nav>
+      <nav className="navigation">
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#">Cuestionario</NavLink>
+        <NavLink href="#">Hazte premium</NavLink>
+      </nav>
 
-        <div className="auth-actions">
-          <ButtonMain>Inicia sesión</ButtonMain>
-          <ButtonSecondary/>Regístrate<ButtonSecondary/>
-        </div>
+      <div className="auth-actions">
+        <ButtonMain href="#">Inicia sesión</ButtonMain>
+        <ButtonSecondary href="#">Regístrate</ButtonSecondary>
+      </div>
 
-      </header>
+    </header>
   );
 }
+
 export default Header;

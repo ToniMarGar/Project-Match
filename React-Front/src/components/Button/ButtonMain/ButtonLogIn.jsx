@@ -1,9 +1,8 @@
 import * as React from "react";
-import ButtonDefault from "../ButtonDefault/ButtonDefault";
 import './ButtonMain.css'
 
 function ButtonMain() {
-    return <ButtonDefault className='main'/>
+    return (<button></button>)
   }
   
   export default ButtonMain
