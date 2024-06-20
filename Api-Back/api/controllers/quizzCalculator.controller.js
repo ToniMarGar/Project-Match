@@ -36,15 +36,32 @@ app.post('/recommend', (req, res) => {
     const userPreferences = req.body;
     const similarities = [];
 
-    for (const city of cities) {
-        const similarity = calculateSimilarity(userPreferences, city);
-        similarities.push({ similarity, name: city.name });
-    }
+    // Iterar sobre cada campo del objeto Quiz usando map
+    Object.keys(userPreferences.Quizz).map((campo) => {
+        // Filtrar los destinos coincidentes dentro del map
+        cities.filter((city) => {
+            if (city[campo] === userPreferences.Quizz[campo]) {
+                // Verificar existencia del destino en el objeto DestinoPuntos
+                if (!destinoPuntos[city.name]) {
+                    // Si el destino no existe en DestinoPuntos, agregarlo y asignarle una puntuación inicial
+                    destinoPuntos[city.name] = 1;
+                } else {
+                    // Si el destino ya existe, simplemente sumar la puntuación a la ya existente
+                    destinoPuntos[city.name] += 1;
+                }
+            }
+        });
+    });
 
-    similarities.sort((a, b) => b.similarity - a.similarity);
-    const recommendedCities = similarities.slice(0, 3).map(item => item.name); // Top 3 recomendaciones
+// Convertir objeto DestinoPuntos en array y ordenar por puntuación
+const sortedDestinos = Object.keys(destinoPuntos)
+.map((name) => ({ name, similarity: destinoPuntos[name] }))
+.sort((a, b) => b.similarity - a.similarity);
 
-    res.json(recommendedCities);
+// Top 3 recomendaciones
+const recommendedCities = sortedDestinos.slice(0, 3).map(item => item.name);
+
+res.json(recommendedCities);
 });
 
 app.listen(port, () => {
