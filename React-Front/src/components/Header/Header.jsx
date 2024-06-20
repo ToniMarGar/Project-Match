@@ -1,5 +1,4 @@
 import * as React from "react";
-import Router from 'react-router-dom'
 
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
@@ -10,18 +9,18 @@ import './Header.css'
 function Header() {
   return (
     <header>
-      <div href="#" className="logo">
-        <img href='logo.png'/>
+      <div className="logo">
+        {/*<img href='logo.png'/>*/}
       </div>
 
       <nav className="navigation">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">Cuestionario</NavLink>
-        <NavLink href="#">Hazte premium</NavLink>
+        <a href="#">Home</a>
+        <a href="#">Cuestionario</a>
+        <a href="#">Hazte premium</a>
       </nav>
 
       <div className="auth-actions">
-        <ButtonMain href="#">Inicia sesión</ButtonMain>
+        <ButtonMain href="#" text='Inicia sesión'>Inicia sesión</ButtonMain>
         <ButtonSecondary href="#">Regístrate</ButtonSecondary>
       </div>
 

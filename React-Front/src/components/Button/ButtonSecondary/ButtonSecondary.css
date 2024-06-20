@@ -1,9 +1,9 @@
-.secondary{
+button{
     border-color: #FC8C0C;
     color: #FC8C0C;
 }
 
-.secondary:hover{
+button:hover{
     background-color: #FDB766;
     color: black;
     font-weight: 600;
