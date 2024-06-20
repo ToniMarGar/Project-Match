@@ -1,0 +1,55 @@
+.newsletter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cde2ff;
+    padding: 64px 60px 72px;
+}
+
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-section {
+    flex-grow: 1;
+}
+
+.title {
+    font: 500 32px Poppins, sans-serif;
+    color: #000;
+    margin: 0;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 40px 0 0;
+}
+
+.email-input, .subscribe-button {
+      width: 100%;
+      border-radius: 8px 8px 8px 8px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 24px;
+}
+.social-icon {
+    width: 40px;
+    height: auto;
+}
