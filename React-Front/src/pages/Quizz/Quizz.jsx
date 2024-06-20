@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 // La llamada al Back para revisar la información es destinationSearch
 // 
 
-const Quizz = ({destinationSearch}) => {
+const Quizz = () => {
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada respuesta del usuario
   const [formData, setFormData] = useState({
@@ -34,12 +34,17 @@ const Quizz = ({destinationSearch}) => {
 
    // Submit del formulario una vez acabado
    const handleSubmit = (e) => {
-    e.preventDefault();
-    destinationSearch(formData);
-    // Aquí puedes agregar la lógica para comparar `formData` con el JSON externo
-    const result = JSONcomparison(formData);
-    console.log(result);
+     if (e) {
+      console.log(e)
+      e.preventDefault();
+      
+      // Aquí puedes agregar la lógica para comparar `formData` con el JSON externo
+      const result = JSONcomparison(formData);
+      console.log(result);
+    }
   };
+
+
 
   // Función para comparar formData con los destinos del JSON externo
   const JSONcomparison = (formData) => {
