@@ -1,15 +1,16 @@
-const router = require('express').Router()
 
 const {
-    getAllDestinations,
     getOneDestination,
+    getAllDestinations,
     createDestination,
     updateDestination,
     deleteDestination
-} = require('../controllers/destination.controller')
+} = require('../controllers/destination.controller.js')
 
-router.get('/', getAllDestinations)
+const router = require('express').Router()
+
 router.get('/:id', getOneDestination)
+router.get('/', getAllDestinations)
 router.post('/', createDestination)
 router.put('/:id', updateDestination)
 router.delete('/:id', deleteDestination)

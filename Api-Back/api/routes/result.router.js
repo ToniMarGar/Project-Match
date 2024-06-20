@@ -1,15 +1,15 @@
 const router = require('express').Router()
 
 const {
-    getAllResults,
     getOneResult,
+    getAllResults,
     createResult,
     updateResult,
-    deleteResult,
+    deleteResult
 } = require('../controllers/result.controller')
 
-router.get('/', getAllResults)
 router.get('/:id', getOneResult)
+router.get('/', getAllResults)
 router.post('/', createResult)
 router.put('/:id', updateResult)
 router.delete('/:id', deleteResult)

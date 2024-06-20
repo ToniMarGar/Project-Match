@@ -1,21 +1,29 @@
 const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
-const Experience = sequelize.define(
-  "experience",
+const ContactInfo = sequelize.define(
+  "contactInfo",
   {
-    id: {
-      type: DataTypes.STRING,
-      unique: true,
-    },
-    user: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    destination: {
+     surname: {
       type: DataTypes.STRING,
       allowNull: false,
      },
+     username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },
+     email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },
+     password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },   
   },
    {
     	//opciones
@@ -24,4 +32,4 @@ const Experience = sequelize.define(
     	}
 );
 
-module.exports = Experience;
+module.exports = ContactInfo;
