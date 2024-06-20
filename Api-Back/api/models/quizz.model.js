@@ -23,10 +23,6 @@ const Quizz = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
      },
-     Qimage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-     },
   },
    {
     	//opciones
