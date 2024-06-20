@@ -3,11 +3,9 @@ import './ButtonDefault.css'
 
 function ButtonDefault() {
   return (
-    <>
-      <div className="button">
-        <p className="CTA">Button text</p>
-      </div>
-    </>
+    <div className="button">
+        <p className="CTA"></p>
+    </div>
   );
 }
 

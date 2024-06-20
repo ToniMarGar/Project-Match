@@ -1,0 +1,23 @@
+div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 264px;
+    max-width: 448px;
+    color: #fff;
+    text-align: center;
+    padding: 60px 24px;
+  }
+  
+img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

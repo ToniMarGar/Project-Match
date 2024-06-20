@@ -29,11 +29,11 @@ async function getAllQuizz(req, res) {
 async function createQuizz(req, res) {
     try {
         const quizz = await Quizz.create({
-          travelers: req.body.travelers,
-          experience: req.body.experience,
-          weather: req.body.weather,
-          location: req.body.location,
-          continent: req.body.continent,
+          Qtravelers: req.body.Qtravelers,
+          Qexperience: req.body.Qexperience,
+          Qweather: req.body.Qweather,
+          Qlocation: req.body.Qlocation,
+          Qcontinent: req.body.Qcontinent,
         })
         return res.status(200).json({message: 'Quizz created', quizz: quizz})
     } catch (error) {
