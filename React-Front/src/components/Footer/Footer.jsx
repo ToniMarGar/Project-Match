@@ -7,9 +7,8 @@ export default function MyComponent() {
   return (
     <footer>
 
-      <section className="newsletter-section">
+    {/* <section className="newsletter-section">
         <div className="newsletter-content">
-
           <div className="news-text">
             <h4>Suscríbete a nuestra newsletter</h4>
             <p>Te mantendremos al tanto de nuevas experiencias alrededor del mundo</p>
@@ -37,7 +36,8 @@ export default function MyComponent() {
           </div>
 
         </div>
-      </section>
+      </section>*/}
+      
     </footer>
   );
 }
