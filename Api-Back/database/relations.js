@@ -7,21 +7,21 @@ const Result = require('../api/models/result.model')
 const initializeRelations = () => {
   try {
 
-
     User.hasOne(ContactInfo)
     ContactInfo.belongsTo(User)
 
     // One to Many
-    Quizz.hasMany(Destination)
-    Destination.belongsTo(Quizz)
+    Quizz.hasMany(Result)
+    Result.belongsTo(Quizz)
 
-    //Experience.hasMany(Result)
-    //Result.belongsTo(Experience)
+    Destination.hasMany(Result)
+    Result.belongsTo(Destination)
 
-    // Many to Many
-    Destination.belongsToMany(Result, { through: 'destination_result' })
-    Result.belongsToMany(Destination, { through: 'destination_result' })
+    User.hasMany(Result)
+    Result.belongsTo(User)
+
     console.log('Relations added to models')
+
   } catch (error) {
     console.log(error)
   }
