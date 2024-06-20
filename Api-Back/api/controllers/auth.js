@@ -8,7 +8,7 @@ const { response } = require('express');
 const bcrypt = require('bcrypt');
 
 // Funcion usada para manejar el registro de nuevos usuarios. req representa la solicitud http y res la respuesta HTTP
-async function Signup(req, res,) {
+async function Signup(req, res) {
     const saltRounds = bcrypt.genSaltSync(parseInt(process.env.SALTROUNDS))
     // Cifra las contraseñas
     const hashedPassword = bcrypt.hashSync(req.body.password, saltRounds)

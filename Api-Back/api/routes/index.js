@@ -6,4 +6,7 @@ router.use('/contactInfo', require('./contactInfo.router'))
 router.use('/destination', require('./destination.router')) 
 router.use('/user', require('./user.router'))
 
+router.use('/auth', require('./auth.router'))
+
+
 module.exports = router
