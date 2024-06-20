@@ -1,32 +1,29 @@
 const { sequelize } = require("../../database/index.js");
 const { DataTypes } = require("sequelize");
 
-const Quizz = sequelize.define(
-  "quizz",
+const ContactInfo = sequelize.define(
+  "contactInfo",
   {
-    Qtravelers: {
-      type: DataTypes.INTEGER,
-     },
-    Qexperience: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    Qweather: {
+     surname: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    Qlocation: {
+     username: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-    Qcontinent: {
+     email: {
       type: DataTypes.STRING,
       allowNull: false,
      },
-     Qimage: {
+     password: {
       type: DataTypes.STRING,
       allowNull: false,
-     },
+     },   
   },
    {
     	//opciones
@@ -35,4 +32,4 @@ const Quizz = sequelize.define(
     	}
 );
 
-module.exports = Quizz;
+module.exports = ContactInfo;

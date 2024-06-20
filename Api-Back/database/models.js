@@ -1,6 +1,6 @@
 // Importa el modelo user desde el archivo iser.model.js dentro de api/model
 const User = require('../api/models/user.model')
-const Experience = require('../api/models/experience.model')
+const ContactInfo = require('../api/models/contactInfo.model')
 const Destination = require('../api/models/destination.model')
 const Quizz = require('../api/models/quizz.model')
 const Result = require('../api/models/result.model')
