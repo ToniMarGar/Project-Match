@@ -5,23 +5,25 @@ import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../Link/Link";
 
 import './Header.css'
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
-      <div className="logo">
-        {/*<img href='logo.png'/>*/}
-      </div>
+      <Link to='/'>
+        {/*<img href='logo.png' className="logo"/>*/}
+      </Link>
 
       <nav className="navigation">
-        <a href="#">Home</a>
-        <a href="#">Cuestionario</a>
-        <a href="#">Hazte premium</a>
+        {/*Barra central de navegación*/}
+        <Link to='/'> <NavLink>Home</NavLink> </Link>
+        <Link to='/Quizz'> <NavLink>Cuestionario</NavLink> </Link>
+        <Link to='/'> <NavLink>Hazte premium</NavLink> </Link>
       </nav>
 
       <div className="auth-actions">
-        <ButtonMain href="#" text='Inicia sesión'>Inicia sesión</ButtonMain>
-        <ButtonSecondary href="#">Regístrate</ButtonSecondary>
+        <Link to='/'> <ButtonMain>Inicia sesión</ButtonMain> </Link>
+        <Link to='/'> <ButtonSecondary>Regístrate</ButtonSecondary> </Link>
       </div>
 
     </header>

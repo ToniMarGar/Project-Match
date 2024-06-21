@@ -1,6 +1,5 @@
 import * as React from "react";
-import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
-import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+
 import LogAppleButton from "../../components/Button/AltLogInButton/AppleButton/AppleButton";
 import LogFacebookButton from "../../components/Button/AltLogInButton/FacebookButton/FacebookButton";
 import LogGoogleButton from "../../components/Button/AltLogInButton/GoogleButton/GoogleButton";
