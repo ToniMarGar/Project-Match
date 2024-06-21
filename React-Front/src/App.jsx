@@ -4,10 +4,15 @@ import React from 'react'
 import Root from "../Layouts";
 import './App.css'
 
+// Testing
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+
 function App() {
   return (
     <>
-      <Root />
+      <Header />
+      <Footer />
     </>
   )
 }

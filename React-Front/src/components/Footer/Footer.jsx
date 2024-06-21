@@ -1,12 +1,11 @@
 import * as React from "react";
 import './Footer.css'
 
-// Importación de iconos
-import Facebook from '../../../../assets/footer-logos/facebook-logo.svg'
-import Instagram from '../../../../assets/footer-logos/instagram-logo.png'
-import Tiktok from '../../../../assets/footer-logos/tiktok-logo.svg'
-import Twitter from '../../../../assets/footer-logos/whatsapp-logo.svg'
-import Whatsapp from '../../../../assets/footer-logos/x-logo.png'
+import Facebook from '../../assets/footer-logos/facebook-logo.svg'
+import Instagram from '../../assets/footer-logos/instagram-logo.png'
+import Tiktok from '../../assets/footer-logos/tiktok-logo.svg'
+import Twitter from '../../assets/footer-logos/whatsapp-logo.svg'
+import Whatsapp from '../../assets/footer-logos/x-logo.png'
 
 
 function Footer() {
@@ -15,60 +14,50 @@ function Footer() {
         <p>2024 Travel-Match, Inc.</p>
 
         <div className="social-icons">
-          <Link href='https://www.facebook.com/login/'>
-            <button className='media-link'>
+            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Facebook}
                 alt="Go to Facebook" 
               />
-            </button>
-          </Link>
+            </div>
 
-          <Link href='#'>
-            <button className='media-link'>
+            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Instagram}
                 alt="Go to Instagram" 
               />
-            </button>
-          </Link>
+            </div>
 
-          <Link href='#'>
-            <button className='media-link'>
+            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Tiktok}
                 alt="Go to Tiktok" 
               />
-            </button>
-          </Link>
+            </div>
 
-          <Link href='#'>
-            <button className='media-link'>
+            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Twitter}
                 alt="Go to Twitter" 
               />
-            </button>
-          </Link>
+            </div>
 
-          <Link href='#'>
-            <button className='media-link'>
+            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Whatsapp}
                 alt="Go to Whatsapp" 
               />
-            </button>
-          </Link>
+            </div>
 
         </div>
 
