@@ -32,34 +32,48 @@ return res.status(500).send(error.message)
 }
 }
 
-    // Objeto vacío para resultados
-    const quizResults = {
-        destinos: [],
-        points: 0
-    };
+// ==================================================================================
 
-    // Función para calcular semejanza
-    function calculateSimilarity(userPreferences, city) { // Aqui se filtran los resultados dependiendo de las respuestas
-    if (userPreferences.travelers === city.travelers) {
-        points += 1;
+  // Objeto vacío para resultados
+
+  console.log(quizz.dataValues);
+
+  const quizResponses = Object.values(req.body)
+  
+  const formattedCities = cityDB.map(city => {
+    let points = 0
+    const cityValues = Object.values(city)
+
+    // Not travellers criteria
+    for(response of quizResponses) {
+      if (cityValues.includes(response)) points++
     }
-    if (userPreferences.type === city.type) {
-        points += 1;
-    }
-    if (userPreferences.weather === city.weather) {
-        points += 1;
-    }
-    if (userPreferences.location === city.location) {
-        points += 1;
-    }
-    if (userPreferences.continent === city.continent) {
-        points += 1;
-    }
-    if (userPreferences.experience === city.experience) {
-        points += 1;
-    }
-    return points;
-    }
+
+    // Travellers criteria
+
+    // City travellers
+    const travellersRange = city.travelers.split("-")
+    const minTravellers = parseInt(travellersRange[0])
+    const maxTravellers = parseInt(travellersRange[1])
+
+    // User choosen travellers (as it comes in body)
+    const choosenTravellers = req.body.Qtravellers
+
+    if(choosenTravellers >= minTravellers && choosenTravellers <= maxTravellers) points++
+
+    return {city, points}
+  })
+
+  console.log(formattedCities)
+
+  const rankedCitites = formattedCities.sort((a, b) => b.points - a.points)
+  console.log(rankedCitites)
+  const first3 = rankedCitites.slice(0,3)
+
+
+
+
+// ==================================================================================
 
 // Función para guardar los resultados del quiz
 exports.saveQuizResults = (userId, quizResults) => {
@@ -77,44 +91,26 @@ app.post('/recommend', (req, res) => {
     const similarities = [];
 
 
-// SEGUNDA TAREA
-    // 2.1. Iterar sobre cada cityName del objeto Quiz usando map
-    Object.keys(userPreferences.Quizz).map((cityName) => {
-        // 2.2. Filtrar los destinos coincidentes dentro del map
-        cities.filter((cities) => {
-            if (cities[cityName] === userPreferences.Quizz[cityName]) {
-                // 2.3 Verificar existencia del destino en el objeto DestinoPuntos
-                //if (!destinoPuntos[cities.name]) {
-                    // 2.4. Si el destino no existe en DestinoPuntos, agregarlo y asignarle una puntuación inicial
-                  //  destinoPuntos[cities.name] = 1;
-                //} else {
-                    // 2.5. Si el destino ya existe, simplemente sumar la puntuación a la ya existente
-                  //  destinoPuntos[cities.name] += 1;
-                }
-            }
-        });
-    });
-
 // Convertir objeto DestinoPuntos en array y ordenar por puntuación
 const sortedDestinos = Object.keys(destinoPuntos)
     .map((name) => ({ name, similarity: destinoPuntos[name] }))
     .sort((a, b) => b.similarity - a.similarity);
 
-// Top 5 recomendaciones
-const recommendedCities = sortedDestinos.slice(0, 5).map(item => item.name);
+    // ======= CREAR UNA FUNCION RANDOM QUE BUSQUE EL ARRAY RESPUESTA ORGANIZADO. DEBE CONTEMPLAR LAS CIUDADES DE MAYOR PUNTUACION EN UNA VARIABLE LLAMADA MOSTPOINT
+    // HACER UN RANDOM DE MAYOR A MENOR HASTA TENER 3 CIUDADES EJ; ORDENADOR DE MAYOR A MENOR
 
 
-    // Guardar los resultados del quiz en la tabla Quiz
+/*     // Guardar los resultados del quiz en la tabla Quiz
     quizController.saveQuizResults(userId, quizResults)
         .then(() => {
             res.json(recommendedCities);
         })
         .catch((error) => {
             res.status(500).json({ error: "Error al guardar los resultados del quiz." });
-        });
+        }); */
 });
 
-res.json(recommendedCities);
+//res.json(recommendedCities);
 
 app.listen(port, () => {
     console.log("Running calculator");

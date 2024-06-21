@@ -6,6 +6,7 @@ const Destination = sequelize.define(
   {
     destinationName: {
       type: DataTypes.STRING,
+      primaryKey: true,
       unique: true,
     },
     travelers: {
