@@ -1,8 +1,9 @@
 import * as React from "react";
 
+// Componentes
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
-import NavLink from "../Link/Link";
+import NavLink from "../NavLink/NavLink";
 
 import './Header.css'
 import { Link } from "react-router-dom";
@@ -12,18 +13,19 @@ function Header() {
     <header>
       <Link to='/'>
         {/*<img href='logo.png' className="logo"/>*/}
+        <div className="logo"></div>
       </Link>
 
       <nav className="navigation">
         {/*Barra central de navegación*/}
-        <Link to='/'> <NavLink>Home</NavLink> </Link>
+        <Link to='/Home'> <NavLink text='Home'> Home</NavLink> </Link>
         <Link to='/Quizz'> <NavLink>Cuestionario</NavLink> </Link>
-        <Link to='/'> <NavLink>Hazte premium</NavLink> </Link>
+        <Link to='#'> <NavLink>Hazte premium</NavLink> </Link>
       </nav>
 
       <div className="auth-actions">
-        <Link to='/'> <ButtonMain>Inicia sesión</ButtonMain> </Link>
-        <Link to='/'> <ButtonSecondary>Regístrate</ButtonSecondary> </Link>
+        <Link to='/SignUp'> <ButtonMain>Inicia sesión</ButtonMain> </Link>
+        <Link to='/LogIn'> <ButtonSecondary>Regístrate</ButtonSecondary> </Link>
       </div>
 
     </header>
