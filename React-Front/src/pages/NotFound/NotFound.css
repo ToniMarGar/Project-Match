@@ -1,0 +1,18 @@
+.not-found{
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.four-o-four{
+    color: #000;
+    font-size: 264px;
+    font-weight: bolder;
+}
+
+.blue{
+    color: #0969FF;
+}
