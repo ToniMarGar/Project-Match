@@ -1,25 +1,37 @@
 import { useState } from "react";
-import { signup } from "../service/auth";
+import { login } from "../services/auth";
+import toast, { Toaster } from 'react-hot-toast';
 
 const FormLogin = () => {
-  const [name, setName] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
     
     const handleLogIn = async () => {
-        let data = { username: name, password: password }
-        const result = await signup(data)
-        localStorage.setItem("token", result.token);
-        localStorage.setItem("role", result.role); 
+      try {
+        let data = { email: email, password: password }
+        console.log("data: " , data)
+        const result = await login(data)
+        console.log(result)
+        localStorage.getItem("token", result.token);
+        localStorage.getItem("role", result.role); 
         setEmail("")
-    }
+      /* console.log(token);
+      console.log(role); */
 
+      } catch (error) {
+        console.log(error)
+        toast.error ('Error al hacer Login.')
+      }
+        
+    }
     
   return (
     <div>
+      <Toaster />
       <form action="">
         <input
           onChange={(e) => {
-            setName(e.target.value);
+            setEmail(e.target.value);
           }}
           required
         />
@@ -37,7 +49,7 @@ const FormLogin = () => {
             handleLogIn();
           }}
         >
-          Registrarse
+          Log In
         </button>
       </form>
     </div>

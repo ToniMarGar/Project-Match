@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { signup } from "../service/auth";
+import { signup } from "../services/auth";
 
 const FormSignup = () => {
-  const [username, setUserName] = useState();
-  const [firstname, setFirstName] = useState();
-  const [surname, setSurName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-
+  const [username, setUserName] = useState('');
+  const [firstname, setFirstName] = useState('');
+  const [surname, setSurName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
     
     const handleSignUp = async () => {
         let data = { username: username, firstname: firstname, surname: surname, email: email, password: password }
@@ -17,7 +16,6 @@ const FormSignup = () => {
         localStorage.setItem("role", result.role); 
         setEmail("")
     }
-
     
   return (
     <div>
