@@ -2,12 +2,12 @@ import * as React from "react";
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../Link/Link";
+import './Header.css'
 
 
 function Header() {
   return (
-    <>
-      <header>
+    <header>
             <div href="#" className="logo"/>
 
             <nav className="navigation">
@@ -22,7 +22,6 @@ function Header() {
         </div>
 
       </header>
-    </>
   );
 }
 export default Header;

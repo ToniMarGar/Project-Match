@@ -1,17 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
 import './App.css'
-import Quizz from './pages/Survey/Survey'
+
+import Quizz from './pages/Quizz/Quizz'
 
 function App() {
 
   return (
     <>
-    <Header/>
     <Quizz/>
-    <Footer/>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import 'DefaultCard.css'
+import './DefaultCard.css'
 
 function DefaultCard() {
   return (
