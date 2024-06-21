@@ -1,4 +1,7 @@
 const Quizz = require("../models/quizz.model")
+const User = require('../models/user.model.js'); 
+const cityDB = require('../../database/cities.json');
+const Result = require("../models/result.model.js");
 
 async function getOneQuizz(req, res) {
   try {
@@ -27,6 +30,8 @@ async function getAllQuizz(req, res) {
 }
 
 async function createQuizz(req, res) {
+  const user = await User.findByPk( req.params.id ) // SE USARA EN RESULT
+ 
     try {
         const quizz = await Quizz.create({
           Qtravelers: req.body.Qtravelers,
@@ -35,10 +40,14 @@ async function createQuizz(req, res) {
           Qlocation: req.body.Qlocation,
           Qcontinent: req.body.Qcontinent,
         })
-        return res.status(200).json({message: 'Quizz created', quizz: quizz})
-    } catch (error) {
-        console.log(error)
-    }
+
+
+  //--------------------------------------------
+  return res.status(200).json({message: 'Quizz created', quizz: first3})
+  
+  } catch (error) {
+      console.log(error)
+  }
 }
 
 

@@ -1,7 +1,7 @@
 // Usado para crear y verificar tokens
 const jwt = require('jsonwebtoken');
 // Se importa el modelo de user
-const User = require('../models/user.model.js'); 
+const User = require('../models/user.model.js');
 // Importa el modulo express que se usa para manipular las respuestas http
 const { response } = require('express');
 // Importa el modulo bcrypt para cifrar y comparar contraseñas de manera segura
