@@ -88,7 +88,7 @@ const Quizz = () => {
       )}
 
       {currentScreen === 2 && (
-        <div className='question3'>
+        <div className='quQuizzestion3'>
           <h1>¿En qué lugar quieres estar?</h1>
           <button onClick={() => { handleChange('location', 'playa'); handleNextScreen(); }}>Playa</button>
           <button onClick={() => { handleChange('location', 'ciudad'); handleNextScreen(); }}>Ciudad</button>

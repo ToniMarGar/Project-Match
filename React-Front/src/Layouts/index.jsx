@@ -1,17 +1,17 @@
+// Importación de Outlet (contenido variable) para el router
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import LogIn from '../pages/LogIn/LogIn'
 
+// Función de la base del Layout
 function Root() {
   return (
     <>
         <Header />
-        <LogIn />
-        <Footer />
         <Outlet />
+        <Footer />
     </>
   )
 }
