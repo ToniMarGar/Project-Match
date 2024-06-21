@@ -41,7 +41,6 @@ async function createQuizz(req, res) {
           Qcontinent: req.body.Qcontinent,
         })
 
-
   //--------------------------------------------
   return res.status(200).json({message: 'Quizz created', quizz: first3})
   

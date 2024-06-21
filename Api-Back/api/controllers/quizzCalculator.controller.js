@@ -96,6 +96,8 @@ const sortedDestinos = Object.keys(destinoPuntos)
     .map((name) => ({ name, similarity: destinoPuntos[name] }))
     .sort((a, b) => b.similarity - a.similarity);
 
+    exports.sortedDestinos;
+    
     // ======= CREAR UNA FUNCION RANDOM QUE BUSQUE EL ARRAY RESPUESTA ORGANIZADO. DEBE CONTEMPLAR LAS CIUDADES DE MAYOR PUNTUACION EN UNA VARIABLE LLAMADA MOSTPOINT
     // HACER UN RANDOM DE MAYOR A MENOR HASTA TENER 3 CIUDADES EJ; ORDENADOR DE MAYOR A MENOR
 
@@ -115,3 +117,5 @@ const sortedDestinos = Object.keys(destinoPuntos)
 app.listen(port, () => {
     console.log("Running calculator");
 });
+
+module.exports = getQuizzResults;

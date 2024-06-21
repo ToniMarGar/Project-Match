@@ -16,9 +16,9 @@ const checkAndSync = async () => {
   const initializeAndListen = () => {
     try {
       express()
-      .use(cors())
       .use(morgan("dev")) //Configuramos morgan para la información de nuestras peticiones
       .use(express.json()) // Le decimos a express que nos transforme los datos con json
+      .use(cors())
       .use("/api", require("./api/routes/index")) //Le decimos a express que use el router principal
       .listen(port, () => {
         console.log(`> Listening on port: ${port}`); //Levantamos express en el puerto deseado
