@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { getOneUser } from "../service/user"
+import { getOneUser } from "../services/user"
 
 const InfoUser = () => {
     const [id, setId] = useState()
@@ -15,7 +15,7 @@ const InfoUser = () => {
 
   return (
     <div>
-          <input type="number" onChange={(e) => {setId(e.target.value)}} />
+          <input type="string" onChange={(e) => {setId(e.target.value)}} />
           <button onClick={(e) => { e.preventDefault(); handleGetOneUser() }}>Ver infor de usuario</button>
           { user.length > 0 ? <p> { user}</p>: <p>No hay usuario</p>}
     </div>

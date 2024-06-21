@@ -9,14 +9,10 @@ const FormLogin = () => {
     const handleLogIn = async () => {
       try {
         let data = { email: email, password: password }
-        console.log("data: " , data)
         const result = await login(data)
-        console.log(result)
         localStorage.getItem("token", result.token);
         localStorage.getItem("role", result.role); 
         setEmail("")
-      /* console.log(token);
-      console.log(role); */
 
       } catch (error) {
         console.log(error)
