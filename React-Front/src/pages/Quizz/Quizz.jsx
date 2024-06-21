@@ -60,66 +60,74 @@ const Quizz = () => {
 
 
   return (
-    <>
-    <form onSubmit={handleSubmit}>
-      {currentScreen === 0 && ( 
-        <div className='question1'>
-          <h1>Primero, ¿con quién vas a viajar?</h1>
-          <div className='container1'>
-            {/* Para cada click, se ejecuta un cambio de pantalla y cambia el valor de la variable formData por el input seleccionado*/}
-            <button onClick={() => { handleChange('travelers', 'solo'); handleNextScreen(); }}>Solo</button>
-            <button onClick={() => { handleChange('travelers', 'familia'); handleNextScreen(); }}>En familia</button>
-            <button onClick={() => { handleChange('travelers', 'pareja'); handleNextScreen(); }}>En pareja</button>
-            <button onClick={() => { handleChange('travelers', 'grupo'); handleNextScreen(); }}>Grupo</button>
+    <div className='container'>
+      <form onSubmit={handleSubmit}>
+        {currentScreen === 0 && ( 
+          <div className='content'>
+            <h1>Primero, ¿con quién vas a viajar?</h1>
+            <div className='card-selection'>
+              {/* Para cada click, se ejecuta un cambio de pantalla y cambia el valor de la variable formData por el input seleccionado*/}
+              <button onClick={() => { handleChange('travelers', 'solo'); handleNextScreen(); }}>Solo</button>
+              <button onClick={() => { handleChange('travelers', 'familia'); handleNextScreen(); }}>En familia</button>
+              <button onClick={() => { handleChange('travelers', 'pareja'); handleNextScreen(); }}>En pareja</button>
+              <button onClick={() => { handleChange('travelers', 'grupo'); handleNextScreen(); }}>Grupo</button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {currentScreen === 1 && (
-        <div className='question2'>
-          <h1>¿Qué tipo de experiencia buscas?</h1>
-          <button onClick={() => { handleChange('experience', 'cultura'); handleNextScreen(); }}>Cultura</button>
-          <button onClick={() => { handleChange('experience', 'relax'); handleNextScreen(); }}>Relax</button>
-          <button onClick={() => { handleChange('experience', 'iconos'); handleNextScreen(); }}>Lugares icónicos</button>
-          <button onClick={() => { handleChange('experience', 'aventura'); handleNextScreen(); }}>Aventura</button>
-          <button onClick={() => { handleChange('experience', 'fiesta'); handleNextScreen(); }}>Fiesta</button>
-          <button onClick={() => { handleChange('experience', 'turismo'); handleNextScreen(); }}>Turismo</button>
-        </div>
-      )}
+        {currentScreen === 1 && (
+          <div className='content'>
+            <h1>¿Qué tipo de experiencia buscas?</h1>
+            <div className='card-selection'>
+              <button onClick={() => { handleChange('experience', 'cultura'); handleNextScreen(); }}>Cultura</button>
+              <button onClick={() => { handleChange('experience', 'relax'); handleNextScreen(); }}>Relax</button>
+              <button onClick={() => { handleChange('experience', 'iconos'); handleNextScreen(); }}>Lugares icónicos</button>
+              <button onClick={() => { handleChange('experience', 'aventura'); handleNextScreen(); }}>Aventura</button>
+              <button onClick={() => { handleChange('experience', 'fiesta'); handleNextScreen(); }}>Fiesta</button>
+              <button onClick={() => { handleChange('experience', 'turismo'); handleNextScreen(); }}>Turismo</button>
+            </div>
+            </div>
+        )}
 
-      {currentScreen === 2 && (
-        <div className='quQuizzestion3'>
-          <h1>¿En qué lugar quieres estar?</h1>
-          <button onClick={() => { handleChange('location', 'playa'); handleNextScreen(); }}>Playa</button>
-          <button onClick={() => { handleChange('location', 'ciudad'); handleNextScreen(); }}>Ciudad</button>
-          <button onClick={() => { handleChange('location', 'montana'); handleNextScreen(); }}>Montaña</button>
-          <button onClick={() => { handleChange('location', 'interior'); handleNextScreen(); }}>Interior</button>
-        </div>
-      )}
+        {currentScreen === 2 && (
+          <div className='content'>
+            <h1>¿En qué lugar quieres estar?</h1>
+            <div className='card-selection'>
+              <button onClick={() => { handleChange('location', 'playa'); handleNextScreen(); }}>Playa</button>
+              <button onClick={() => { handleChange('location', 'ciudad'); handleNextScreen(); }}>Ciudad</button>
+              <button onClick={() => { handleChange('location', 'montana'); handleNextScreen(); }}>Montaña</button>
+              <button onClick={() => { handleChange('location', 'interior'); handleNextScreen(); }}>Interior</button>
+            </div>
+          </div>
+        )}
 
-      {currentScreen === 3 && (
-        <div className='question4'>
-          <h1>¿Qué clima prefieres?</h1>
-          <button onClick={() => { handleChange('weather', 'soleado'); handleNextScreen(); }}>Soleado</button>
-          <button onClick={() => { handleChange('weather', 'frio'); handleNextScreen(); }}>Frío</button>
-          <button onClick={() => { handleChange('weather', 'neutro'); handleNextScreen(); }}>Neutral</button>
-        </div>
-      )}
+        {currentScreen === 3 && (
+          <div className='content'>
+            <h1>¿Qué clima prefieres?</h1>
+            <div className='card-selection'>
+              <button onClick={() => { handleChange('weather', 'soleado'); handleNextScreen(); }}>Soleado</button>
+              <button onClick={() => { handleChange('weather', 'frio'); handleNextScreen(); }}>Frío</button>
+              <button onClick={() => { handleChange('weather', 'neutro'); handleNextScreen(); }}>Neutral</button>
+            </div>
+          </div>
+        )}
 
-      {currentScreen === 4 && (
-        <div className='question5'>
-          <h1>Por último, ¿tienes algún continente de preferencia?</h1>
-          <button onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}>Europa</button>
-          <button onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}>Asia</button>
-          <button onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}>África</button>
-          <button onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}>América</button>
-          <button onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}>Oceanía</button>
-        </div>
-      )}
-    </form>
-        
-    {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
-    </>
+        {currentScreen === 4 && (
+          <div className='content'>
+            <h1>Por último, ¿tienes algún continente de preferencia?</h1>
+            <div className='card-selection'>
+              <button onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}>Europa</button>
+              <button onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}>Asia</button>
+              <button onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}>África</button>
+              <button onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}>América</button>
+              <button onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}>Oceanía</button>
+            </div>
+          </div>
+        )}
+      </form>
+          
+      {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
+    </div>
   );
 };
 

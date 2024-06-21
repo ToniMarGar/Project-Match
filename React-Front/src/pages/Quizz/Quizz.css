@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    height: 1440px;
+    width: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0; 
+}
+
+.card-selection{}

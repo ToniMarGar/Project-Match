@@ -2,6 +2,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
+import './main.css'
+
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
