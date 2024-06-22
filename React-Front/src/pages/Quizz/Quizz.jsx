@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Quizz.css'
 
-import ButtonIcon from ''
+import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 
 const Quizz = () => {
     // Contenemos los resultados del quizz para poder consultar la DB
@@ -64,7 +64,7 @@ const Quizz = () => {
           <div id='intro-content'>
             <p id='quizz-intro'>¿Quieres una escapada y no sabes dónde ir?</p>
             <h1 className='blue'>Vamos a explorar tus preferencias para encontrar tu destino ideal</h1>
-            <button onClick={() => { handleNextScreen(); }}>Descúbre</button>
+            <ButtonIcon onClick={() => { handleNextScreen(); }}/>
           </div>
         )}
 
