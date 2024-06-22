@@ -1,5 +1,5 @@
 footer {
-    width: 100%;
+    width: 100vw;
     padding: 24px 64px 24px 64px;
     display: flex;
     justify-content: space-between;
