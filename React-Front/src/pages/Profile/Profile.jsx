@@ -1,125 +1,77 @@
 import * as React from "react";
+import './Profile.css'
 
+// Los Tags, si se puede, van a ser componentes a parte
+const TagButton = ({ text }) => (
+  <button className="tag-button">{text}</button>
+);
 
+// Las DestinationCard ya son componentes creados, pero tengo que qveriguar como parasles info siendo componentes 
+const DestinationCard = ({ image, title, subtitle, tags }) => (
+  <article className="destination-card">
+    <img src={image} alt={`${title} destination`} className="destination-image" />
+    <div className="destination-content">
+      <h3 className="destination-title">{title}</h3>
+      <p className="destination-subtitle">{subtitle}</p>
+    </div>
+    <div className="tag-container">
+      {tags.map((tag, index) => (
+        <TagButton key={index} text={tag} />
+      ))}
+    </div>
+  </article>
+);
+
+// La estructura de Profile viene directa de la IA, pero no sé como verla sin ser admin
 function Profile() {
   return (
-    <>
-      <div>
-        <div>
-          <div>
-            <div>
-              <img
-                loading="lazy"
-                srcSet='#'
-                className="img"
-              />
-              <div className="div-4">Falete Rebooter</div>
-              <div className="div-5">@falete_rebooter</div>
-              <div className="div-6">PLAN GRATUITO</div>
-              <div className="div-7" />
-              <div className="div-8">
-                <div className="div-9">
-                  <span style="font-weight: 500;">Nombre:</span> Falete
-                </div>
-                <div className="div-10">
-                  <span style="font-weight: 500;">Apellido:</span> Rebooter
-                </div>
-                <div className="div-11">
-                  <span style="font-weight: 500;">Correo electrónico:</span>
-                  <br />
-                  falete@rebootacademy.com
-                </div>
-              </div>
-              <div className="div-12">Contraseña</div>
-              <div className="div-13">
-                <div className="div-14">Cambiar</div>
-                <div className="div-15">Revisar</div>
-              </div>
+    <main className="profile-container">
+        <aside className="profile-card">
+        {/* ProfileCard component, esto va a desaparecer */}
+          <div className="profile-card">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a735eb5b0bd101b39d17228cb94286b4acede094a638373f1333c4df7d3fe4c?apiKey=d0e5275347df4fb3abc0d1041ed2568c&" alt="Profile picture" className="profile-image" />
+            <div className="profile-info">
+              <h2 className="profile-name">Falete Rebooter</h2>
+              <p className="profile-username">@falete_rebooter</p>
             </div>
+            <p className="profile-plan">PLAN GRATUITO</p>
           </div>
-          <div className="column-2">
-            <div className="div-16">
-              <div className="div-17">Mis preferencias</div>
-              <div className="div-18">
-                <div className="div-19">GRUPOS</div>
-                <div className="div-20">FIESTA</div>
-                <div className="div-21">PLAYA</div>
-                <div className="div-22">SOLEADO</div>
-                <div className="div-23">EUROPA</div>
-              </div>
-              <div className="div-24">Mis últimos cuestionarios</div>
-              <div className="div-25">
-                <div className="div-26">
-                  <div className="column-3">
-                    <div className="div-27">
-                      <img
-                        loading="lazy"
-                        srcSet="#"
-                      />
-                      <div className="div-28">Ibiza</div>
-                      <div className="div-29">Sueño de una noche de verano</div>
-                      <div className="div-30">
-                        <div className="div-31">GRUPOS</div>
-                        <div className="div-32">FIESTA</div>
-                        <div className="div-33">PLAYA</div>
-                      </div>
-                      <div className="div-34">
-                        <div className="div-35">SOLEADO</div>
-                        <div className="div-36">EUROPA</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="column-4">
-                    <div className="div-37">
-                      <img
-                        loading="lazy"
-                        srcSet="#"
-                        className="img-3"
-                      />
-                      <div className="div-38">Split</div>
-                      <div className="div-39">
-                        Escondite a las puertas del Mediterráneo
-                      </div>
-                      <div className="div-40">
-                        <div className="div-41">PAREJAS</div>
-                        <div className="div-42">TURÍSTICO</div>
-                      </div>
-                      <div className="div-43">
-                        <div className="div-44">PLAYA</div>
-                        <div className="div-45">SOLEADO</div>
-                        <div className="div-46">EUROPA</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="column-5">
-                    <div className="div-47">
-                      <img
-                        loading="lazy"
-                        srcSet="#"
-                        className="img-4"
-                      />
-                      <div className="div-48">Kyoto</div>
-                      <div className="div-49">
-                        Tradición milenaria después de la guerra
-                      </div>
-                      <div className="div-50">
-                        <div className="div-51">GRUPOS</div>
-                        <div className="div-52">CULTURA</div>
-                        <div className="div-53">CIUDAD</div>
-                      </div>
-                      <div className="div-54">
-                        <div className="div-55">SOLEADO</div>
-                        <div className="div-56">ASIA</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <hr className="profile-divider" />
+          <section className="profile-details">
+            <p className="profile-detail"><strong>Nombre:</strong> Falete</p>
+            <p className="profile-detail"><strong>Apellido:</strong> Rebooter</p>
+            <p className="profile-detail"><strong>Correo electrónico:</strong><br />falete@rebootacademy.com</p>
+          </section>
+          <section className="password-section">
+            <h3 className="password-title">Contraseña</h3>
+            <div className="password-actions">
+              <button className="action-button primary">Cambiar</button>
+              <button className="action-button secondary">Revisar</button>
             </div>
-          </div>
-        </div>
-      </div>
-      </>
+          </section>
+        </aside>
+
+        <section className="main-content">
+          <section className="preferences-section">
+            <h2 className="section-title">Mis preferencias</h2>
+            <div className="tag-container">
+              <TagButton text="GRUPOS" />
+              <TagButton text="FIESTA" />
+              <TagButton text="PLAYA" />
+              <TagButton text="SOLEADO" />
+              <TagButton text="EUROPA" />
+            </div>
+          </section>
+          <section className="questionnaires-section">
+            <h2 className="section-title">Mis últimos cuestionarios</h2>
+            <div className="destinations-grid">
+              {destinations.map((dest, index) => (
+                <DestinationCard key={index} {...dest} />
+              ))}
+            </div>
+          </section>
+        </section>
+      </main>
   )
 }
 
