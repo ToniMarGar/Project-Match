@@ -60,6 +60,7 @@ const Quizz = () => {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit}>
+      {/*
       {currentScreen === 0 && ( 
           <div id='intro-content'>
             <p id='quizz-intro'>¿Quieres una escapada y no sabes dónde ir?</p>
@@ -67,8 +68,9 @@ const Quizz = () => {
             <ButtonIcon onClick={() => { handleNextScreen(); }}/>
           </div>
         )}
+        */}
 
-        {currentScreen === 1 && ( 
+        {currentScreen === 0 && ( 
           <div className='content'>
             <h1>Primero, ¿con quién vas a viajar?</h1>
             <div className='card-selection'>
