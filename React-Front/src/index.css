@@ -16,10 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body { 
-  width: 100vw; 
-  height: 100vh;
-}
+
 
 a {
   color: #000000;
