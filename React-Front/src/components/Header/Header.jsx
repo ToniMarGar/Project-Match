@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 // Componentes
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
@@ -6,7 +7,6 @@ import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../NavLink/NavLink";
 
 import './Header.css'
-import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -18,14 +18,14 @@ function Header() {
 
       <nav className="navigation">
         {/*Barra central de navegación*/}
-        <Link to='/Home'> <a text='Home'> Home</a> </Link>
+        <Link to='/Home'> <a> Home</a> </Link>
         <Link to='/Quizz'> <a>Cuestionario</a> </Link>
-        <Link to='#'> <a>Hazte premium</a> </Link>
+        <Link to='/'> <a>Hazte premium</a> </Link>
       </nav>
 
       <div className="auth-actions">
-        <Link to='/SignUp'> <ButtonMain>Inicia sesión</ButtonMain> </Link>
-        <Link to='/LogIn'> <ButtonSecondary>Regístrate</ButtonSecondary> </Link>
+        <Link to='/SignUp'> <ButtonMain text='Inicia sesión'/></Link>
+        <Link to='/LogIn'> <ButtonSecondary text='Regístrate'/></Link>
       </div>
 
     </header>

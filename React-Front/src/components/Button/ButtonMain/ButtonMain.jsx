@@ -1,8 +1,8 @@
 import * as React from "react";
 import './ButtonMain.css'
 
-function ButtonMain() {
-    return (<button className='main'>Inicia sesión</button>)
+function ButtonMain({text}) {
+    return (<button className='main'>{text}</button>)
   }
   
   export default ButtonMain

@@ -1,13 +1,13 @@
 import * as React from "react";
 import './ButtonProfile.css'
 
-function ButtonProfile() {
+function ButtonProfile({username, userImg}) {
   return (
     <>
-      <div className="button">
-        <p text='Hola, {user.name}'></p>
-        <img src="#" alt="Profile image" />
-      </div>
+      <button className="profile-button">
+        <p>Hola, {username}</p>
+        <img src={userImg} alt="Profile image" />
+      </button>
     </>
   );
 }
