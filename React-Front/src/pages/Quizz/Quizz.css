@@ -10,7 +10,8 @@
 
 #intro-content{
     display: flex;
-
+    width: 800px;
+    height: 520px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

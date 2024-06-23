@@ -14,51 +14,40 @@ function Footer() {
         <p>2024 Travel-Match, Inc.</p>
 
         <div className="social-icons">
-            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Facebook}
                 alt="Go to Facebook" 
               />
-            </div>
-
-            <div className='media-link'>
+              
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Instagram}
                 alt="Go to Instagram" 
               />
-            </div>
 
-            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Tiktok}
                 alt="Go to Tiktok" 
               />
-            </div>
 
-            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Twitter}
                 alt="Go to Twitter" 
               />
-            </div>
 
-            <div className='media-link'>
               <img 
                 className='icon-footer'
                 loading="lazy" 
                 src={Whatsapp}
                 alt="Go to Whatsapp" 
               />
-            </div>
-
         </div>
 
       {/* <section className="newsletter-section">

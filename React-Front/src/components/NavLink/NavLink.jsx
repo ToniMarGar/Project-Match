@@ -1,10 +1,9 @@
 import * as React from "react";
+import './NavLink.css'
 
-function NavLink() {
+function NavLink({ text }) {
   return (
-      <div>
-          <a></a>
-      </div>
+      <button className='nav'>{ text }</button>
   );
 }
 
