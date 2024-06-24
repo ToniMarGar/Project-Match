@@ -1,5 +1,5 @@
 .not-found{
-    height: 540px;
+    height: 656px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,9 @@
 }
 
 .four-o-four{
+    margin: -64px;
+    padding: 0;
     color: #000;
-    font-size: 264px;
+    font-size: 240px;
     font-weight: bolder;
 }
