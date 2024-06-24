@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './Quizz.css'
 
 import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
@@ -172,25 +173,35 @@ const Quizz = () => {
           <div className='content'>
             <h1>Por último, ¿tienes algún continente de preferencia?</h1>
             <div className='card-selection'>
-              <button className='h-card' 
-              onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
-              >Europa</button>
+              <Link to='/Destination'>
+                <button className='h-card' 
+                onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
+                >Europa</button>
+              </Link>
 
-              <button className='h-card' 
-              onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
-              >Asia</button>
+              <Link to='/Destination'>
+                <button className='h-card' 
+                onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
+                >Asia</button>
+              </Link>
 
-              <button className='h-card' 
-              onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
-              >África</button>
+              <Link to='/Destination'>
+                <button className='h-card' 
+                onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
+                >África</button>
+              </Link>
 
-              <button className='h-card' 
-              onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
-              >América</button>
+              <Link to='/Destination'>
+                <button className='h-card' 
+                onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
+                >América</button>
+              </Link>
 
-              <button className='h-card' background-image=''
-              onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
-              >Oceanía</button>
+              <Link to='/Destination'>
+                <button className='h-card' background-image=''
+                onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
+                >Oceanía</button>
+              </Link>
             </div>
           </div>
         )}
