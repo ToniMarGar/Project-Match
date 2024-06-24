@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import './SignUp.css'
+import './LogIn.css'
 
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
