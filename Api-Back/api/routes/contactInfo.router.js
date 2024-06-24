@@ -5,7 +5,10 @@ const {
     getOneContactInfo,
     createContactInfo,
     updateContactInfo,
-    deleteContactInfo
+    deleteContactInfo,
+    
+    //setProfileImage
+
 } = require('../controllers/contactInfo.controller')
 
 router.get('/:id', getOneContactInfo)
@@ -13,5 +16,7 @@ router.get('/', getAllContactInfos)
 router.post('/', createContactInfo)
 router.put('/:id', updateContactInfo)
 router.delete('/:id', deleteContactInfo)
+
+//router.post('/:id', setProfileImage)
 
 module.exports = router
