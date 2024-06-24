@@ -1,5 +1,5 @@
 import * as React from "react";
-import 'DestinacionCard.css'
+import './DestinacionCard.css'
 
 import CardTag from '../../Tags/CardTag/CardTag'
 
