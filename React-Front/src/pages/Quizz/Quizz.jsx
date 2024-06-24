@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
+import { LinearProgress } from '@mui/material';
 
 
 
@@ -11,17 +12,15 @@ import { suggestedDestinations } from '../../services/quizzServices';
 const Quizz = () => {
 
   async function prueba() {
-    await suggestedDestinations({ 
-      "travelers": 6, 
-      "weather": "Templado", 
-      "location": "Ciudad", 
-      "continent": "Europa", 
-      "experience": "Cultura"
+    const result = await suggestedDestinations({ 
+      "travelers": formData.travelers, 
+      "weather": formData.weather, 
+      "location": formData.location, 
+      "continent": formData.continent, 
+      "experience": formData.experience
       }) 
+      return result
   }
-
-
-
 
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada respuesta del usuario
@@ -50,7 +49,7 @@ const Quizz = () => {
   };
 
    // Submit del formulario una vez acabado
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
     if (e) {
       console.log(e)
       e.preventDefault();
@@ -60,16 +59,17 @@ const Quizz = () => {
 
      // console.log(result);
 
-      const resultt = prueba().then(data => {
-        // Convertir el objeto data a una cadena de texto
-        const jsonString = JSON.stringify(data);
-        console.log('Datos como cadena:', jsonString.toString);
+     try{
+      const resultt = await prueba();
 
-        // Aquí puedes usar jsonString según tus necesidades
-    })
-    .catch(error => {
-        console.error('Error al obtener datos:', error);
-    });
+      console.log(resultt)
+
+      return resultt;
+
+     } catch(error) {
+      console.error('Error al obtener datos:', error);
+     }
+
 
    
 
@@ -144,7 +144,7 @@ const Quizz = () => {
       {currentScreen === 4 && (
         <div className='question5'>
           <h1>Por último, ¿tienes algún continente de preferencia?</h1>
-          <button onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}>Europa</button>
+          <button onClick={() => { handleChange('continent', 'Europa'); const xddd = handleSubmit(); }}>Europa</button>
           <button onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}>Asia</button>
           <button onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}>África</button>
           <button onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}>América</button>
@@ -154,6 +154,10 @@ const Quizz = () => {
     </form>
         
     {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
+
+
+
+
     </>
   );
 };
