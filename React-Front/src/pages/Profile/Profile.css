@@ -1,159 +1,37 @@
 .profile-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 64px 80px;
+    
   }
-  .profile-sidebar {
+
+aside {
     width: 25%;
     background-color: #f4f4f4;
     border-radius: 8px;
     padding: 32px 16px;
-  }
-  .profile-card {
-    text-align: center;
-  }
-  .profile-image {
-    width: 160px;
-    object-fit: cover;
-  }
-  .profile-info {
-    margin-top: 16px;
-  }
-  .profile-name {
-    font: 24px Poppins, sans-serif;
-    color: #000;
-  }
-  .profile-username {
-    font: 16px Poppins, sans-serif;
-    color: #575757;
-  }
-  .profile-plan {
-    color: #575757;
-    text-transform: uppercase;
-    font: 600 12px Poppins, sans-serif;
-    margin-top: 16px;
-  }
-  .profile-divider {
-    background-color: #3771c8;
-    height: 2px;
-    border: none;
-    margin: 32px 0;
-  }
-  .profile-details {
-    font-size: 16px;
-    color: #000;
-  }
-  .profile-detail {
-    margin-top: 16px;
-    font-family: Poppins, sans-serif;
-  }
-  .password-section {
-    margin-top: 24px;
-  }
-  .password-title {
-    font-family: Poppins, sans-serif;
-    color: #000;
-    font-weight: 500;
-  }
-  .password-actions {
-    display: flex;
-    gap: 16px;
-    margin-top: 12px;
-  }
-  .action-button {
-    font-family: Poppins, sans-serif;
-    border-radius: 120px;
-    padding: 8px 20px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .action-button.primary {
-    background-color: #fc8c0c;
-    color: #fff;
-    border: none;
-  }
-  .action-button.secondary {
-    border: 1px solid #fc8c0c;
-    color: #fc8c0c;
-    background-color: transparent;
-  }
-  .main-content {
-    width: 75%;
-    margin-left: 20px;
-  }
-  .section-title {
-    color: #000;
-    font: 500 24px Poppins, sans-serif;
-    margin-bottom: 12px;
-  }
-  .tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tag-button {
-    font-family: Poppins, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #fc8c0c;
-    border: none;
-    border-radius: 4px;
-    padding: 4px 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  .questionnaires-section {
-    margin-top: 40px;
-  }
-  .destinations-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .destination-card {
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    aspect-ratio: 0.64;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 24px;
-  }
-  .destination-image {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .destination-content {
-    position: relative;
-    z-index: 1;
-  }
-  .destination-title {
-    font: 500 24px Poppins, sans-serif;
-  }
-  .destination-subtitle {
-    margin-top: 12px;
-    font: 400 16px Poppins, sans-serif;
-  }
-  .destination-card .tag-container {
-    position: relative;
-    z-index: 1;
-    margin-top: auto;
-  }
-  .destination-card .tag-button {
-    background-color: #64a0ff;
-  }
-    .profile-sidebar,
-    .main-content {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 40px;
-    }
-    .destinations-grid {
-      grid-template-columns: 1fr;
-    }
+}
+
+.preferences{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.preferences-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.destinations-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
