@@ -1,7 +1,8 @@
 import * as React from "react";
-import './DestinacionCard.css'
+import './DestinationCard.css'
 
 import CardTag from '../../Tags/CardTag/CardTag'
+
 
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
@@ -10,6 +11,7 @@ const TagGroup = ({ tags }) => (
     ))}
   </div>
 );
+
 
 function DestinacionCard({name, img}) {
   return (

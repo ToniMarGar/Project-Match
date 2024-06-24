@@ -1,69 +1,57 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+import './SignUp.css'
 
-import LogAppleButton from "../../components/Button/AltLogInButton/AppleButton/AppleButton";
-import LogFacebookButton from "../../components/Button/AltLogInButton/FacebookButton/FacebookButton";
-import LogGoogleButton from "../../components/Button/AltLogInButton/GoogleButton/GoogleButton";
-import './LogIn.css'
+import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
+import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
+import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
+import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
+import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
 
-const FormField = ({ label, inputId, placeholder }) => (
-  <div className="form-control">
-    <label htmlFor={inputId}>{label}</label>
-    <input type="text" id={inputId} placeholder={placeholder} />
-  </div>
-);
 
 function LogIn() {
   return (
-    <>
-      <div className="container">
-        <section className="section">
-          <div className="content-wrapper">
-            <article className="main-content">
-              <form className="form">
-                <FormField
-                  label="Nombre de usuario"
-                  inputId="username"
-                  placeholder="Nombre de usuario"
-                />
-                <FormField
-                  label="Contraseña"
-                  inputId="password"
-                  placeholder="Contraseña"
-                />
-                <div className="social-buttons">
-                  <LogGoogleButton/>
-                  <LogFacebookButton/>
-                  <LogAppleButton/>
+    <main className="registration-page">
+        <section className="form-section">
 
-                </div>
-                <button type="submit" className="login-button">
-                  Inicia sesión
-                </button>
-              </form>
-              <p className="forgot-password">
-                ¿Has olvidado tu contraseña? Haz click{" "}
-                <span className="link">aquí</span>
-              </p>
-              <div className="register-section">
-                <span className="register-text">¿NO ESTÁS REGISTRADO?</span>
-                <button className="register-button">Regístrate</button>
-              </div>
-            </article>
-            <aside className="side-content">
-              <div className="side-text-wrapper">
-                <h2 className="side-heading">
-                  Haz <span className="highlight">match</span> con tu siguente{" "}
-                  <span className="highlight">travel</span>
-                </h2>
-                <p className="side-text">
-                  Inicia sesión y revisa tus últimos destinos
-                </p>
-              </div>
-            </aside>
+          <form className="signup-form">
+            <div className="input-group">
+              <label>Nombre de usuario</label>
+              <input type="text" placeholder='Nombre de usuario' />
+            </div>
+
+            <div className="input-group">
+              <label>Contraseña</label>
+              <input type="password" placeholder='Constraseña' />
+            </div>
+
+            <div className="social-buttons">
+              <Apple/> <Facebook/> <Google/>
+            </div>
+
+            <p>¿Has olvidado tu contraseña? Haz click{" "}
+            <a>aquí</a></p>
+
+            <Link to='/Profile'>
+              <ButtonMain text='Inicia sesión' />
+            </Link>
+          </form>
+
+          <div className="login-prompt">
+            <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
+            <Link to='/SignUp'>
+              <ButtonSecondary text='Regístrate'/>
+            </Link>
           </div>
         </section>
-      </div>
-    </>
+
+        <section className="text-section">
+          <p className="huge">Haz <em className="huge-special">match</em> con 
+          tu siguente <em className="huge-special">travel</em>
+          </p>
+          <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
+        </section>
+    </main>
   );
 }
 

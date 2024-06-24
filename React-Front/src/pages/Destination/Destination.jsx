@@ -5,7 +5,6 @@ import DestinationCard from '../../components/Cards/DestinationCard/DestinationC
 import Tag from '../../components/Tags/Tag/Tag'
 
 
-// Los Tags, como en el perfil, serán preferiblemente componentes
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
     {tags.map((tag, index) => (
@@ -13,6 +12,7 @@ const TagGroup = ({ tags }) => (
     ))}
   </div>
 );
+
 
 // El array de respuesta del back al cuestionario
 const resultTags = [];
