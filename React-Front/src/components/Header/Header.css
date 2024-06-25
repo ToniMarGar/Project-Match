@@ -1,6 +1,6 @@
 header {
     margin-top: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -9,8 +9,9 @@ header {
 }
 
 .logo {
-    height: 80px;
-    background-color: violet;
+    height: 100%;
+    width: 180px;
+    background-color: rgb(255, 0, 212);
 }
 
 .navigation {

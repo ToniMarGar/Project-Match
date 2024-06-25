@@ -1,10 +1,8 @@
 import * as React from "react";
 import './Tag.css'
 
-function CardTag() {
-  return (
-    <div></div>
-  );
-}
+const Tag = ({ text }) => (
+  <span className="o-tag">{text}</span>
+);
 
-export default CardTag;
+export default Tag;

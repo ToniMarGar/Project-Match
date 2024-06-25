@@ -1,8 +1,8 @@
 import * as React from "react";
 import './ButtonSecondary.css'
 
-function ButtonSecondary() {
-    return  (<button className='secondary'>Regístrate</button>)
+function ButtonSecondary({text}) {
+    return  (<button className='secondary'>{text}</button>)
   }
   
   export default ButtonSecondary
