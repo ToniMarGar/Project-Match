@@ -17,6 +17,7 @@ const Quizz = () => {
 console.log("HOLALALAL")
 
   async function prueba() {
+    console.log(formData);
     const result = await suggestedDestinations({ 
       "travelers": formData.travelers, 
       "weather": formData.weather, 
@@ -27,11 +28,6 @@ console.log("HOLALALAL")
       return result
   }
 
-/*   async function newResult() {
-    const inputResult = await setOneResult({
-
-    })
-  } */
 
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada respuesta del usuario
@@ -45,6 +41,9 @@ console.log("HOLALALAL")
 
   // Estado para manejar la pantalla actual del cuestionario
   const [currentScreen, setCurrentScreen] = useState(0);
+
+  const [destinations, setDestinations] = useState([]);
+
 
   //Manejar el 'cambio de pantallas' entre el cuestionario
   const handleChange = (name, value) => {
@@ -64,31 +63,24 @@ console.log("HOLALALAL")
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
     console.log(formData)
-    if (e) {
-      console.log(e)
       e.preventDefault();
       
       // Aquí puedes agregar la lógica para comparar `formData` con el JSON externo
       //const result = JSONcomparison(formData);
 
-     // console.log(result);
-
      try{
-      const resultt = await prueba();
-      newResult()
-      console.log(resultt)
+      const result = await prueba();
+      console.log(result)
+      setDestinations(result)
 
-      return resultt;
+      handleNextScreen()
+
 
      } catch(error) {
       console.error('Error al obtener datos:', error);
      }
-
-
-   
-
       //console.log(resultt.resolve + " todoOKEY")
-  };
+  
    }
 
  
@@ -127,19 +119,19 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               {/* Para cada click, se ejecuta un cambio de pantalla y cambia el valor de la variable formData por el input seleccionado*/}
               <button text='Solo' className='h-card' 
-              onClick={() => { handleChange('travelers', 'solo'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Solo'); handleNextScreen(); }}
               >Solo</button>
 
               <button text='En familia' className='h-card' 
-              onClick={() => { handleChange('travelers', 'familia'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Familia'); handleNextScreen(); }}
               >En familia</button>
 
               <button text='En pareja' className='h-card' 
-              onClick={() => { handleChange('travelers', 'pareja'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'En pareja'); handleNextScreen(); }}
               >En pareja</button>
 
               <button text='Grupo' className='h-card' 
-              onClick={() => { handleChange('travelers', 'grupo'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Grupo'); handleNextScreen(); }}
               >Grupo</button>
             </div>
           </div>
@@ -224,34 +216,40 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
+                onClick={(e) => { handleChange('continent', 'Europa'); handleSubmit(e); }}
                 >Europa</button>
               </Link>
 
               <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
+                onClick={(e) => { handleChange('continent', 'Asia'); handleSubmit(e); }}
                 >Asia</button>
               </Link>
 
               <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
+                onClick={(e) => { handleChange('continent', 'Africa'); handleSubmit(e); }}
                 >África</button>
               </Link>
 
               <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
+                onClick={(e) => { handleChange('continent', 'America'); handleSubmit(e); }}
                 >América</button>
               </Link>
 
-             {/*  <Link to='/Destination'> */}
-                <button className='h-card' background-image=''
-                onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
+             
+                <button className='h-card'
+                onClick={(e) => { handleChange('continent', 'Oceania'); handleSubmit(e); }}
                 >Oceanía</button>
-              {/* </Link> */}
             </div>
+          </div>
+        )}
+        {currentScreen === 5 && (
+          <div className='destinatios'>
+          {destinations.map((d, idx)=>{
+            return <h1 key={idx}>{d.destination.destinationName}</h1>
+          })}
           </div>
         )}
       </form>
