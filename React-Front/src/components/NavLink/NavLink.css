@@ -9,17 +9,7 @@
     border-radius: 0;
 }
 .nav:hover{
-    display: flex;
-    height: 100%;
-    padding: 0px 4px;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch; 
-    border: 0;
-    border-radius: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(205, 226, 255, 0) 34.5%,
-      #0969ff 100%
-    );
+    padding: 4px;
+    color: #0043B5;
+    font-weight: 700;
 }

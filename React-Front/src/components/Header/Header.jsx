@@ -18,14 +18,14 @@ function Header() {
 
       <nav className="navigation">
         {/*Barra central de navegación*/}
-        <Link to='/'><NavLink text='Home'/></Link>
+        <Link to='/Home'><NavLink text='Home'/></Link>
         <Link to='/Quizz'><NavLink text='Tu destino ideal'/></Link>
-        <Link to='/'><NavLink text='Hazte premium'/></Link>
+        <Link to='/Home'><NavLink text='Hazte premium'/></Link>
       </nav>
 
       <div className="auth-actions">
-        <Link to='/SignUp'> <ButtonMain text='Inicia sesión'/></Link>
-        <Link to='/LogIn'> <ButtonSecondary text='Regístrate'/></Link>
+        <Link to='/LogIn'> <ButtonMain text='Inicia sesión'/></Link>
+        <Link to='/SignUp'> <ButtonSecondary text='Regístrate'/></Link>
       </div>
 
     </header>

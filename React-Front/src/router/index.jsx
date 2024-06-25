@@ -1,7 +1,7 @@
 import { createBrowserRouter ,redirect} from "react-router-dom";
 
 import Root from "../pages/Layouts/root";
-import Home from "../pages/Home/Home";
+import Home from '../pages/Home/Home'
 import SignUp from "../pages/SignUp/SignUp";
 import LogIn from "../pages/LogIn/LogIn";
 import Profile from "../pages/Profile/Profile";
@@ -12,7 +12,7 @@ import NotFound from "../pages/NotFound/NotFound";
 
 
 const router = createBrowserRouter([{
-        path: "/Home",
+        path: "/Profile",
         element: <Root />,
         errorElement: <NotFound/>,
         children:[
