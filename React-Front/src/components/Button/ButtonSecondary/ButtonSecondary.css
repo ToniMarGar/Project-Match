@@ -1,10 +1,10 @@
 .secondary{
     border-color: #FC8C0C;
     color: #FC8C0C;
+    font-weight: 600;
 }
 
 .secondary:hover{
     background-color: #FDB766;
     color: black;
-    font-weight: 600;
 }

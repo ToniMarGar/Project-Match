@@ -1,4 +1,7 @@
 const Quizz = require("../models/quizz.model")
+const User = require('../models/user.model.js'); 
+const cityDB = require('../../database/cities.json');
+const Result = require("../models/result.model.js");
 
 async function getOneQuizz(req, res) {
   try {
@@ -27,6 +30,8 @@ async function getAllQuizz(req, res) {
 }
 
 async function createQuizz(req, res) {
+  const user = await User.findByPk( req.params.id ) // SE USARA EN RESULT
+ 
     try {
         const quizz = await Quizz.create({
           Qtravelers: req.body.Qtravelers,
@@ -35,10 +40,13 @@ async function createQuizz(req, res) {
           Qlocation: req.body.Qlocation,
           Qcontinent: req.body.Qcontinent,
         })
-        return res.status(200).json({message: 'Quizz created', quizz: quizz})
-    } catch (error) {
-        console.log(error)
-    }
+
+  //--------------------------------------------
+  return res.status(200).json({message: 'Quizz created', quizz: first3})
+  
+  } catch (error) {
+      console.log(error)
+  }
 }
 
 
@@ -77,11 +85,57 @@ async function deleteQuizz(req, res) {
   }
 }
 
+async function suggestedDestinations(req,res) {
+    try {
+      // Objeto vacío para resultados
+
+    //console.log(quizz.dataValues);
+
+    const quizResponses = Object.values(req.body)
+    
+    const formattedCities = cityDB.map(city => {
+      let points = 0
+      const cityValues = Object.values(city)
+  
+      // Not travellers criteria
+      for(response of quizResponses) {
+        if (cityValues.includes(response)) points++
+      }
+  
+      // Travellers criteria
+  
+      // City travellers
+      const travellersRange = city.travelers.split("-")
+      const minTravellers = parseInt(travellersRange[0])
+      const maxTravellers = parseInt(travellersRange[1])
+  
+      // User choosen travellers (as it comes in body)
+      const choosenTravellers = req.body.Qtravellers
+  
+      if(choosenTravellers >= minTravellers && choosenTravellers <= maxTravellers) points++
+  
+      return {city, points}
+    })
+  
+    console.log(formattedCities)
+  
+    const rankedCitites = formattedCities.sort((a, b) => b.points - a.points)
+    console.log(rankedCitites)
+    const first3 = rankedCitites.slice(0,3)
+
+    res.status(200).json(first3)
+    } catch (error) {
+      console.log(error.message)
+      res.status(500).send("Error Suggesting Destinations")
+    }
+}
+
 
 module.exports = {
     getAllQuizz,
     getOneQuizz,
     createQuizz,
     updateQuizz,
-    deleteQuizz
+    deleteQuizz,
+    suggestedDestinations
 }

@@ -11,8 +11,8 @@ const Result = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
      },
-    destinationId: {
-      type: DataTypes.INTEGER,
+    destinationName: {
+      type: DataTypes.STRING,
       allowNull: false,
      },
   },
