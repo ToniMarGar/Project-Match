@@ -1,9 +1,15 @@
 import * as React from "react";
 import './Profile.css'
+import { getAllDestinations } from '../../services/destinationServices'
 
 import ProfileCard from '../../components/Cards/ProfileCard/ProfileCard'
 import DestinationCard from '../../components/Cards/DestinationCard/DestinationCard'
 import Tag from '../../components/Tags/Tag/Tag'
+
+async function getThreeDestinations(){
+  const result = await getAllDestinations()
+  return result
+}
 
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
@@ -13,7 +19,19 @@ const TagGroup = ({ tags }) => (
   </div>
 );
 
-function Profile() {
+async function Profile() {
+  try {
+    const destinations = await getThreeDestinations();
+    console.log(destinations+" prpprprprprpr")
+
+    return destinations;
+  } catch (error) {
+    console.log("WEEEEEEEEEEEE")
+
+    console.error('Error al obtener datos:', error);
+
+  }
+ 
   return (
     <main className="profile-container">
         <aside>
