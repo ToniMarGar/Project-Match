@@ -47,6 +47,9 @@
     flex-shrink: 0;
     border-radius: 16px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), lightgray 50% / cover no-repeat;
+    color: white;
+    -webkit-text-stroke: 1,5px rgb(180, 21, 201);
+    
 }
 .v-card{
     display: flex;
@@ -63,3 +66,14 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 10
     box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.40); 
     font-weight: 900;
 }
+
+ 
+/*     .background-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+ */
