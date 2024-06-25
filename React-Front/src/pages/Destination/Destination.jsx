@@ -25,7 +25,7 @@ function Destination() {
   return (
     <main className="travel-recommendations">
       <section className="preferences-section">
-        <TagGroup key={index} text={pref} />
+       {/*  <TagGroup key={index}  text={pref}  /> */}
         <h1> Según tus preferencias, tus destinos ideales son: </h1>
       </section>
 

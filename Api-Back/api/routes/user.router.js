@@ -10,7 +10,7 @@ const {
 
 const router = require('express').Router() 
 
-router.get("/:id", checkAuth,checkAdmin, getOneUser);
+router.get("/:id", checkAuth, getOneUser);
 router.get("/",checkAuth,checkAdmin,getAllUsers);
 router.post("/",checkAuth,createUser);
 router.put("/:id",checkAuth,updateUser);

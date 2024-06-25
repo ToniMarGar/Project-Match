@@ -16,6 +16,7 @@ async function getOneDestination(req, res) {
 
 async function getAllDestinations(req, res) {
   try {
+    console.log(res.locals.user.id)
     const destinations = await Destination.findAll({ paranoid: false })
     if (destinations) {
       return res.status(200).json(destinations)

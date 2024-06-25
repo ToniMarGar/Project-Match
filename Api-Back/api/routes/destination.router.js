@@ -1,4 +1,4 @@
-
+const { checkAuth,checkAdmin } = require("../middleware/index.js");
 const {
     getOneDestination,
     getAllDestinations,
@@ -9,10 +9,10 @@ const {
 
 const router = require('express').Router()
 
-router.get('/:id', getOneDestination)
-router.get('/', getAllDestinations)
-router.post('/', createDestination)
-router.put('/:id', updateDestination)
-router.delete('/:id', deleteDestination)
+router.get('/:id',checkAuth, getOneDestination)
+router.get('/',checkAuth, getAllDestinations)
+router.post('/',checkAuth, createDestination)
+router.put('/:id',checkAuth, updateDestination)
+router.delete('/:id',checkAuth, deleteDestination)
 
 module.exports = router

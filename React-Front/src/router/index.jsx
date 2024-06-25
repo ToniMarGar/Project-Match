@@ -2,14 +2,14 @@ import { createBrowserRouter ,redirect} from "react-router-dom";
 
 import Root from "../pages/Layouts/root";
 import Home from "../pages/Home/Home";
-import SignUp from "../pages/SignUp/SignUp";
+/* import SignUp from "../pages/SignUp/SignUp"; */
+import {SignUp} from '../pages/SignUp/SignUp'
 import LogIn from "../pages/LogIn/LogIn";
 import Profile from "../pages/Profile/Profile";
 import Quizz from "../pages/Quizz/Quizz";
 import Destination from '../pages/Destination/Destination'
 import FinalDestination from '../pages/FinalDestination/FinalDestination'
 import NotFound from "../pages/NotFound/NotFound";
-
 
 const router = createBrowserRouter([{
         path: "/",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([{
             },
             {
                 path: "/SignUp",
-                element: <SignUp />,
+                element:  <SignUp/> ,
             },
             {
                 path: "/LogIn",
@@ -31,14 +31,6 @@ const router = createBrowserRouter([{
             {
                 path: "/Profile",
                 element: <Profile />,
-                loader: () => {
-                    if (localStorage.role != "Admin") {
-                       alert("No eres admin")
-                        return redirect("/")
-                    }else {
-                        return null
-                    }
-                }
             },
             {
                 path: "/Quizz",

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
-import { LinearProgress } from '@mui/material';
-
+import {setOneResult} from '../../services/result';
 
 
 // La llamada al Back para revisar la información es destinationSearch
@@ -15,6 +14,7 @@ import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 // import DefaultCard from '../../components/Cards/DefaultCard/DefaultCard';
 
 const Quizz = () => {
+console.log("HOLALALAL")
 
   async function prueba() {
     const result = await suggestedDestinations({ 
@@ -27,6 +27,12 @@ const Quizz = () => {
       return result
   }
 
+/*   async function newResult() {
+    const inputResult = await setOneResult({
+
+    })
+  } */
+  
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada respuesta del usuario
   const [formData, setFormData] = useState({
@@ -66,7 +72,7 @@ const Quizz = () => {
 
      try{
       const resultt = await prueba();
-
+      newResult()
       console.log(resultt)
 
       return resultt;
