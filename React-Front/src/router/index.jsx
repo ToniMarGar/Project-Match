@@ -1,4 +1,5 @@
 import { createBrowserRouter ,redirect} from "react-router-dom";
+
 import Root from "../pages/Layouts/root";
 import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound/NotFound";
@@ -11,12 +12,12 @@ import FinalDestination from "../pages/FinalDestination/FinalDestination";
 
 
 const router = createBrowserRouter([{
-        path: "/Home",
+        path: "/",
         element: <Root />,
         errorElement: <NotFound/>,
         children:[
             {
-                path: "/Home",
+                path: "/",
                 element: <Home />,
             },
             {
@@ -44,11 +45,11 @@ const router = createBrowserRouter([{
                 element: <Quizz />,
             },
             {
-                path: "/Destination",
+                path: "/Results",
                 element: <Destination />,
             },
             {
-                path: "/Destination/Result",
+                path: "/Your-destination",
                 element: <FinalDestination />,
             },
             

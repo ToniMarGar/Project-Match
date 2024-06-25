@@ -29,7 +29,7 @@ function Destination() {
       </section>
 
       <section className="destinations-grid">
-        <Link to='/Destination/Result'>
+        <Link to='/Your-destination'>
           {destinations.map((dest, index) => (
             <DestinationCard key={index} {...dest} />
           ))}

@@ -173,31 +173,31 @@ const Quizz = () => {
           <div className='content'>
             <h1>Por último, ¿tienes algún continente de preferencia?</h1>
             <div className='card-selection'>
-              <Link to='/Destination'>
+              <Link to='/Results'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
                 >Europa</button>
               </Link>
 
-              <Link to='/Destination'>
+              <Link to='/Results'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
                 >Asia</button>
               </Link>
 
-              <Link to='/Destination'>
+              <Link to='/Results'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
                 >África</button>
               </Link>
 
-              <Link to='/Destination'>
+              <Link to='/Results'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
                 >América</button>
               </Link>
 
-              <Link to='/Destination'>
+              <Link to='/Results'>
                 <button className='h-card' background-image=''
                 onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
                 >Oceanía</button>

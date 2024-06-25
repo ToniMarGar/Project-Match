@@ -19,9 +19,9 @@ function Header() {
 
       <nav className="navigation">
         {/*Barra central de navegación*/}
-        <Link to='/Home'><NavLink text='Home'/></Link>
+        <Link to='/'><NavLink text='Home'/></Link>
         <Link to='/Quizz'><NavLink text='Tu destino ideal'/></Link>
-        <Link to='/Home'><NavLink text='Hazte premium'/></Link>
+        <Link to='/'><NavLink text='Hazte premium'/></Link>
       </nav>
 
       <div className="auth-actions">
