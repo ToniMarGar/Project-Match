@@ -99,6 +99,8 @@ async function suggestedDestinations(req,res) {
   
       // Not travellers criteria
       for(response of quizResponses) {
+        console.log(cityValues);
+        console.log(response);
         if (cityValues.includes(response)) points++
       }
   
@@ -113,14 +115,12 @@ async function suggestedDestinations(req,res) {
       const choosenTravellers = req.body.Qtravellers
   
       if(choosenTravellers >= minTravellers && choosenTravellers <= maxTravellers) points++
-  
+  console.log( req.body.Qtravellers);
       return {city, points}
     })
   
-    console.log(formattedCities)
-  
     const rankedCitites = formattedCities.sort((a, b) => b.points - a.points)
-    console.log(rankedCitites)
+    console.log(req.body)
     const first3 = rankedCitites.slice(0,3)
 
     res.status(200).json(first3)

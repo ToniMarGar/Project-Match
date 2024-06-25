@@ -32,7 +32,7 @@ console.log("HOLALALAL")
 
     })
   } */
-  
+
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada respuesta del usuario
   const [formData, setFormData] = useState({
@@ -52,6 +52,8 @@ console.log("HOLALALAL")
       ...formData,
       [name]: value
     });
+    console.log(name, value)
+    console.log(formData)
   };
 
    // Manejar el cambio de pantalla del cuestionario
@@ -61,6 +63,7 @@ console.log("HOLALALAL")
 
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
+    console.log(formData)
     if (e) {
       console.log(e)
       e.preventDefault();
@@ -243,11 +246,11 @@ console.log("HOLALALAL")
                 >América</button>
               </Link>
 
-              <Link to='/Destination'>
+             {/*  <Link to='/Destination'> */}
                 <button className='h-card' background-image=''
                 onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
                 >Oceanía</button>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         )}
