@@ -25,11 +25,11 @@ function Home() {
 
       <section className="travel-match-quizz">
         <div className="image-quizz-setion">
-          <img 
+          {/* <img 
             src={img}
             alt={name}
             className="final-destination-image" 
-          />
+          /> */}
         </div>
 
         <div className="intro-quizz-section">
@@ -46,11 +46,11 @@ function Home() {
       </section>
 
       <section className="travel-match-quizz">
-        <img 
+        {/* <img 
           src={quizzImg}
           alt='Haz el quizz'
           className="home-img" 
-        />
+        /> */}
 
         <div className="text-home-section">
           <h2>¿Cómo funciona Travel-Match?</h2>
@@ -76,11 +76,11 @@ function Home() {
           </Link>
         </div>
 
-        <img 
+        {/* <img 
           src={signupImg}
           alt='Regístrate'
           className="home-img" 
-        />
+        /> */}
       </section>
 
       <section className="premium-suggestion">
@@ -95,11 +95,11 @@ function Home() {
           </Link>
         </div>
 
-        <img 
+        {/* <img 
           src={premiumImg}
           alt='Plan premium'
           className="home-img" 
-        />
+        /> */}
       </section>
     </main>
   );
