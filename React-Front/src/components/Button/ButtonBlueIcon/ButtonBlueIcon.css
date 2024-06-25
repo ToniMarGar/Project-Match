@@ -1,0 +1,19 @@
+.reservation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 8px 8px 16px;
+    border-radius: 8px;
+    background-color: #0969ff;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+.reservation-button:hover { background-color: #0043B5; }
+
+  .button-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }

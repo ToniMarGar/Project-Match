@@ -1,72 +1,56 @@
-.user-profile {
+.profile-card {
     border-radius: 8px;
     background-color: #f4f4f4;
     display: flex;
+    max-width: 296px;
     flex-direction: column;
     padding: 32px 16px;
 }
 
-.user-profile-header {
+.profile-header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    align-items: center;
 }
 
-.profile-img {
-    aspect-ratio: 1;
-    object-fit: cover;
+.profile-image {
+    object-fit: auto;
+    object-position: center;
     width: 160px;
+    border-radius: 160px;
 }
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 16px;
+.profile-name {
+    color: #000;
+    font: 24px;
+    margin: 16px 0 0;
 }
-
-.user-name {
-    margin: 0;
-}
-
-.user-username {
+.profile-username {
     color: #575757;
+    font: 16px Poppins, sans-serif;
     margin: 0;
-}
-
-.user-plan {
-    color: #575757;
-    text-transform: uppercase;
-    margin-top: 16px;
-    font-family: Poppins, sans-serif;
-    font-weight: 600;
-    font-size: 12px;
 }
 
 hr {
     background-color: #3771c8;
-    margin-top: 32px;
+    margin: 32px 0;
     height: 2px;
     border: none;
-  }
+}
 
-.user-details {
+.profile-details {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 32px;
     font-size: 16px;
 }
 
-section {
+.profile-title {
     display: flex;
-    flex-direction: column;
     margin-top: 24px;
+    flex-direction: column;
 }
 
-.password-buttons {
+.button-group {
     display: flex;
     gap: 16px;
-    margin-top: 12px;
 }

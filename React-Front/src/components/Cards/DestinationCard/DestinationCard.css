@@ -1,0 +1,40 @@
+.travel-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 0.64;
+    max-width: 288px;
+    color: #fff;
+    padding: 24px;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-footer {
+    position: relative;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 244px;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.tag-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}

@@ -1,43 +1,79 @@
 import * as React from "react";
-import ButtonMain from "../Button/ButtonMain/ButtonMain";
+import './Footer.css'
 
-export default function MyComponent() {
+import Facebook from '../../assets/footer-logos/facebook-logo.svg'
+import Instagram from '../../assets/footer-logos/instagram-logo.png'
+import Tiktok from '../../assets/footer-logos/tiktok-logo.svg'
+import Twitter from '../../assets/footer-logos/whatsapp-logo.svg'
+import Whatsapp from '../../assets/footer-logos/x-logo.png'
 
 
+function Footer() {
   return (
-    <footer>
+      <footer>
+        <p>2024 Travel-Match, Inc.</p>
 
-    {/* <section className="newsletter-section">
-        <div className="newsletter-content">
-          <div className="news-text">
-            <h4>Suscríbete a nuestra newsletter</h4>
-            <p>Te mantendremos al tanto de nuevas experiencias alrededor del mundo</p>
-          </div>
+        <div className="social-icons">
+              <img 
+                className='icon-footer'
+                loading="lazy" 
+                src={Facebook}
+                alt="Go to Facebook" 
+              />
+              
+              <img 
+                className='icon-footer'
+                loading="lazy" 
+                src={Instagram}
+                alt="Go to Instagram" 
+              />
 
-          <form>
-            <label htmlFor="emailInput" className="visually-hidden">Introduce tu email</label>
-            <input
-              type="email"
-              id="newsletter-input"
-              placeholder="Introduce tu email"
-            />
-            <ButtonMain type="submit">Suscribirme</ButtonMain>
-          </form>
+              <img 
+                className='icon-footer'
+                loading="lazy" 
+                src={Tiktok}
+                alt="Go to Tiktok" 
+              />
+
+              <img 
+                className='icon-footer'
+                loading="lazy" 
+                src={Twitter}
+                alt="Go to Twitter" 
+              />
+
+              <img 
+                className='icon-footer'
+                loading="lazy" 
+                src={Whatsapp}
+                alt="Go to Whatsapp" 
+              />
         </div>
-        <div className="footer">
-          <p>2024 Travel-Match, Inc.</p>
 
-          <div className="social-icons">
-            <img src='#' alt='Facebook' className="social-icon"/>
-            <img src='#' alt='Instagram' className="social-icon"/>
-            <img src='#' alt='Tiktok' className="social-icon"/>
-            <img src='#' alt='Twitter' className="social-icon"/>
-            <img src='#' alt='WhatsApp' className="social-icon"/>
+      {/* <section className="newsletter-section">
+          <div className="newsletter-content">
+            <div className="news-text">
+              <h4>Suscríbete a nuestra newsletter</h4>
+              <p>Te mantendremos al tanto de nuevas experiencias alrededor del mundo</p>
+            </div>
+
+            <form>
+              <label htmlFor="emailInput" className="visually-hidden">Introduce tu email</label>
+              <input
+                type="email"
+                id="newsletter-input"
+                placeholder="Introduce tu email"
+              />
+              <ButtonMain type="submit">Suscribirme</ButtonMain>
+            </form>
           </div>
+          <div className="footer">
 
-        </div>
-      </section>*/}
-      
-    </footer>
+          </div>
+        </section>*/}
+        
+      </footer>
   );
 }
+
+export default Footer
