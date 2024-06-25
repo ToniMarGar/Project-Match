@@ -5,13 +5,11 @@ import { useState } from "react";
 
 import { signup } from "../../services/auth";
 
-
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
-
 
 export const SignUp=() =>{
   const [username, setUserName] = useState('');

@@ -3,7 +3,7 @@ import './ProfileCard.css'
 import ButtonThird from '../../Button/ButtonThird/ButtonThird'
 
 function ProfileCard({username, firstName, surName, email, profileImg}) {
-
+res.locals.user.id
   return (
     <>
       <article className="profile-card">

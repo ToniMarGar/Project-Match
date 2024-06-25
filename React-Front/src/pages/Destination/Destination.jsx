@@ -5,11 +5,9 @@ import './Destination.css'
 import DestinationCard from '../../components/Cards/DestinationCard/DestinationCard'
 import Tag from '../../components/Tags/Tag/Tag'
 
-
 // El array de respuesta del back al cuestionario
 const resultTags = [];
 const destinations = []
-
 
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
@@ -18,7 +16,6 @@ const TagGroup = ({ tags }) => (
     ))}
   </div>
 );
-
 
 function Destination() {
 
