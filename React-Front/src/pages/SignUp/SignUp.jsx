@@ -41,13 +41,13 @@ function SignUp() {
               <input type="password" placeholder='Constraseña' />
             </div>
 
-            <div className="social-buttons">
-              <Apple/> <Facebook/> <Google/>
-            </div>
-
             <Link to='/Profile'>
               <ButtonMain text='Regístrate' />
             </Link>
+
+            <div className="social-buttons">
+              <Apple/> <Facebook/> <Google/>
+            </div>
           </form>
 
           <div className="login-prompt">
