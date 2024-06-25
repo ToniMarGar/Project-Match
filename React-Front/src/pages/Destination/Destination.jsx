@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Destination.css'
 
 import DestinationCard from '../../components/Cards/DestinationCard/DestinationCard'
 import Tag from '../../components/Tags/Tag/Tag'
 
 
+// El array de respuesta del back al cuestionario
+const resultTags = [];
+const destinations = []
+
+
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
-    {tags.map((tag, index) => (
+    {resultTags.map((tag, index) => (
       <Tag key={index} text={tag} />
     ))}
   </div>
 );
-
-
-// El array de respuesta del back al cuestionario
-const resultTags = [];
-const destinations = []
 
 
 function Destination() {
@@ -29,9 +30,11 @@ function Destination() {
       </section>
 
       <section className="destinations-grid">
-        {destinations.map((dest, index) => (
-          <DestinationCard key={index} {...dest} />
-        ))}
+        <Link to='/Destination/Result'>
+          {destinations.map((dest, index) => (
+            <DestinationCard key={index} {...dest} />
+          ))}
+        </Link>
       </section>
     </main>
   );
