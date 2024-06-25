@@ -4,20 +4,15 @@ import React from 'react'
 import Root from "../Layouts";
 import './App.css'
 
-import Home from './pages/Home/Home'
-import Quizz from './pages/Quizz/Quizz'
-import NotFound from './pages/NotFound/NotFound'
-import FormLogin from './components/FormLogIn'
-import FormSignup from './components/FormSignup'
-import Profile from './pages/Profile/Profile'
-import InfoUser from './components/InfoUser'
-
+// Testing
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <>
-      <FormLogin />
-      <InfoUser />
+      <Header />
+      <Footer />
     </>
   )
 }
