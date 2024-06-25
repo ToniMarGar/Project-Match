@@ -12,12 +12,12 @@ import NotFound from "../pages/NotFound/NotFound";
 
 
 const router = createBrowserRouter([{
-        path: "/",
+        path: "/Home",
         element: <Root />,
         errorElement: <NotFound/>,
         children:[
             {
-                path: "/",
+                path: "/Home",
                 element: <Home />,
             },
             {

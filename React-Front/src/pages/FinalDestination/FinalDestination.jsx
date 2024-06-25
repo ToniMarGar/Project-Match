@@ -33,7 +33,7 @@ function FinalDestination({name, img}) {
                 </div>
               </div>
 
-              <p>Según tus preferencias, creemos que {name} es el destino ideal para ti.</p>
+              <h3>Según tus preferencias, creemos que {name} es el destino ideal para ti.</h3>
 
               <div className="action-buttons">
                 <Link to='/Quizz'>
