@@ -1,8 +1,14 @@
+const { where } = require('sequelize')
 const User = require('../models/user.model')
+const { Where } = require('sequelize/lib/utils')
 
 async function getOneUser(req, res) {
+
     try {
-        const user = await User.findByPk( req.params.id )
+       
+      
+
+        const user = await User.findByPk( res.locals.user.id )
         if (user) {
             return res.status(200).json(user)
         } else {
