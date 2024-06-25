@@ -1,4 +1,5 @@
 .container {
+    text-align: center;
     height: 656px;
     display: flex;
     width: auto;

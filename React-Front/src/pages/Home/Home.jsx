@@ -4,6 +4,9 @@ import './Home.css'
 
 import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 import ButtonBlue from "../../components/Button/ButtonBlue/ButtonBlue";
+import Multiple from '../../assets/home-images/multiple.png'
+import Discover from '../../assets/home-images/discover.png'
+import Disconnect from '../../assets/home-images/disconect.png'
 
 function Home() {
   return (
@@ -24,30 +27,8 @@ function Home() {
 
 
       <section className="travel-match-quizz">
-        <div className="image-quizz-setion">
-          <img 
-            src={img}
-            alt={name}
-            className="final-destination-image" 
-          />
-        </div>
-
-        <div className="intro-quizz-section">
-          <h2>¿Cómo funciona Travel-Match?</h2>
-
-          <h3>¿Alguna vez has querido hacer una escapada pero no encuentras el lugar perfecto? Travel-match te acerca a tu siguente destino.
-          <br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
-          </h3>
-
-          <Link to='/Quizz'>
-              <ButtonIcon text='Pruébalo'></ButtonIcon>
-            </Link>
-        </div>
-      </section>
-
-      <section className="travel-match-quizz">
         <img 
-          src={quizzImg}
+          src={Discover}
           alt='Haz el quizz'
           className="home-img" 
         />
@@ -56,7 +37,7 @@ function Home() {
           <h2>¿Cómo funciona Travel-Match?</h2>
 
           <h3>¿Alguna vez has querido hacer una escapada pero no encuentras el lugar perfecto? Travel-match te acerca a tu siguente destino.
-          <br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
+          <br /><br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
           </h3>
 
           <Link to='/Quizz'>
@@ -77,7 +58,7 @@ function Home() {
         </div>
 
         <img 
-          src={signupImg}
+          src={Multiple}
           alt='Regístrate'
           className="home-img" 
         />
@@ -96,7 +77,7 @@ function Home() {
         </div>
 
         <img 
-          src={premiumImg}
+          src={Disconnect}
           alt='Plan premium'
           className="home-img" 
         />
