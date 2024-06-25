@@ -1,12 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import './Header.css'
+
 
 // Componentes
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../NavLink/NavLink";
 
-import './Header.css'
 
 function Header() {
   return (

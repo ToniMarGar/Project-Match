@@ -21,7 +21,6 @@ const TagGroup = ({ tags }) => (
 
 
 function Destination() {
-
   return (
     <main className="travel-recommendations">
       <section className="preferences-section">
