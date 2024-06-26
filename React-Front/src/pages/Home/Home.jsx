@@ -4,6 +4,9 @@ import './Home.css'
 
 import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 import ButtonBlue from "../../components/Button/ButtonBlue/ButtonBlue";
+import Multiple from '../../assets/home-images/multiple.png'
+import Discover from '../../assets/home-images/discover.png'
+import Disconnect from '../../assets/home-images/disconect.png'
 
 function Home() {
   return (
@@ -24,13 +27,9 @@ function Home() {
 
 
       <section className="travel-match-quizz">
-        <div className="image-quizz-setion">
-          {/* <img 
-            src={img}
-            alt={name}
-            className="final-destination-image" 
-          /> */}
-        </div>
+        <img 
+          src={Discover}
+        ></img>
 
         <div className="intro-quizz-section">
           <h2>¿Cómo funciona Travel-Match?</h2>
@@ -46,17 +45,17 @@ function Home() {
       </section>
 
       <section className="travel-match-quizz">
-        {/* <img 
+        <img 
           src={quizzImg}
           alt='Haz el quizz'
           className="home-img" 
-        /> */}
+        />
 
         <div className="text-home-section">
           <h2>¿Cómo funciona Travel-Match?</h2>
 
           <h3>¿Alguna vez has querido hacer una escapada pero no encuentras el lugar perfecto? Travel-match te acerca a tu siguente destino.
-          <br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
+          <br /><br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
           </h3>
 
           <Link to='/Quizz'>
@@ -76,11 +75,11 @@ function Home() {
           </Link>
         </div>
 
-        {/* <img 
-          src={signupImg}
+        <img 
+          src={Multiple}
           alt='Regístrate'
           className="home-img" 
-        /> */}
+        />
       </section>
 
       <section className="premium-suggestion">
@@ -95,11 +94,11 @@ function Home() {
           </Link>
         </div>
 
-        {/* <img 
-          src={premiumImg}
+        <img 
+          src={Disconnect}
           alt='Plan premium'
           className="home-img" 
-        /> */}
+        />
       </section>
     </main>
   );

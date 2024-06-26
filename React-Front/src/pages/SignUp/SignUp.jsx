@@ -76,6 +76,10 @@ export const SignUp=() =>{
           required/>
             </div>
 
+            <Link to='/Profile'>
+              <ButtonMain text='Regístrate' />
+            </Link>
+
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
