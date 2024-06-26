@@ -3,20 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
-<<<<<<< HEAD
 import './LogIn.css'
 
-=======
->>>>>>> 4ea830b1356d3db93bf5276398e9f7f1bebb6cfa
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
-<<<<<<< HEAD
-=======
-import './LogIn.css'
->>>>>>> 4ea830b1356d3db93bf5276398e9f7f1bebb6cfa
 
 function LogIn() {
   const [username, setUsername] = useState('');
@@ -58,7 +51,6 @@ function LogIn() {
           }}
           required/>
             </div>
-<<<<<<< HEAD
 
               <div className="input-group">
                 <p>¿Has olvidado tu contraseña? Haz click{" "}
@@ -76,8 +68,6 @@ function LogIn() {
                 <Apple/> <Facebook/> <Google/>
               </div>
             </form>
-=======
->>>>>>> 4ea830b1356d3db93bf5276398e9f7f1bebb6cfa
 
               <ButtonMain text='Inicia sesión' func={
             handleLogIn
@@ -86,7 +76,6 @@ function LogIn() {
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
-             </form>
             
             <div className="login-prompt">
               <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
