@@ -1,8 +1,16 @@
+.full{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .home-page{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-self: stretch;
+    width: 1400px;
 }
 
 .hero {
@@ -19,7 +27,6 @@
 
 .hero-content {
     padding: 120px;
-    position: relative;
     display: flex;
     width: 520px;
     flex-direction: column;
@@ -27,39 +34,23 @@
     align-items:center
 }
 
-.h-text{
-    text-align:left;
-}
-
-.travel-match-quizz {
-    display: flex;
-    padding: 80px;
-    align-items: center;
-    gap: 64px;
-    align-self: stretch;
-}
+.h-text{ text-align:left; }
 
 .home-img {
     border-radius: 24px;
     width: 544px;
-    max-width: 100%;
     height: 496px;
-    margin: 0 auto;
+    margin: 0;
 }
 
-.intro-quizz-section {
+.white-container{
+    width: 1400px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.signup-cta{
-    display: flex;
-    padding: 64px;
-    justify-content: flex-end;
+    flex-direction:row;
+    padding: 40px;
     align-items: center;
-    gap: 80px;
+    justify-content: center;
+    gap: 120px;
 }
 
 .text-home-section{
@@ -72,9 +63,13 @@
 }
 
 .premium-suggestion{
+    width: 1400px;
     display: flex;
-    padding: 80px;
+    flex-direction:row;
+    padding-top: 64px;
+    padding-bottom: 80px;
     align-items: center;
-    gap: 80px;
+    justify-content: center;
+    gap: 120px;
     background: #FFE9CC;
 }

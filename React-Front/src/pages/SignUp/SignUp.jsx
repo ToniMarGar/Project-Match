@@ -31,79 +31,79 @@ export const SignUp=() =>{
         navigate("/Profile")
       }
       return (
-    <main className="registration-page">
-        <section className="form-section">
-
-          <form className="signup-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="input-group">
-              <label>Nombre de usuario</label>
-              <input type="text" placeholder='Nombre de usuario' onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          required/>
-            </div>
-
-            <div className="input-group">
-              <label>Nombre</label>
-              <input type="text" placeholder='Nombre' onChange={(e) => {
-            setFirstName(e.target.value);
-          }}
-          required/>
-            </div>
-
-            <div className="input-group">
-              <label>Apellido</label>
-              <input type="text" placeholder='Apellido' onChange={(e) => {
-            setSurName(e.target.value);
-          }}
-          required/>
-            </div>
-
-            <div className="input-group">
-              <label>Email</label>
-              <input type="mail" placeholder='Email' onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-         value={email}
-          required/>
-            </div>
-
-            <div className="input-group">
-              <label>Contraseña</label>
-              <input type="password" placeholder='Constraseña' onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          required/>
-            </div>
-
-            <Link to='/Profile'>
-              <ButtonMain text='Regístrate' />
-            </Link>
-
-            <div className="social-buttons">
-              <Apple/> <Facebook/> <Google/>
-            </div>
-
-            
-              <ButtonMain text='Regístrate' func={handleSignUp}/>
-          </form>
-
-          <div className="login-prompt">
-            <p className="meta">¿YA TIENES UNA CUENTA?</p>
-             <Link to='/LogIn'>
-              <ButtonSecondary text='Inicia Sesión'/>
-            </Link> *
-          </div>
-        </section>
-
-        <section className="text-section">
-          <p className="huge">Haz <em className="huge-special">match</em> con 
-          tu siguente <em className="huge-special">travel</em>
-          </p>
-          <h1 className='blue'>Regístrate para guardar los destinos 
-          seleccionados especialmente para ti</h1>
-        </section>
-    </main>
-  );
+        <main className="general-container">
+          <section className="registration-page">
+              <section className="form-section">
+    
+                <form className="signup-form" onSubmit={(e) => e.preventDefault()}>
+                  <div className="input-group">
+                    <label>Nombre de usuario</label>
+                    <input type="text" placeholder='Nombre de usuario' onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
+                required/>
+                  </div>
+    
+                  <div className="input-group">
+                    <label>Nombre</label>
+                    <input type="text" placeholder='Nombre' onChange={(e) => {
+                  setFirstName(e.target.value);
+                }}
+                required/>
+                  </div>
+    
+                  <div className="input-group">
+                    <label>Apellido</label>
+                    <input type="text" placeholder='Apellido' onChange={(e) => {
+                  setSurName(e.target.value);
+                }}
+                required/>
+                  </div>
+    
+                  <div className="input-group">
+                    <label>Email</label>
+                    <input type="mail" placeholder='Email' onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              value={email}
+                required/>
+                  </div>
+    
+                  <div className="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" placeholder='Constraseña' onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+                required/>
+                  </div>
+    
+                  <Link to='/Profile'>
+                  <ButtonMain text='Regístrate' func={handleSignUp}/>
+                  </Link>
+    
+                  <div className="social-buttons">
+                    <Apple/> <Facebook/> <Google/>
+                  </div>
+    
+                </form>
+    
+                <div className="login-prompt">
+                  <p className="meta">¿YA TIENES UNA CUENTA?</p>
+                  <Link to='/LogIn'>
+                    <ButtonSecondary text='Inicia Sesión'/>
+                  </Link>
+                </div>
+              </section>
+    
+              <section className="text-section">
+                <p className="huge">Haz <em className="huge-special">match</em> con 
+                tu siguente <em className="huge-special">travel</em>
+                </p>
+                <h1 className='blue'>Regístrate para guardar los destinos 
+                seleccionados especialmente para ti</h1>
+              </section>
+          </section>
+        </main>
+        );
 }
 
