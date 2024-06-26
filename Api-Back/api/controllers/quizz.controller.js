@@ -89,6 +89,8 @@ async function suggestedDestinations(req,res) {
     try {
       // Objeto vacío para resultados
 
+    console.log(req.body);
+
     const quizResponses = Object.values(req.body)
     
     const formattedCities = cityDB.map(city => {
@@ -98,24 +100,28 @@ async function suggestedDestinations(req,res) {
       for(response of quizResponses) {
         if (cityValues.includes(response)) points++
       }
-  
-      // Travellers criteria
-  
-      /* // City travellers ICNLUDES(OPCIONES USUARIO)
-      const travellersRange = city.travelers.split("-")
-      const minTravellers = parseInt(travellersRange[0])
-      const maxTravellers = parseInt(travellersRange[1])
-
       
-      // User choosen travellers (as it comes in body)
-      const choosenTravellers = req.body.Qtravellers
-      
-      if(choosenTravellers >= minTravellers && choosenTravellers <= maxTravellers) points++
-      return {city, points}
-    */
-    
     const matchTravelers = city.travelers.includes(req.body.travelers)
-    if(matchTravelers) points++
+
+    const matchContinent = city.continent.includes(req.body.continent)
+
+    const matchWeather = city.continent.includes(req.body.weather)
+
+    const matchExperience = city.experience.includes(req.body.experience)
+
+    const matchLocation = city.location.includes(req.body.location)
+
+
+    if(matchTravelers) points+=2
+
+    if(matchContinent) points+=4
+
+    if(matchWeather) points+=2
+
+    if(matchExperience) points+=2
+
+    if(matchLocation) points+=3
+    
 
     return {destination: city, points: points}
   }) 
