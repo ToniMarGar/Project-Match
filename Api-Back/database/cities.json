@@ -70,7 +70,6 @@
   {"destinationName": "Antananarivo", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
   {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "New York", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Rio de Janeiro", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Fiesta"},
   {"destinationName": "Mexico City", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Lima", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Santiago", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
