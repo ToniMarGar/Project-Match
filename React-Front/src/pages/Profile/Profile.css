@@ -1,15 +1,27 @@
 .profile-container {
-    
+    display: flex;
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      max-width: 1127px;
+      gap: 80px;
+      padding: 40px 60px;
   }
 
 aside {
-    width: 25%;
+    width: 85%;
     background-color: #f4f4f4;
     border-radius: 8px;
     padding: 32px 16px;
 }
 
-.preferences{
+.form-section {
+  width: 400px;
+  border-right: 1px solid rgba(9, 105, 255, 1);
+  gap: 0;
+}
+
+/* .preferences{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,7 +33,7 @@ aside {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-}
+} */
 
 .result-section {
   display: flex;

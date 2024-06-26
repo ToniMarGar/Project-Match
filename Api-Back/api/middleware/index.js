@@ -12,7 +12,7 @@ function checkAuth(req, res, next) {
             async (err, result) => {
                 if (err) return res.status(401).send("Token not valid")
                 const user = await User.findOne({
-                    where: { email: result.email }
+                    where: { username: result.username }
                 })
                 if (!user) return res.status(401).send("User not found")
 

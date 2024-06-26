@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-import './LogIn.css'
+import { Link, useNavigate } from "react-router-dom"; 
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
@@ -9,78 +8,75 @@ import Facebook from '../../components/Button/AltLogInButton/FacebookButton/Face
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import './LogIn.css'
 
 function LogIn() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
     
     const handleLogIn = async () => {
       try {
-        let data = { email: email, password: password }
+        let data = { username: username, password: password }
         const result = await login(data)
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
-        setEmail("")
-
+        navigate("/Profile")
       } catch (error) {
         console.log(error)
         toast.error ('Error al hacer Login.')
       }
     }
   return (
-    <main className="registration-page">
-      <Toaster />
-        <section className="form-section">
+    <main className="general-container">
+      <section className="registration-page">
+        <Toaster />
+          <section className="form-section">
 
-          <form className="signup-form">
+          <form className="signup-form" onClick={(e) => e.preventDefault()}>
             <div className="input-group">
               <label>Nombre de usuario</label>
               <input type="text" placeholder='Nombre de usuario' onChange={(e) => {
-            setEmail(e.target.value);
+            setUsername(e.target.value);
           }}
           required/>
             </div>
 
             <div className="input-group">
               <label>Contraseña</label>
-              <input type="password" placeholder='Constraseña' type="password"
+              <input type="password" placeholder='Constraseña'
           onChange={(e) => {
             setPassword(e.target.value);
           }}
           required/>
             </div>
 
+              <ButtonMain text='Inicia sesión' func={
+            handleLogIn
+          }/>
+    
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
+             </form>
+            
+            <div className="login-prompt">
+              <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
+              <Link to='/SignUp'>
+                <ButtonSecondary text='Regístrate'/>
+              </Link>
+            </div>
+          </section>
+         
 
-            <p>¿Has olvidado tu contraseña? Haz click{" "}
-            <a>aquí</a></p>
-
-            <Link to='/Profile'>
-              <ButtonMain text='Inicia sesión' onClick={(e) => {
-            e.preventDefault();
-            handleLogIn();
-          }}/>
-            </Link>
-          </form>
-
-          <div className="login-prompt">
-            <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
-            <Link to='/SignUp'>
-              <ButtonSecondary text='Regístrate'/>
-            </Link>
-          </div>
-        </section>
-
-        <section className="text-section">
-          <p className="huge">Haz <em className="huge-special">match</em> con 
-          tu siguente <em className="huge-special">travel</em>
-          </p>
-          <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
-        </section>
+          <section className="text-section">
+            <p className="huge">Haz match con tu siguente travel
+            </p>
+            <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
+          </section>
+      </section>
     </main>
   );
 }
 
-export default LogIn
+export default LogIn;

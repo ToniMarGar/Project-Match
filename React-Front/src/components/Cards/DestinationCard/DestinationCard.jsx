@@ -3,7 +3,6 @@ import './DestinationCard.css'
 
 import CardTag from '../../Tags/CardTag/CardTag'
 
-
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
     {tags.map((tag, index) => (
@@ -11,7 +10,6 @@ const TagGroup = ({ tags }) => (
     ))}
   </div>
 );
-
 
 function DestinacionCard({name, img}) {
   return (

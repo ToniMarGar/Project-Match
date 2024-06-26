@@ -18,12 +18,12 @@ try{
     // Crea un nuevo usuario en la base de datos con la informacion proporcionada en req.body
     const user = await User.create(req.body)
     // Define el payload del token JWT siendo el email en este caso [CAMBIAR]
-    const payload = {email: req.body.email}
+    const payload = {username: req.body.username}
     // Genera un token JWT firmado con una clave secreta env.SECRET que expira en 1 hora
     const token = jwt.sign(payload,process.env.SECRET,{ expiresIn: '1h' })
   
     // Si todo va bien devuelve una respuesta con un estado 200 que es OK y un objeto JSON que contiene el token, rol de usuario y su email
-    return res.status(200).json({token, role: user.role, user: user.email}) 
+    return res.status(200).json({token, role: user.role, user: user.username}) 
 }
 catch(error){
     // En caso de error lo captura  y devuelve una respuesta con un estado 500 ERROR DE SERVIDOR y mensaje de error
@@ -35,7 +35,7 @@ async function Login(req, res){
     try {
         // Busca un usuario en la BD en donde el email coincida con el porporcionado en req.body.email
         const user = await User.findOne({
-            where:{email:req.body.email}
+            where:{username:req.body.username}
         })
 
 // Si no se encuentra el usuario devuelve una respuesta con un estado 404 no encontrado junto a un mensaje de error
@@ -47,7 +47,7 @@ const comparePass = bcrypt.compareSync(req.body.password,user.password)
 // Si las contraseñas coinciden se define el payload del token JWT, genera un token JWT firmado con una clave secreta env.SECRET 
 // y devuelve una respuesta con estado 200 ok y un onjeto JSON que contiene el token y el rol del usuario.
 if(comparePass) {
-    const payload = {email :user.email}
+    const payload = {username :user.username}
     const token = jwt.sign(payload,process.env.SECRET)
     return res.status(200).json({token, role: user.role})
     // Si las contraseñas no coinciden se devuelve una respuesta con estado 404 no encontrado junto un mensaje de error

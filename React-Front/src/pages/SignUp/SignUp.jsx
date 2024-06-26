@@ -1,16 +1,13 @@
 import * as React from "react";
- import { Link, Navigate, redirect, useNavigate } from "react-router-dom"; 
-import './SignUp.css'
+import { Link, useNavigate } from "react-router-dom"; 
 import { useState } from "react";
-
 import { signup } from "../../services/auth";
-
-
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import './SignUp.css'
 
 export const SignUp=() =>{
   const [username, setUserName] = useState('');
@@ -18,16 +15,15 @@ export const SignUp=() =>{
   const [surname, setSurName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-      const navigate = useNavigate();
-    const handleSignUp = async () => { 
+  const navigate = useNavigate();
+  const handleSignUp = async () => { 
       
         let data = { username: username, firstname: firstname, surname: surname, email: email, password: password }
         const result = await signup(data)
         console.log(result)
-        localStorage.setItem("userEmail", result.user)
+        localStorage.setItem("userUsername", result.user)
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
-        setEmail("")
         navigate("/Profile")
       }
       return (
@@ -75,13 +71,13 @@ export const SignUp=() =>{
           }}
           required/>
             </div>
+            
+              <ButtonMain text='Regístrate' func={handleSignUp}/>
 
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
 
-            
-              <ButtonMain text='Regístrate' func={handleSignUp}/>
           </form>
 
           <div className="login-prompt">

@@ -6,12 +6,21 @@ import Instagram from '../../assets/footer-logos/instagram-logo.png'
 import Tiktok from '../../assets/footer-logos/tiktok-logo.svg'
 import Twitter from '../../assets/footer-logos/whatsapp-logo.svg'
 import Whatsapp from '../../assets/footer-logos/x-logo.png'
+import Logo from '../../assets/brand-assets/travel-match-logo-02.png'
 
 
 function Footer() {
   return (
       <footer>
-        <p>2024 Travel-Match, Inc.</p>
+        <section className="brand-section">
+          <img 
+            className='icon-footer'
+            loading="lazy" 
+            src={Logo}
+            alt="TravelMatchTM" 
+          />
+          <p>2024 Travel-Match, Inc.</p>
+        </section>
 
         <div className="social-icons">
               <img 

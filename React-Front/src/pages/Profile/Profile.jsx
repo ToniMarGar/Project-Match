@@ -29,21 +29,15 @@ const TagGroup = ({ tags }) => (
   return (
 
     <main className="profile-container">
-        <aside>
+        <section className="form-section">
+        <aside >
           <ProfileCard/> 
         </aside>
-
-        <main className='preferences'>
-          <section className="preferences-section">
-            <h2>Mis preferencias</h2>
-            {/* <TagGroup/> */}
-          </section>
-
-          <section className="result-section">
-            <h2>Mis últimos cuestionarios</h2>
+        </section>
+        <section className="result-section">
+          <h2>Mis últimos cuestionarios</h2>
              
           </section>
-        </main>
       </main>
   )
 }
