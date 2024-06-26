@@ -1,22 +1,12 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-
 import {setOneResult} from '../../services/result';
-
-
-=======
-import { setNewQuizz } from '../../services/newQuizz';
-
-import { Link } from "react-router-dom";
->>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
 import './Quizz.css'
 
 import Tag from '../../components/Tags/Tag/Tag'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
-import ButtonSkyscanner from '../../components/Button/ButtonBlueIcon/ButtonBlueIcon'
 
 const Quizz = () => {
 
