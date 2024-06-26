@@ -16,7 +16,6 @@ import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 // import DefaultCard from '../../components/Cards/DefaultCard/DefaultCard';
 
 const Quizz = () => {
-console.log("HOLALALAL")
 
   async function prueba() {
     console.log(formData);
@@ -62,6 +61,10 @@ console.log("HOLALALAL")
     setCurrentScreen(currentScreen + 1);
   };
 
+  // El final
+  const [finalResult, setFinalResult] = useState("")
+  console.log(finalResult)
+
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
     console.log(formData)
@@ -80,6 +83,11 @@ console.log("HOLALALAL")
      }  
    }
 
+   const handleSelection = async (e) => {
+    handleNextScreen()
+
+   }
+
   // Función para comparar formData con los destinos del JSON externo
   const JSONcomparison = (formData) => {
     return destinationName.filter(destinationName => 
@@ -90,8 +98,6 @@ console.log("HOLALALAL")
       destinationName.continent === formData.continent
     );
   };
-
-
 
   return (
     <div className='container'>
@@ -236,19 +242,32 @@ console.log("HOLALALAL")
                 onClick={() => { handleChange('continent', 'América'); handleSubmit(); }}
                 >América</button>
 
-             {/*  <Link to='/Destination'> */}
                 <button className='h-card' background-image=''
                 onClick={() => { handleChange('continent', 'Oceanía'); handleSubmit(); }}
                 >Oceanía</button>
-              {/* </Link> */}
             </div>
           </div>
         )}
         {currentScreen === 5 && (
-          <div className='destinatios'>
-          {destinations.map((d, idx)=>{
-            return <h1 key={idx}>{d.destination.destinationName}</h1>
-          })}
+          <div className='destinations'>
+
+                {destinations.map((d, idx)=>{
+                  return <h1 key={idx} onClick={() => {setFinalResult(d.destination); handleSelection()}}>{d.destination.destinationName}</h1>
+                })}
+          </div>
+        )}
+
+        {currentScreen === 6 && (
+          <div className='finalDestinations'>
+            <h1>Has elegido...</h1>
+            <h2>{finalResult.destinationName}</h2>
+            <h2>{finalResult.experience}</h2>
+            <h2>{finalResult.travelers}</h2>
+            <h2>{finalResult.weather}</h2>
+            <h2>{finalResult.continent}</h2>
+
+
+
           </div>
         )}
       </form>
