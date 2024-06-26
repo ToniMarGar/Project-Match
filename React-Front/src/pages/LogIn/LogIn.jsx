@@ -58,7 +58,6 @@ function LogIn() {
           }}
           required/>
             </div>
-<<<<<<< HEAD
 
               <div className="input-group">
                 <p>¿Has olvidado tu contraseña? Haz click{" "}
@@ -76,8 +75,6 @@ function LogIn() {
                 <Apple/> <Facebook/> <Google/>
               </div>
             </form>
-=======
->>>>>>> 4ea830b1356d3db93bf5276398e9f7f1bebb6cfa
 
               <ButtonMain text='Inicia sesión' func={
             handleLogIn
