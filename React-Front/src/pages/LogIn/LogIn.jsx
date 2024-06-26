@@ -3,16 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
-import './LogIn.css'
-
-
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
 import './LogIn.css'
-
 
 function LogIn() {
   const [username, setUsername] = useState('');
@@ -62,6 +58,7 @@ function LogIn() {
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
+             </form>
             
             <div className="login-prompt">
               <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
@@ -70,6 +67,7 @@ function LogIn() {
               </Link>
             </div>
           </section>
+         
 
           <section className="text-section">
             <p className="huge">Haz match con tu siguente travel
@@ -81,4 +79,4 @@ function LogIn() {
   );
 }
 
-export default LogIn
+export default LogIn;
