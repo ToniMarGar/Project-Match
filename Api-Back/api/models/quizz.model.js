@@ -4,8 +4,13 @@ const { DataTypes } = require("sequelize");
 const Quizz = sequelize.define(
   "quizz",
   {
+    QdestinationName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },
     Qtravelers: {
       type: DataTypes.STRING,
+      allowNull: false,
      },
     Qexperience: {
       type: DataTypes.STRING,

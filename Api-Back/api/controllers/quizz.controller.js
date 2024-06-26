@@ -34,6 +34,7 @@ async function createQuizz(req, res) {
  
     try {
         const quizz = await Quizz.create({
+          QdestinationName: req.body.QdestinationName,
           Qtravelers: req.body.Qtravelers,
           Qexperience: req.body.Qexperience,
           Qweather: req.body.Qweather,

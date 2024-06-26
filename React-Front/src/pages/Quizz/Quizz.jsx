@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
 import { Link } from "react-router-dom";
-import {setOneResult} from '../../services/result';
 import './Quizz.css'
+import {setNewQuizz} from '../../services/newQuizz'
 
 import Tag from '../../components/Tags/Tag/Tag'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
@@ -33,7 +33,7 @@ const Quizz = () => {
     console.log("HIIIIIIIIIIIII");
     console.log(formData.travelers)
     const result = await setNewQuizz({ 
-      "destinationName": formData.destinationName,
+      "QdestinationName": finalResult.destinationName,
       "Qtravelers": formData.travelers,
       "Qexperience": formData.experience,
       "Qweather": formData.weather,
