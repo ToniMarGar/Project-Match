@@ -5,7 +5,7 @@ const Quizz = sequelize.define(
   "quizz",
   {
     Qtravelers: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
      },
     Qexperience: {
       type: DataTypes.STRING,
@@ -23,6 +23,10 @@ const Quizz = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
      },
+     idUser: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     }
   },
    {
     	//opciones

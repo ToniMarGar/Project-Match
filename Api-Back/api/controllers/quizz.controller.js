@@ -39,6 +39,7 @@ async function createQuizz(req, res) {
           Qweather: req.body.Qweather,
           Qlocation: req.body.Qlocation,
           Qcontinent: req.body.Qcontinent,
+          idUser: res.locals.user.id,
         })
 
   //--------------------------------------------
@@ -48,7 +49,6 @@ async function createQuizz(req, res) {
       console.log(error)
   }
 }
-
 
 async function updateQuizz(req, res) {
   try {
@@ -102,27 +102,17 @@ async function suggestedDestinations(req,res) {
       }
       
     const matchTravelers = city.travelers.includes(req.body.travelers)
-
     const matchContinent = city.continent.includes(req.body.continent)
-
     const matchWeather = city.continent.includes(req.body.weather)
-
     const matchExperience = city.experience.includes(req.body.experience)
-
     const matchLocation = city.location.includes(req.body.location)
 
-
     if(matchTravelers) points+=2
-
     if(matchContinent) points+=4
-
     if(matchWeather) points+=2
-
     if(matchExperience) points+=2
-
     if(matchLocation) points+=3
     
-
     return {destination: city, points: points}
   }) 
 
@@ -135,7 +125,6 @@ async function suggestedDestinations(req,res) {
       res.status(500).send("Error Suggesting Destinations")
     }
 }
-
 
 module.exports = {
     getAllQuizz,

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 import {setOneResult} from '../../services/result';
 
 
+=======
+import { setNewQuizz } from '../../services/newQuizz';
+
+import { Link } from "react-router-dom";
+>>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
 import './Quizz.css'
 
 import Tag from '../../components/Tags/Tag/Tag'
@@ -26,6 +32,18 @@ const Quizz = () => {
       return result
   }
 
+  async function prueba2() {
+    console.log("HIIIIIIIIIIIII");
+
+    const result = await setNewQuizz({ 
+      "destinationName": finalResult.destinationName,
+      "Qtravelers": finalResult.travelers,
+      "Qexperience": finalResult.experience,
+      "Qweather": finalResult.weather,
+      "Qlocation": finalResult.location,
+      "Qcontinent": finalResult.continent,
+      }) 
+  }
 
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada rDestinationespuesta del usuario
@@ -82,7 +100,15 @@ const Quizz = () => {
    }
 
    const handleSelection = async (e) => {
-    handleNextScreen()
+    try{
+      const result = await prueba2();
+      handleNextScreen()
+
+      //console.log(result)
+      //setDestinations(result)
+     } catch(error) {
+      console.error('Error al obtener datos:', error);
+     }  
 
    }
 
@@ -254,7 +280,6 @@ const Quizz = () => {
 
         {currentScreen === 5 && (
           <div className='destinations'>
-
                 {destinations.map((d, idx)=>{
                   return <h1 key={idx} onClick={() => {setFinalResult(d.destination); handleSelection()}}>{d.destination.destinationName}</h1>
                 })}
@@ -263,6 +288,7 @@ const Quizz = () => {
 
 
         {currentScreen === 6 && (
+<<<<<<< HEAD
           <div className="content">
           <section className="info-destination-section">
               <div className="recommendation-content">
@@ -298,10 +324,23 @@ const Quizz = () => {
                   </Link>
               </section>
             </section>
+=======
+          <div className='finalDestinations'>
+            <h1>Has elegido...</h1>
+            <h2>{finalResult.destinationName}</h2>
+            <h2>{finalResult.experience}</h2>
+            <h2>{finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})}</h2>
+            <h2>{finalResult.weather}</h2>
+            <h2>{finalResult.continent}</h2>
+>>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
           </div>
       )}
 
       </form>
+<<<<<<< HEAD
+=======
+      {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
+>>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
     </div>
   );
 };

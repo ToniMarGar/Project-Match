@@ -11,9 +11,13 @@ function ProfileCard({username, firstName, surName, email, profileImg}) {
   const navigate = useNavigate();
 
 const cerrarSesion = () => {
+    <Toaster />
      localStorage.removeItem("token");
      localStorage.removeItem("role");
      localStorage.removeItem("userEmail");
+     toast('Hasta pronto!', {
+    icon: '👏',
+    });
      navigate("/LogIn")
   };
 
@@ -40,6 +44,8 @@ const cerrarSesion = () => {
             alt="Profile picture"
             className="profile-image"
           />
+          <hr></hr>
+          <p><ButtonThird text="Cambiar foto de perfil"/></p>
           <p className="profile-name">{data.firstname} {data.surname}</p>
           <p className="profile-username">{data.username}</p>
         </div>
@@ -55,8 +61,6 @@ const cerrarSesion = () => {
           <section className="button-group">
             <label className="profile-title"></label>
             <ButtonThird text="Cambiar contraseña"/>
-          </section>
-          <section>
             <button onClick={cerrarSesion} className="button-close">Cerrar sesion</button>
           </section>
         </main>
