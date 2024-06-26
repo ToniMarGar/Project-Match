@@ -112,19 +112,19 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               {/* Para cada click, se ejecuta un cambio de pantalla y cambia el valor de la variable formData por el input seleccionado*/}
               <button text='Solo' className='h-card' 
-              onClick={() => { handleChange('travelers', 'solo'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Solo'); handleNextScreen(); }}
               >Solo</button>
 
               <button text='En familia' className='h-card' 
-              onClick={() => { handleChange('travelers', 'familia'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Familia'); handleNextScreen(); }}
               >En familia</button>
 
               <button text='En pareja' className='h-card' 
-              onClick={() => { handleChange('travelers', 'pareja'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Pareja'); handleNextScreen(); }}
               >En pareja</button>
 
               <button text='Grupo' className='h-card' 
-              onClick={() => { handleChange('travelers', 'grupo'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'Grupo'); handleNextScreen(); }}
               >Grupo</button>
             </div>
           </div>
@@ -136,32 +136,32 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/cultura.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'cultura'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Cultura'); handleNextScreen(); }}
               >Cultura</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/relax.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'relax'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Relax'); handleNextScreen(); }}
               >Relax</button>
 
               <button className='h-card' sDestinationtyle={{backgroundImage: "url(/src/assets/quizz-card-images/iconos.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'iconos'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Iconos'); handleNextScreen(); }}
               >Lugares icónicos</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/aventura.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'aventura'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Aventura'); handleNextScreen(); }}
               >Aventura</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/fiesta.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'fiesta'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Fiesta'); handleNextScreen(); }}
               >Fiesta</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/turismo.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('experience', 'turismo'); handleNextScreen(); }}
+              onClick={() => { handleChange('experience', 'Turismo'); handleNextScreen(); }}
               >Turismo</button>
             </div>
             </div>
@@ -173,22 +173,22 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/playa.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('location', 'playa'); handleNextScreen(); }}
+              onClick={() => { handleChange('location', 'Playa'); handleNextScreen(); }}
               >Playa</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/ciudad.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('location', 'ciudad'); handleNextScreen(); }}
+              onClick={() => { handleChange('location', 'Ciudad'); handleNextScreen(); }}
               >Ciudad</button>
 
               <button className='h-card' sDestinationtyle={{backgroundImage: "url(/src/assets/quizz-card-images/montana.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('location', 'montana'); handleNextScreen(); }}
+              onClick={() => { handleChange('location', 'Montana'); handleNextScreen(); }}
               >Montaña</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/interior.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('location', 'interior'); handleNextScreen(); }}
+              onClick={() => { handleChange('location', 'Interior'); handleNextScreen(); }}
               >Interior</button>
             </div>
           </div>
@@ -200,18 +200,18 @@ console.log("HOLALALAL")
             <div className='card-selection'>
               <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/soleado.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('weather', 'soleado'); handleNextScreen(); }}
+              onClick={() => { handleChange('weather', 'Soleado'); handleNextScreen(); }}
               >Soleado</button>
               
               <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/frio.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('weather', 'frio'); handleNextScreen(); }}
+              onClick={() => { handleChange('weather', 'Frio'); handleNextScreen(); }}
               >Frío</button>
 
               <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/neutro.jpg)", backgroundSize: "cover" }}
               
-              onClick={() => { handleChange('weather', 'neutro'); handleNextScreen(); }}
-              >Neutral</button>
+              onClick={() => { handleChange('weather', 'Templado'); handleNextScreen(); }}
+              >Templado</button>
             </div>
           </div>
         )}
@@ -220,33 +220,25 @@ console.log("HOLALALAL")
           <div className='content'>
             <h1>Por último, ¿tienes algún continente de preferencia?</h1>
             <div className='card-selection'>
-              <Link to='/Destination'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
                 >Europa</button>
-              </Link>
 
-              <Link to='/Destination'>
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
                 >Asia</button>
-              </Link>
 
-              <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
+                onClick={() => { handleChange('continent', 'África'); handleSubmit(); }}
                 >África</button>
-              </Link>
 
-              <Link to='/Destination'>
                 <button className='h-card' 
-                onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
+                onClick={() => { handleChange('continent', 'América'); handleSubmit(); }}
                 >América</button>
-              </Link>
 
              {/*  <Link to='/Destination'> */}
                 <button className='h-card' background-image=''
-                onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
+                onClick={() => { handleChange('continent', 'Oceanía'); handleSubmit(); }}
                 >Oceanía</button>
               {/* </Link> */}
             </div>
