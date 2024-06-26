@@ -8,3 +8,4 @@ export const getAllDestinations = async (body) => {
     return data
 
 }
+

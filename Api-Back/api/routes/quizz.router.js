@@ -8,10 +8,11 @@ const {
     deleteQuizz,
     suggestedDestinations
 } = require('../controllers/quizz.controller')
+const {checkAuth} = require("../middleware/index")
 
 router.get('/:id', getOneQuizz)
 router.get('/', getAllQuizz)
-router.post('/', createQuizz)
+router.post('/', checkAuth, createQuizz)
 router.put('/:id', updateQuizz)
 router.delete('/:id', deleteQuizz)
 
