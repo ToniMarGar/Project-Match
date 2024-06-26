@@ -261,7 +261,7 @@ const Quizz = () => {
             <h1>Has elegido...</h1>
             <h2>{finalResult.destinationName}</h2>
             <h2>{finalResult.experience}</h2>
-            <h2>{finalResult.travelers}</h2>
+            <h2>{finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})}</h2>
             <h2>{finalResult.weather}</h2>
             <h2>{finalResult.continent}</h2>
 
