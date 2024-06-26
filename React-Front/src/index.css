@@ -38,33 +38,28 @@ body {
 }
 
 .huge {
+  margin-bottom:24px;
   color: #000;
   font-size: 56px;
   font-weight: 400;
   line-height: 120%;
 }
-.huge-special {
-  color: #000000;
-  font-size: 40px;
-  font-style: italic;
-  font-weight: bold;
-  line-height: 120%;
-}
 h1 {
   color: #000;
-  text-align: center;
-  font-size: 56px;
+  margin:0;
+  font-size: 40px;
   font-weight: 600;
   margin-top: 0px;
   margin-bottom: 20px;
   line-height: 120%;
 }
 h2 {
+  margin:0;
   font-size: 32px;
-  line-height: 1.1;
   line-height: 120%;
 }
 p {
+  margin:0;
   color: #000000;
   font-size: 1em;
 }

@@ -50,6 +50,16 @@ function LogIn() {
           required/>
             </div>
 
+            <p>¿Has olvidado tu contraseña? Haz click{" "}
+            <a>aquí</a></p>
+
+            <Link to='/Profile'>
+              <ButtonMain text='Inicia sesión' onClick={(e) => {
+            e.preventDefault();
+            handleLogIn();
+          }}/>
+          </Link>
+
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
@@ -63,6 +73,10 @@ function LogIn() {
             handleLogIn();
           }}/>
             </Link>
+            <div className="login-prompt">
+              <p>¿Has olvidado tu contraseña? Haz click{" "}
+              <a>aquí</a></p>
+            </div>
           </form>
 
           <div className="login-prompt">
@@ -74,8 +88,7 @@ function LogIn() {
         </section>
 
         <section className="text-section">
-          <p className="huge">Haz <em className="huge-special">match</em> con 
-          tu siguente <em className="huge-special">travel</em>
+          <p className="huge">Haz match con tu siguente travel
           </p>
           <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
         </section>
