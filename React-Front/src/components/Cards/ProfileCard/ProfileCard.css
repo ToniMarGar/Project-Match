@@ -5,6 +5,8 @@
     max-width: 296px;
     flex-direction: column;
     padding: 32px 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-header {
@@ -53,4 +55,18 @@ hr {
 .button-group {
     display: flex;
     gap: 16px;
+}
+
+.button-close {
+    display: inline-flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+    color: white;
+    background: #FC8C0C;
+}
+
+.button-close:hover {
+    background: #AE5A00;
 }

@@ -250,7 +250,6 @@ const Quizz = () => {
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'África'); handleSubmit(); }}
                 >África</button>
-
                 <button className='h-card' 
                 onClick={() => { handleChange('continent', 'América'); handleSubmit(); }}
                 >América</button>
