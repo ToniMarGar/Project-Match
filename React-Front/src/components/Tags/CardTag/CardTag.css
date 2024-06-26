@@ -1,12 +1,7 @@
-div {
-    display: flex;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: #FC8C0C;
-    color: #fff;
-    white-space: nowrap;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    font-weight: 600;
-    font-size: 12px;
-  }
+.tag {
+  color: white;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #64a0ff;
+  padding: 4px 12px;
+}

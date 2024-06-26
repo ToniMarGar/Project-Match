@@ -1,14 +1,18 @@
 import React from 'react'
+
+// Llamada al únio layout que tenemos, el que hay
+import Root from "../Layouts";
 import './App.css'
 
-import Home from './pages/Home/Home'
-
+// Testing
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
-
   return (
     <>
-      <Home />
+      <Header />
+      <Footer />
     </>
   )
 }

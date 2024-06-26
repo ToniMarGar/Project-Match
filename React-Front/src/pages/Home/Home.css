@@ -1,0 +1,80 @@
+.home-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+}
+
+.hero {
+    display: flex;
+    height: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    color: white;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%), path-to-image('../../assets/hero.jpg') lightgray 50% / cover no-repeat;
+}
+
+.hero-content {
+    padding: 120px;
+    position: relative;
+    display: flex;
+    width: 520px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center
+}
+
+.h-text{
+    text-align:left;
+}
+
+.travel-match-quizz {
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    gap: 64px;
+    align-self: stretch;
+}
+
+.home-img {
+    border-radius: 24px;
+    width: 544px;
+    max-width: 100%;
+    height: 496px;
+    margin: 0 auto;
+}
+
+.intro-quizz-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.signup-cta{
+    display: flex;
+    padding: 64px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 80px;
+}
+
+.text-home-section{
+    display: flex;
+    width: 464px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    flex-shrink: 0;
+}
+
+.premium-suggestion{
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    gap: 80px;
+    background: #FFE9CC;
+}

@@ -1,0 +1,9 @@
+.o-tag{
+    display: flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #FC8C0C;
+    color: white;
+}

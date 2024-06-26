@@ -1,12 +1,12 @@
 import * as React from "react";
 import './DefaultCard.css'
 
-function DefaultCard() {
+function DefaultCard({text}) {
   return (
-    <div>
+    <button>
         <img loading="lazy" src="#" alt="Background"/>
-        <h2>Solo</h2>
-    </div>
+        <h2>{text}</h2>
+    </button>
   );
 }
 

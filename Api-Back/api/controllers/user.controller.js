@@ -30,7 +30,7 @@ async function createUser(req, res) {
     try {
         const user = await User.create({
             username: req.body.username,
-            name: req.body.name,
+            firstname: req.body.name,
             surname: req.body.surname,
             role: req.body.role,
             email: req.body.email,

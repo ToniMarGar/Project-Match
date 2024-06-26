@@ -1,29 +1,32 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+import './Header.css'
 
+
+// Componentes
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
-import NavLink from "../Link/Link";
+import NavLink from "../NavLink/NavLink";
 
-import './Header.css'
-import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <Link to='/'>
         {/*<img href='logo.png' className="logo"/>*/}
+        <div className="logo"></div>
       </Link>
 
       <nav className="navigation">
         {/*Barra central de navegación*/}
-        <Link to='/'> <NavLink>Home</NavLink> </Link>
-        <Link to='/Quizz'> <NavLink>Cuestionario</NavLink> </Link>
-        <Link to='/'> <NavLink>Hazte premium</NavLink> </Link>
+        <Link to='/'><NavLink text='Home'/></Link>
+        <Link to='/Quizz'><NavLink text='Tu destino ideal'/></Link>
+        <Link to='/'><NavLink text='Hazte premium'/></Link>
       </nav>
 
       <div className="auth-actions">
-        <Link to='/'> <ButtonMain>Inicia sesión</ButtonMain> </Link>
-        <Link to='/'> <ButtonSecondary>Regístrate</ButtonSecondary> </Link>
+        <Link to='/LogIn'> <ButtonMain text='Inicia sesión'/></Link>
+        <Link to='/SignUp'> <ButtonSecondary text='Regístrate'/></Link>
       </div>
 
     </header>
