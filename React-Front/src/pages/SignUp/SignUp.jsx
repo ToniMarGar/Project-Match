@@ -1,5 +1,5 @@
 import * as React from "react";
- import { Link } from "react-router-dom"; 
+ import { Link, Navigate, redirect, useNavigate } from "react-router-dom"; 
 import './SignUp.css'
 import { useState } from "react";
 
@@ -12,15 +12,15 @@ import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleBu
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
 
-
 export const SignUp=() =>{
   const [username, setUserName] = useState('');
   const [firstname, setFirstName] = useState('');
   const [surname, setSurName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-    
-    const handleSignUp = async () => {
+      const navigate = useNavigate();
+    const handleSignUp = async () => { 
+      
         let data = { username: username, firstname: firstname, surname: surname, email: email, password: password }
         const result = await signup(data)
         console.log(result)
@@ -28,8 +28,9 @@ export const SignUp=() =>{
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
         setEmail("")
-    }
-  return (
+        navigate("/Profile")
+      }
+      return (
     <main className="registration-page">
         <section className="form-section">
 
@@ -79,9 +80,8 @@ export const SignUp=() =>{
               <Apple/> <Facebook/> <Google/>
             </div>
 
-             <Link to='/Profile'> 
+            
               <ButtonMain text='Regístrate' func={handleSignUp}/>
-          </Link>  
           </form>
 
           <div className="login-prompt">

@@ -10,8 +10,8 @@ const FormLogin = () => {
       try {
         let data = { email: email, password: password }
         const result = await login(data)
-        localStorage.getItem("token", result.token);
-        localStorage.getItem("role", result.role); 
+        localStorage.setItem("token", result.token);
+        localStorage.setItem("role", result.role); 
         setEmail("")
 
       } catch (error) {

@@ -5,11 +5,9 @@ import './Destination.css'
 import DestinationCard from '../../components/Cards/DestinationCard/DestinationCard'
 import Tag from '../../components/Tags/Tag/Tag'
 
-
 // El array de respuesta del back al cuestionario
 const resultTags = [];
 const destinations = []
-
 
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
@@ -19,9 +17,7 @@ const TagGroup = ({ tags }) => (
   </div>
 );
 
-
 function Destination() {
-
   return (
     <main className="travel-recommendations">
       <section className="preferences-section">
@@ -30,7 +26,7 @@ function Destination() {
       </section>
 
       <section className="destinations-grid">
-        <Link to='/Destination/Result'>
+        <Link to='/Your-destination'>
           {destinations.map((dest, index) => (
             <DestinationCard key={index} {...dest} />
           ))}

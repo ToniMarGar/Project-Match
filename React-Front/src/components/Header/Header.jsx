@@ -1,12 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import './Header.css'
+
 
 // Componentes
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../NavLink/NavLink";
 
-import './Header.css'
 
 function Header() {
   return (
@@ -24,8 +25,8 @@ function Header() {
       </nav>
 
       <div className="auth-actions">
-        <Link to='/SignUp'> <ButtonMain text='Inicia sesión'/></Link>
-        <Link to='/LogIn'> <ButtonSecondary text='Regístrate'/></Link>
+        <Link to='/LogIn'> <ButtonMain text='Inicia sesión'/></Link>
+        <Link to='/SignUp'> <ButtonSecondary text='Regístrate'/></Link>
       </div>
 
     </header>
