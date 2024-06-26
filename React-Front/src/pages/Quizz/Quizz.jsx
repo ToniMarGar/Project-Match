@@ -66,9 +66,6 @@ console.log("HOLALALAL")
    const handleSubmit = async (e) => {
     console.log(formData)
       e.preventDefault();
-      
-      // Aquí puedes agregar la lógica para comparar `formData` con el JSON externo
-      //const result = JSONcomparison(formData);
 
      try{
       const result = await prueba();
@@ -80,14 +77,8 @@ console.log("HOLALALAL")
 
      } catch(error) {
       console.error('Error al obtener datos:', error);
-     }
-      //console.log(resultt.resolve + " todoOKEY")
-  
+     }  
    }
-
- 
-
-
 
   // Función para comparar formData con los destinos del JSON externo
   const JSONcomparison = (formData) => {

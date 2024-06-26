@@ -115,6 +115,7 @@ async function suggestedDestinations(req,res) {
     */
     
     const matchTravelers = city.travelers.includes(req.body.travelers)
+
     if(matchTravelers) points++
 
     return {destination: city, points: points}

@@ -43,7 +43,7 @@ function LogIn() {
 
             <div className="input-group">
               <label>Contraseña</label>
-              <input type="password" placeholder='Constraseña' type="password"
+              <input type="password" placeholder='Constraseña'
           onChange={(e) => {
             setPassword(e.target.value);
           }}
