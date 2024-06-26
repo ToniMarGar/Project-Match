@@ -2,7 +2,6 @@
   {"destinationName": "París", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Nueva York", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
   {"destinationName": "Tokio", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "Asia", "experience": "Cultura"},
-  {"destinationName": "Sídney", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "Oceanía", "experience": "Turismo"},
   {"destinationName": "Ciudad del Cabo", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Playa/Montaña", "continent": "África", "experience": "Aventura"},
   {"destinationName": "Londres", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Iconos"},
   {"destinationName": "Roma", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
