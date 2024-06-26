@@ -68,14 +68,6 @@ function LogIn() {
                 <Apple/> <Facebook/> <Google/>
               </div>
             </form>
-
-              <ButtonMain text='Inicia sesión' func={
-            handleLogIn
-          }/>
-    
-            <div className="social-buttons">
-              <Apple/> <Facebook/> <Google/>
-            </div>
             
             <div className="login-prompt">
               <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
