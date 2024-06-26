@@ -7,6 +7,7 @@ import ButtonBlue from "../../components/Button/ButtonBlue/ButtonBlue";
 import Multiple from '../../assets/home-images/multiple.png'
 import Discover from '../../assets/home-images/discover.png'
 import Disconnect from '../../assets/home-images/disconect.png'
+import moduleName from '../../assets/home-images/hero.png'
 
 function Home() {
   return (
@@ -14,9 +15,9 @@ function Home() {
       <section className="hero">
           <div className="hero-content">
             <div>
-              <h1 className="huge, h-text"> Haz <span>match </span> 
+              <h1 className="huge, h-text, color-change"> Haz <span>match </span> 
               con tu siguente <span>travel</span> </h1>
-              <h2 className='h-text'>¿No sabes donde viajar? Descubre tu siguiente destino en función de tus preferencias</h2>
+              <h3 className='h-text'>¿No sabes donde viajar? Descubre tu siguiente destino en función de tus preferencias</h3>
             </div>
 
             <Link to='/Quizz'>

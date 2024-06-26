@@ -5,13 +5,13 @@
     gap: 12px;
     padding: 16px 24px 16px 28px;
     border-radius: 120px;
-    background-color: #fc8c0c;
+    background-color: #0969FF;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 .icon-button:hover{
-    background-color: #AE5A00;
+    background-color: #0043B5;
     font-weight: 600;
 }
 

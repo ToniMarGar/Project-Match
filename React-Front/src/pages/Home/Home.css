@@ -15,23 +15,27 @@
 
 .hero {
     display: flex;
-    height: 720px;
+    height: 600px;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     gap: 10px;
     align-self: stretch;
     color: white;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%), path-to-image('../../assets/hero.jpg') lightgray 50% / cover no-repeat;
+    background-image: url(../../assets/home-images/hero.png);
+    background-size: cover;
 }
 
 .hero-content {
     padding: 120px;
     display: flex;
-    width: 520px;
+    width: 400px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items:center
+}
+
+.color-change{
+    color: white;
 }
 
 .h-text{ text-align:left; }
