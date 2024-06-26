@@ -5,13 +5,11 @@ import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
 import './LogIn.css'
 
-
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
-
 
 function LogIn() {
   const [email, setEmail] = useState('');
@@ -45,7 +43,6 @@ function LogIn() {
             required/>
               </div>
 
-<<<<<<< HEAD
             <div className="input-group">
               <label>Contraseña</label>
               <input type="password" placeholder='Constraseña'
@@ -54,16 +51,6 @@ function LogIn() {
           }}
           required/>
             </div>
-=======
-              <div className="input-group">
-                <label>Contraseña</label>
-                <input type="password" placeholder='Constraseña'
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            required/>
-              </div>
->>>>>>> 89943d21103c7438dcfd338f1707fda9786cea93
 
               <div className="input-group">
                 <p>¿Has olvidado tu contraseña? Haz click{" "}

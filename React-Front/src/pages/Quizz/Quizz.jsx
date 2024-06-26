@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
-//import { LinearProgress } from '@mui/material';
+import { setNewQuizz } from '../../services/newQuizz';
 
-import {setOneResult} from '../../services/result';
-
-
-// La llamada al Back para revisar la información es destinationSearch
-
-
-// 
 import { Link } from "react-router-dom";
 import './Quizz.css'
 
@@ -29,6 +22,18 @@ const Quizz = () => {
       return result
   }
 
+  async function prueba2() {
+    console.log("HIIIIIIIIIIIII");
+
+    const result = await setNewQuizz({ 
+      "destinationName": finalResult.destinationName,
+      "Qtravelers": finalResult.travelers,
+      "Qexperience": finalResult.experience,
+      "Qweather": finalResult.weather,
+      "Qlocation": finalResult.location,
+      "Qcontinent": finalResult.continent,
+      }) 
+  }
 
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada rDestinationespuesta del usuario
@@ -84,7 +89,15 @@ const Quizz = () => {
    }
 
    const handleSelection = async (e) => {
-    handleNextScreen()
+    try{
+      const result = await prueba2();
+      handleNextScreen()
+
+      //console.log(result)
+      //setDestinations(result)
+     } catch(error) {
+      console.error('Error al obtener datos:', error);
+     }  
 
    }
 
@@ -250,7 +263,6 @@ const Quizz = () => {
         )}
         {currentScreen === 5 && (
           <div className='destinations'>
-
                 {destinations.map((d, idx)=>{
                   return <h1 key={idx} onClick={() => {setFinalResult(d.destination); handleSelection()}}>{d.destination.destinationName}</h1>
                 })}
@@ -265,13 +277,9 @@ const Quizz = () => {
             <h2>{finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})}</h2>
             <h2>{finalResult.weather}</h2>
             <h2>{finalResult.continent}</h2>
-
-
-
           </div>
         )}
       </form>
-          
       {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
     </div>
   );
