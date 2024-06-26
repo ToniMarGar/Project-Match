@@ -1,7 +1,7 @@
 import * as React from "react";
 import './ProfileCard.css'
 import { Link, useNavigate } from "react-router-dom"; 
-
+import toast, { Toaster } from 'react-hot-toast';
 import ButtonThird from '../../Button/ButtonThird/ButtonThird'
 import { readUsername } from "../../../services/profile.service";
 import { getOneUser } from "../../../services/user";
@@ -14,9 +14,7 @@ const cerrarSesion = () => {
      localStorage.removeItem("token");
      localStorage.removeItem("role");
      localStorage.removeItem("userEmail");
-
      navigate("/LogIn")
-     console.log(data);
   };
 
   useEffect(() => {
@@ -27,11 +25,13 @@ const cerrarSesion = () => {
     const data = await getOneUser()
     console.log(data)
     setData(data)
+    toast.success('Bienvenido de nuevo!')
+
   }
   return (
     <>
       <article className="profile-card">
-
+      <Toaster />
         <div className="profile-header">
           <img
             loading="lazy"
@@ -53,11 +53,11 @@ const cerrarSesion = () => {
           <label className="profile-title">Email: {data.email}</label>
           
           <section className="button-group">
-            <label className="profile-title">Contraseña</label>
+            <label className="profile-title"></label>
             <ButtonThird text="Cambiar contraseña"/>
           </section>
           <section>
-            <button onClick={cerrarSesion}>Cerrar sesion</button>
+            <button onClick={cerrarSesion} className="button-close">Cerrar sesion</button>
           </section>
         </main>
       </article>

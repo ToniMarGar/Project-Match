@@ -12,7 +12,6 @@ const TagGroup = ({ tags }) => (
   </div>
 );
 
-
 function DestinacionCard({name, img}) {
   return (
     <article className="travel-card">

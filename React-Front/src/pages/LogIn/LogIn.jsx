@@ -21,12 +21,7 @@ function LogIn() {
         const result = await login(data)
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
-
-        console.log("Token:", result.token);
-        console.log("Role:", result.role);
-
         navigate("/Profile")
-
       } catch (error) {
         console.log(error)
         toast.error ('Error al hacer Login.')
@@ -55,12 +50,10 @@ function LogIn() {
           required/>
             </div>
 
-
               <ButtonMain text='Inicia sesión' func={
             handleLogIn
           }/>
-
-            
+    
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
