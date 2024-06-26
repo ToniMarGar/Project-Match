@@ -69,7 +69,7 @@ function Home() {
             <h3>Hoteles, pasajes, itinerarios, lugares, restaurantes, actividades... Con el 
             <strong>plan premium</strong>, todo tu viaje queda planeado, tú solo tienes que reservar.</h3>
 
-            <Link to='/'>
+            <Link to='/SignUp'>
               <ButtonBlue text='Regístrate'></ButtonBlue>
             </Link>
         </div>

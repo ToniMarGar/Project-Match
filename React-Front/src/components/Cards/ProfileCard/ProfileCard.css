@@ -5,6 +5,8 @@
     max-width: 296px;
     flex-direction: column;
     padding: 32px 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-header {
