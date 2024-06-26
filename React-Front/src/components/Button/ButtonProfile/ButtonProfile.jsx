@@ -6,7 +6,7 @@ function ButtonProfile({username, userImg}) {
     <>
       <button className="profile-button">
         <p>Hola, {username}</p>
-        <img src={userImg} alt="Profile image" />
+        <img src="../../../../src/assets/Default_profile.jpg" alt="Profile image" width={"40px"}/>
       </button>
     </>
   );
