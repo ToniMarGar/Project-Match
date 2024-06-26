@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
-//import { LinearProgress } from '@mui/material';
+import { Link } from "react-router-dom";
 
 import {setOneResult} from '../../services/result';
 
 
-// La llamada al Back para revisar la información es destinationSearch
-
-
-// 
-import { Link } from "react-router-dom";
 import './Quizz.css'
 
-import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
-// import DefaultCard from '../../components/Cards/DefaultCard/DefaultCard';
+import Tag from '../../components/Tags/Tag/Tag'
+import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
+import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import ButtonSkyscanner from '../../components/Button/ButtonBlueIcon/ButtonBlueIcon'
 
 const Quizz = () => {
 
@@ -68,6 +65,7 @@ const Quizz = () => {
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
     console.log(formData)
+    // 
       e.preventDefault();
 
      try{
@@ -112,6 +110,7 @@ const Quizz = () => {
         )}
         */}
 
+
         {currentScreen === 0 && ( 
           <div className='content'>
             <h1>Primero, ¿con quién vas a viajar?</h1>
@@ -135,6 +134,7 @@ const Quizz = () => {
             </div>
           </div>
         )}
+
 
         {currentScreen === 1 && (
           <div className='content'>
@@ -173,6 +173,7 @@ const Quizz = () => {
             </div>
         )}
 
+
         {currentScreen === 2 && (
           <div className='content'>
             <h1>¿En qué lugar quieres estar?</h1>
@@ -200,6 +201,7 @@ const Quizz = () => {
           </div>
         )}
 
+
         {currentScreen === 3 && (
           <div className='content'>
             <h1>¿Qué clima prefieres?</h1>
@@ -221,6 +223,7 @@ const Quizz = () => {
             </div>
           </div>
         )}
+
 
         {currentScreen === 4 && (
           <div className='content'>
@@ -247,6 +250,8 @@ const Quizz = () => {
             </div>
           </div>
         )}
+
+
         {currentScreen === 5 && (
           <div className='destinations'>
 
@@ -256,22 +261,47 @@ const Quizz = () => {
           </div>
         )}
 
+
         {currentScreen === 6 && (
-          <div className='finalDestinations'>
-            <h1>Has elegido...</h1>
-            <h2>{finalResult.destinationName}</h2>
-            <h2>{finalResult.experience}</h2>
-            <h2>{finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})}</h2>
-            <h2>{finalResult.weather}</h2>
-            <h2>{finalResult.continent}</h2>
-
-
-
+          <div className="content">
+          <section className="info-destination-section">
+              <div className="recommendation-content">
+                    <div className="destination-header">
+                        <h1>{finalResult.destinationName}</h1>
+  
+                          <div className="tag-container">
+                            <Tag text={finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})} />
+                            <Tag text={finalResult.experience} />
+                            <Tag text={finalResult.location} />
+                            <Tag text={finalResult.weather} />
+                            <Tag text={finalResult.continent} />
+                        </div>
+                    </div>
+  
+                    <h3>Según tus preferencias, creemos que {finalResult.destinationName} es el destino ideal para ti.</h3>
+  
+                    <div className="action-buttons">
+                      <Link to='/Quizz'>
+                        <ButtonSecondary text="Prueba de nuevo"/>
+                      </Link>
+                    </div>
+              </div>
+  
+              <section className="premium-section">
+                    <p className="meta">SI LO PREFIERES</p>
+                  <p>Recibe un plan de experiencia completa: rutas, guía de lugares imprescindibles, 
+                    itinerario por días, pasajes, hoteles... Tu viaje ya planificado con el{" "}
+                  <strong>plan premium.</strong></p>
+                  
+                  <Link to='/'>
+                      <ButtonMain text="Hazte Premium ahora"/>
+                  </Link>
+              </section>
+            </section>
           </div>
-        )}
+      )}
+
       </form>
-          
-      {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
     </div>
   );
 };

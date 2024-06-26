@@ -9,8 +9,6 @@ import LogIn from "../pages/LogIn/LogIn";
 //import SignUp from "../pages/SignUp/SignUp";
 import Profile from "../pages/Profile/Profile";
 import Quizz from "../pages/Quizz/Quizz";
-import Destination from "../pages/Destination/Destination";
-import FinalDestination from "../pages/FinalDestination/FinalDestination";
 
 const router = createBrowserRouter([{
         path: "/",
@@ -36,15 +34,7 @@ const router = createBrowserRouter([{
             {
                 path: "/Quizz",
                 element: <Quizz />,
-            },
-            {
-                path: "/Results",
-                element: <Destination />,
-            },
-            {
-                path: "/Your-destination",
-                element: <FinalDestination />,
-            },
+            }
             
         ]
     },
