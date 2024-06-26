@@ -254,7 +254,7 @@ console.log("HOLALALAL")
               </Link>
 
              {/*  <Link to='/Destination'> */}
-                <button className='h-card' background-image=''
+                <button className='h-card'
                 onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
                 >Oceanía</button>
               {/* </Link> */}

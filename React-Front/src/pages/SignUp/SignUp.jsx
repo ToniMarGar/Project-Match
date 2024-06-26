@@ -18,8 +18,8 @@ export const SignUp=() =>{
   const [surname, setSurName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-      const navigate = useNavigate();
-    const handleSignUp = async () => { 
+  const navigate = useNavigate();
+  const handleSignUp = async () => { 
       
         let data = { username: username, firstname: firstname, surname: surname, email: email, password: password }
         const result = await signup(data)
@@ -75,17 +75,13 @@ export const SignUp=() =>{
           }}
           required/>
             </div>
-
-            <Link to='/Profile'>
-              <ButtonMain text='Regístrate' />
-            </Link>
+            
+              <ButtonMain text='Regístrate' func={handleSignUp}/>
 
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>
             </div>
 
-            
-              <ButtonMain text='Regístrate' func={handleSignUp}/>
           </form>
 
           <div className="login-prompt">

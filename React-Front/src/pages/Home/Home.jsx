@@ -46,7 +46,7 @@ function Home() {
 
       <section className="travel-match-quizz">
         <img 
-          src={quizzImg}
+          src={Discover}
           alt='Haz el quizz'
           className="home-img" 
         />

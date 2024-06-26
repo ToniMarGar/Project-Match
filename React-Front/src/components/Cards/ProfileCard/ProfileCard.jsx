@@ -6,9 +6,11 @@ import { getOneUser } from "../../../services/user";
 import { useEffect, useState } from "react";
 function ProfileCard({username, firstName, surName, email, profileImg}) {
   const [data, setData] = useState({})
+  
   useEffect(() => {
     getuserinfo()
   },[])
+  
   async function getuserinfo () {
     const data = await getOneUser()
     console.log(data)

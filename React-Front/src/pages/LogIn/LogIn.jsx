@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import './LogIn.css'
 import { useState } from "react";
 import { login } from "../../services/auth";
@@ -9,10 +8,12 @@ import Facebook from '../../components/Button/AltLogInButton/FacebookButton/Face
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import { Link, Navigate, redirect, useNavigate } from "react-router-dom"; 
 
 function LogIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
     
     const handleLogIn = async () => {
       try {
@@ -21,6 +22,7 @@ function LogIn() {
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
         setEmail("")
+        navigate("/Profile")
 
       } catch (error) {
         console.log(error)
@@ -50,29 +52,17 @@ function LogIn() {
           required/>
             </div>
 
-            <p>¿Has olvidado tu contraseña? Haz click{" "}
-            <a>aquí</a></p>
-
-            <Link to='/Profile'>
-              <ButtonMain text='Inicia sesión' onClick={(e) => {
-            e.preventDefault();
-            handleLogIn();
-          }}/>
-          </Link>
-
-            <div className="social-buttons">
-              <Apple/> <Facebook/> <Google/>
-            </div>
-
-            <p>¿Has olvidado tu contraseña? Haz click{" "}
-            <a>aquí</a></p>
-
-            <Link to='/Profile'>
+<Link to='/Profile'>
               <ButtonMain text='Inicia sesión' onClick={(e) => {
             e.preventDefault();
             handleLogIn();
           }}/>
             </Link>
+            
+            <div className="social-buttons">
+              <Apple/> <Facebook/> <Google/>
+            </div>
+            
             <div className="login-prompt">
               <p>¿Has olvidado tu contraseña? Haz click{" "}
               <a>aquí</a></p>
