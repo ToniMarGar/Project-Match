@@ -7,13 +7,17 @@ import './Header.css'
 import ButtonMain from "../Button/ButtonMain/ButtonMain";
 import ButtonSecondary from "../Button/ButtonSecondary/ButtonSecondary";
 import NavLink from "../NavLink/NavLink";
+import Logo from '../../assets/brand-assets/travel-match-logo-04.png'
 
 
 function Header() {
   return (
     <header>
       <Link to='/'>
-        {/*<img href='logo.png' className="logo"/>*/}
+        <img 
+          src={Logo} 
+          className="logo"
+        />
         <div className="logo"></div>
       </Link>
 

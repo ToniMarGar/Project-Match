@@ -3,12 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
+import './LogIn.css'
+
+
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
 import './LogIn.css'
+
 
 function LogIn() {
   const [username, setUsername] = useState('');
@@ -28,9 +32,10 @@ function LogIn() {
       }
     }
   return (
-    <main className="registration-page">
-      <Toaster />
-        <section className="form-section">
+    <main className="general-container">
+      <section className="registration-page">
+        <Toaster />
+          <section className="form-section">
 
           <form className="signup-form" onClick={(e) => e.preventDefault()}>
             <div className="input-group">
@@ -59,24 +64,19 @@ function LogIn() {
             </div>
             
             <div className="login-prompt">
-              <p>¿Has olvidado tu contraseña? Haz click{" "}
-              <a>aquí</a></p>
+              <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
+              <Link to='/SignUp'>
+                <ButtonSecondary text='Regístrate'/>
+              </Link>
             </div>
-          </form>
+          </section>
 
-          <div className="login-prompt">
-            <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
-            <Link to='/SignUp'>
-              <ButtonSecondary text='Regístrate'/>
-            </Link>
-          </div>
-        </section>
-
-        <section className="text-section">
-          <p className="huge">Haz match con tu siguente travel
-          </p>
-          <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
-        </section>
+          <section className="text-section">
+            <p className="huge">Haz match con tu siguente travel
+            </p>
+            <h1 className='blue'>Inicia sesión y revisa tus últimos destinos</h1>
+          </section>
+      </section>
     </main>
   );
 }

@@ -1,17 +1,19 @@
 header {
-    margin-top: 0;
-    width: 100vw;
+    position:sticky;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 24px 64px 12px 64px;
     border-bottom: 1px solid #0969FF;
+    background-color: white;
+    padding-top: 24px;
+    padding-bottom: 12px;
 }
 
 .logo {
     height: 100%;
-    width: 180px;
-    background-color: rgb(255, 0, 212);
+    width: 240px;
+    padding-left: 40px;
 }
 
 .navigation {
@@ -26,5 +28,6 @@ header {
 .auth-actions {
     display: flex;
     align-items: flex-start;
+    padding-right: 40px;
     gap: 12px; 
 }

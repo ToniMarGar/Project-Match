@@ -1,4 +1,4 @@
-.button-third {
+.button-third{
     display: inline-flex;
     padding: 8px 20px;
     justify-content: center;
@@ -7,7 +7,6 @@
     color: white;
     background: #FC8C0C;
 }
-
-.button-third:hover {
+.button-third:hover{
     background: #AE5A00;
 }
