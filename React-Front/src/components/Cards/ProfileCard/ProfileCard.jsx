@@ -11,9 +11,13 @@ function ProfileCard({username, firstName, surName, email, profileImg}) {
   const navigate = useNavigate();
 
 const cerrarSesion = () => {
+    <Toaster />
      localStorage.removeItem("token");
      localStorage.removeItem("role");
      localStorage.removeItem("userEmail");
+     toast('Hasta pronto!', {
+    icon: '👏',
+    });
      navigate("/LogIn")
   };
 
