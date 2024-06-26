@@ -9,9 +9,15 @@ import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 // import DefaultCard from '../../components/Cards/DefaultCard/DefaultCard';
 
 const Quizz = () => {
-
+  const [formData, setFormData] = useState({
+    travelers: '',
+    experience: '',
+    weather: '',
+    location: '',
+    continent: ''
+  });
+  
   async function prueba() {
-    console.log(formData);
     const result = await suggestedDestinations({ 
       "travelers": formData.travelers, 
       "weather": formData.weather, 
@@ -21,29 +27,23 @@ const Quizz = () => {
       }) 
       return result
   }
+  
 
-  async function prueba2() {
+  async function prueba2(a) {
     console.log("HIIIIIIIIIIIII");
-
+    console.log(formData.travelers)
     const result = await setNewQuizz({ 
-      "destinationName": finalResult.destinationName,
-      "Qtravelers": finalResult.travelers,
-      "Qexperience": finalResult.experience,
-      "Qweather": finalResult.weather,
-      "Qlocation": finalResult.location,
-      "Qcontinent": finalResult.continent,
+      "destinationName": formData.destinationName,
+      "Qtravelers": formData.travelers,
+      "Qexperience": formData.experience,
+      "Qweather": formData.weather,
+      "Qlocation": formData.location,
+      "Qcontinent": formData.continent,
       }) 
   }
 
     // Contenemos los resultados del quizz para poder consultar la DB
     // Cada key cambia de valor con cada rDestinationespuesta del usuario
-  const [formData, setFormData] = useState({
-    travelers: '',
-    experience: '',
-    weather: '',
-    location: '',
-    continent: ''
-  });
 
   // Estado para manejar la pantalla actual del cuestionario
   const [currentScreen, setCurrentScreen] = useState(0);
@@ -57,8 +57,6 @@ const Quizz = () => {
       ...formData,
       [name]: value
     });
-    console.log(name, value)
-    console.log(formData)
   };
 
    // Manejar el cambio de pantalla del cuestionario
@@ -74,10 +72,9 @@ const Quizz = () => {
    const handleSubmit = async (e) => {
     console.log(formData)
       e.preventDefault();
-
-     try{
+      
+      try{
       const result = await prueba();
-      console.log(result)
       setDestinations(result)
 
       handleNextScreen()

@@ -43,7 +43,7 @@ async function createQuizz(req, res) {
         })
 
   //--------------------------------------------
-  return res.status(200).json({message: 'Quizz created', quizz: first3})
+  return res.status(200).json({message: 'Quizz created', quizz: quizz})
   
   } catch (error) {
       console.log(error)
