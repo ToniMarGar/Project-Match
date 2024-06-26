@@ -32,7 +32,7 @@ async function createResult(req, res) {
       console.log(req.body)
         const result = await Result.create({
           quizzId: req.body.idQuizz,
-          userId: req.body.idUsername,
+          userId: res.locals.user.id,
           destinationName: req.body.idDestination,
         })
         return res.status(200).json({message: 'Result created', result: result})

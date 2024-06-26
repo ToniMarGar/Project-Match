@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { suggestedDestinations } from '../../services/quizzServices';
-import { LinearProgress } from '@mui/material';
+//import { LinearProgress } from '@mui/material';
 
+import {setOneResult} from '../../services/result';
 
 
 // La llamada al Back para revisar la información es destinationSearch
@@ -15,6 +16,7 @@ import ButtonIcon from '../../components/Button/ButtonIcon/ButtonIcon'
 // import DefaultCard from '../../components/Cards/DefaultCard/DefaultCard';
 
 const Quizz = () => {
+console.log("HOLALALAL")
 
   async function prueba() {
     const result = await suggestedDestinations({ 
@@ -27,8 +29,14 @@ const Quizz = () => {
       return result
   }
 
+/*   async function newResult() {
+    const inputResult = await setOneResult({
+
+    })
+  } */
+
     // Contenemos los resultados del quizz para poder consultar la DB
-    // Cada key cambia de valor con cada respuesta del usuario
+    // Cada key cambia de valor con cada rDestinationespuesta del usuario
   const [formData, setFormData] = useState({
     travelers: '',
     experience: '',
@@ -46,6 +54,8 @@ const Quizz = () => {
       ...formData,
       [name]: value
     });
+    console.log(name, value)
+    console.log(formData)
   };
 
    // Manejar el cambio de pantalla del cuestionario
@@ -55,6 +65,7 @@ const Quizz = () => {
 
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
+    console.log(formData)
     if (e) {
       console.log(e)
       e.preventDefault();
@@ -66,7 +77,7 @@ const Quizz = () => {
 
      try{
       const resultt = await prueba();
-
+      newResult()
       console.log(resultt)
 
       return resultt;
@@ -117,19 +128,23 @@ const Quizz = () => {
             <h1>Primero, ¿con quién vas a viajar?</h1>
             <div className='card-selection'>
               {/* Para cada click, se ejecuta un cambio de pantalla y cambia el valor de la variable formData por el input seleccionado*/}
-              <button text='Solo' className='h-card' 
+              <button text='Solo' className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/solo.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('travelers', 'solo'); handleNextScreen(); }}
               >Solo</button>
 
-              <button text='En familia' className='h-card' 
+              <button text='En familia' className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/familia.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('travelers', 'familia'); handleNextScreen(); }}
               >En familia</button>
 
-              <button text='En pareja' className='h-card' 
+              <button text='En pareja' className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/pareja.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('travelers', 'pareja'); handleNextScreen(); }}
               >En pareja</button>
 
-              <button text='Grupo' className='h-card' 
+              <button text='Grupo' className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/grupos.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('travelers', 'grupo'); handleNextScreen(); }}
               >Grupo</button>
             </div>
@@ -140,27 +155,33 @@ const Quizz = () => {
           <div className='content'>
             <h1>¿Qué tipo de experiencia buscas?</h1>
             <div className='card-selection'>
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/cultura.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'cultura'); handleNextScreen(); }}
               >Cultura</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/relax.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'relax'); handleNextScreen(); }}
               >Relax</button>
 
-              <button className='h-card' 
+              <button className='h-card' sDestinationtyle={{backgroundImage: "url(/src/assets/quizz-card-images/iconos.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'iconos'); handleNextScreen(); }}
               >Lugares icónicos</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/aventura.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'aventura'); handleNextScreen(); }}
               >Aventura</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/fiesta.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'fiesta'); handleNextScreen(); }}
               >Fiesta</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/turismo.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('experience', 'turismo'); handleNextScreen(); }}
               >Turismo</button>
             </div>
@@ -171,19 +192,23 @@ const Quizz = () => {
           <div className='content'>
             <h1>¿En qué lugar quieres estar?</h1>
             <div className='card-selection'>
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/playa.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('location', 'playa'); handleNextScreen(); }}
               >Playa</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/ciudad.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('location', 'ciudad'); handleNextScreen(); }}
               >Ciudad</button>
 
-              <button className='h-card' 
+              <button className='h-card' sDestinationtyle={{backgroundImage: "url(/src/assets/quizz-card-images/montana.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('location', 'montana'); handleNextScreen(); }}
               >Montaña</button>
 
-              <button className='h-card' 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/interior.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('location', 'interior'); handleNextScreen(); }}
               >Interior</button>
             </div>
@@ -194,15 +219,18 @@ const Quizz = () => {
           <div className='content'>
             <h1>¿Qué clima prefieres?</h1>
             <div className='card-selection'>
-              <button className='v-card' 
+              <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/soleado.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('weather', 'soleado'); handleNextScreen(); }}
               >Soleado</button>
               
-              <button className='v-card' 
+              <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/frio.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('weather', 'frio'); handleNextScreen(); }}
               >Frío</button>
 
-              <button className='v-card' 
+              <button className='v-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/neutro.jpg)", backgroundSize: "cover" }}
+              
               onClick={() => { handleChange('weather', 'neutro'); handleNextScreen(); }}
               >Neutral</button>
             </div>
@@ -214,34 +242,39 @@ const Quizz = () => {
             <h1>Por último, ¿tienes algún continente de preferencia?</h1>
             <div className='card-selection'>
               <Link to='/Destination'>
-                <button className='h-card' 
+                <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/europa.jpg)", backgroundSize: "cover" }}
+              
                 onClick={() => { handleChange('continent', 'Europa'); handleSubmit(); }}
                 >Europa</button>
               </Link>
 
               <Link to='/Destination'>
-                <button className='h-card' 
+                <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/asia.jpg)", backgroundSize: "cover" }}
+              
                 onClick={() => { handleChange('continent', 'Asia'); handleSubmit(); }}
                 >Asia</button>
               </Link>
 
               <Link to='/Destination'>
-                <button className='h-card' 
+                <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/africa.jpg)", backgroundSize: "cover" }}
+              
                 onClick={() => { handleChange('continent', 'Africa'); handleSubmit(); }}
                 >África</button>
               </Link>
 
               <Link to='/Destination'>
-                <button className='h-card' 
+                <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/america.jpg)", backgroundSize: "cover" }}
+              
                 onClick={() => { handleChange('continent', 'America'); handleSubmit(); }}
                 >América</button>
               </Link>
 
               <Link to='/Destination'>
-                <button className='h-card' background-image=''
+                <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/oceania.jpg)", backgroundSize: "cover" }}
+              
                 onClick={() => { handleChange('continent', 'Oceania'); handleSubmit(); }}
                 >Oceanía</button>
-              </Link>
+               </Link>
             </div>
           </div>
         )}

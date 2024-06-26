@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Apple from '../../../../assets/start-session-logos/apple.png'
 import '../CommonStyle.css'
+import { Link } from "react-router-dom";
 
 function LogAppleButton() {
   return (

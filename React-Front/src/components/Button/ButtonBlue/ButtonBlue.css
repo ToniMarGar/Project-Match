@@ -1,0 +1,22 @@
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px 16px 28px;
+    border-radius: 120px;
+    background-color: #fc8c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.icon-button:hover{
+    background-color: #AE5A00;
+    font-weight: 600;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
