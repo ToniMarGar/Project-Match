@@ -1,7 +1,7 @@
-import * as React from "react";
 import './ButtonProfile.css'
 
 function ButtonProfile({username, userImg}) {
+
   return (
     <>
       <button className="profile-button">
