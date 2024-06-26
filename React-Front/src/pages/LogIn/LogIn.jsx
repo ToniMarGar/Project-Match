@@ -1,5 +1,5 @@
 import * as React from "react";
-import './LogIn.css'
+import { Link, useNavigate } from "react-router-dom"; 
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
@@ -8,20 +8,23 @@ import Facebook from '../../components/Button/AltLogInButton/FacebookButton/Face
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
-import { Link, Navigate, redirect, useNavigate } from "react-router-dom"; 
+import './LogIn.css'
 
 function LogIn() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
     
     const handleLogIn = async () => {
       try {
-        let data = { email: email, password: password }
+        let data = { username: username, password: password }
         const result = await login(data)
         localStorage.setItem("token", result.token);
         localStorage.setItem("role", result.role); 
-        setEmail("")
+
+        console.log("Token:", result.token);
+        console.log("Role:", result.role);
+
         navigate("/Profile")
 
       } catch (error) {
@@ -34,30 +37,29 @@ function LogIn() {
       <Toaster />
         <section className="form-section">
 
-          <form className="signup-form">
+          <form className="signup-form" onClick={(e) => e.preventDefault()}>
             <div className="input-group">
               <label>Nombre de usuario</label>
               <input type="text" placeholder='Nombre de usuario' onChange={(e) => {
-            setEmail(e.target.value);
+            setUsername(e.target.value);
           }}
           required/>
             </div>
 
             <div className="input-group">
               <label>Contraseña</label>
-              <input type="password" placeholder='Constraseña' type="password"
+              <input type="password" placeholder='Constraseña'
           onChange={(e) => {
             setPassword(e.target.value);
           }}
           required/>
             </div>
 
-<Link to='/Profile'>
-              <ButtonMain text='Inicia sesión' onClick={(e) => {
-            e.preventDefault();
-            handleLogIn();
-          }}/>
-            </Link>
+
+              <ButtonMain text='Inicia sesión' func={
+            handleLogIn
+          }/>
+
             
             <div className="social-buttons">
               <Apple/> <Facebook/> <Google/>

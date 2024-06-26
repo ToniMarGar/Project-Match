@@ -1,20 +1,31 @@
 import * as React from "react";
 import './ProfileCard.css'
+import { Link, useNavigate } from "react-router-dom"; 
+
 import ButtonThird from '../../Button/ButtonThird/ButtonThird'
 import { readUsername } from "../../../services/profile.service";
 import { getOneUser } from "../../../services/user";
 import { useEffect, useState } from "react";
 function ProfileCard({username, firstName, surName, email, profileImg}) {
   const [data, setData] = useState({})
-  
+  const navigate = useNavigate();
+
+const cerrarSesion = () => {
+     localStorage.removeItem("token");
+     localStorage.removeItem("role");
+     localStorage.removeItem("userEmail");
+
+     navigate("/LogIn")
+     console.log(data);
+  };
+
   useEffect(() => {
     getuserinfo()
   },[])
-  
+
   async function getuserinfo () {
     const data = await getOneUser()
     console.log(data)
-    console.log("uids");
     setData(data)
   }
   return (
@@ -44,6 +55,9 @@ function ProfileCard({username, firstName, surName, email, profileImg}) {
           <section className="button-group">
             <label className="profile-title">Contraseña</label>
             <ButtonThird text="Cambiar contraseña"/>
+          </section>
+          <section>
+            <button onClick={cerrarSesion}>Cerrar sesion</button>
           </section>
         </main>
       </article>
