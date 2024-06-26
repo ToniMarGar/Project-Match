@@ -288,7 +288,6 @@ const Quizz = () => {
 
 
         {currentScreen === 6 && (
-<<<<<<< HEAD
           <div className="content">
           <section className="info-destination-section">
               <div className="recommendation-content">
@@ -324,23 +323,10 @@ const Quizz = () => {
                   </Link>
               </section>
             </section>
-=======
-          <div className='finalDestinations'>
-            <h1>Has elegido...</h1>
-            <h2>{finalResult.destinationName}</h2>
-            <h2>{finalResult.experience}</h2>
-            <h2>{finalResult.travelers.filter((traveler)=>{return formData.travelers === traveler})}</h2>
-            <h2>{finalResult.weather}</h2>
-            <h2>{finalResult.continent}</h2>
->>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
           </div>
       )}
 
       </form>
-<<<<<<< HEAD
-=======
-      {/* Aquí podrái ir una barra de progreso, si deira tiempo */}  
->>>>>>> c0a50f6298f1d16c3ee08851c11e39549f21722a
     </div>
   );
 };
