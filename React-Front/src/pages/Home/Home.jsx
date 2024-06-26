@@ -29,6 +29,24 @@ function Home() {
       <section className="travel-match-quizz">
         <img 
           src={Discover}
+        ></img>
+
+        <div className="intro-quizz-section">
+          <h2>¿Cómo funciona Travel-Match?</h2>
+
+          <h3>¿Alguna vez has querido hacer una escapada pero no encuentras el lugar perfecto? Travel-match te acerca a tu siguente destino.
+          <br />Solo tienes que rellenar un test con cinco preguntas básicas, y nuestro buscador elegirá entre cientos de destinos aquel que más se ajusta a tí.
+          </h3>
+
+          <Link to='/Quizz'>
+              <ButtonIcon text='Pruébalo'></ButtonIcon>
+            </Link>
+        </div>
+      </section>
+
+      <section className="travel-match-quizz">
+        <img 
+          src={quizzImg}
           alt='Haz el quizz'
           className="home-img" 
         />

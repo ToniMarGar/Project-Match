@@ -24,6 +24,10 @@ const ContactInfo = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
      },   
+     /* profilepic: {
+      type: DataTypes.STRING,
+      allowNull: true,
+     }, */
   },
    {
     	//opciones

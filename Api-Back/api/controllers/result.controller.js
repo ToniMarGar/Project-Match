@@ -29,13 +29,15 @@ async function getAllResults(req, res) {
 
 async function createResult(req, res) {
     try {
+      console.log(req.body)
         const result = await Result.create({
-            idQuizz: req.body.idQuizz,
-            idUsername: req.body.idUsername,
-            idDestination: req.body.idDestination,
+          quizzId: req.body.idQuizz,
+          userId: res.locals.user.id,
+          destinationName: req.body.idDestination,
         })
         return res.status(200).json({message: 'Result created', result: result})
     } catch (error) {
+      console.log(error.message)
         res.status(500).send(error.message)
     }
 }

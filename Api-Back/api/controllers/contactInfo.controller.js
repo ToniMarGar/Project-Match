@@ -79,10 +79,23 @@ async function deleteContactInfo(req, res) {
   }
 }
 
+  /* async function setProfileImage(req, res) {
+    try {
+        const contactInfo = await ContactInfo.create({
+          profilepic: req.body.profilepic,
+
+        })
+        return res.status(200).json({message: 'Profile picture added', contactInfo: contactInfo})
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+} */
+
 module.exports = {
     getAllContactInfos,
     getOneContactInfo,
     createContactInfo,
     updateContactInfo,
     deleteContactInfo,
+    //setProfileImage
 }

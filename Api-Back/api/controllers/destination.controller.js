@@ -16,6 +16,7 @@ async function getOneDestination(req, res) {
 
 async function getAllDestinations(req, res) {
   try {
+    console.log(res.locals.user.id)
     const destinations = await Destination.findAll({ paranoid: false })
     if (destinations) {
       return res.status(200).json(destinations)
@@ -30,11 +31,12 @@ async function getAllDestinations(req, res) {
 async function createDestination(req, res) {
     try {
         const destination = await Destination.create({
-          Dtravelers: req.body.Dtravelers,
-          Dexperience: req.body.Dexperience,
-          Dweather: req.body.Dweather,
-          Dlocation: req.body.Dlocation,
-          Dcontinent: req.body.Dcontinent,
+          destinationName: req.body.destinationName,
+          Dtravelers: req.body.travelers,
+          Dexperience: req.body.experience,
+          Dweather: req.body.weather,
+          Dlocation: req.body.location,
+          Dcontinent: req.body.continent,
         })
         return res.status(200).json({message: 'destination created', destination: destination})
     } catch (error) {

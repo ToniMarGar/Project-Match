@@ -1,9 +1,19 @@
-import * as React from "react";
+ import * as React from "react";
+// import React, { useState } from 'react';
+
 import './Profile.css'
+import { getAllDestinations } from '../../services/destinationServices'
 
 import ProfileCard from '../../components/Cards/ProfileCard/ProfileCard'
 import DestinationCard from '../../components/Cards/DestinationCard/DestinationCard'
 import Tag from '../../components/Tags/Tag/Tag'
+
+  async function getThreeDestinations(){
+  const result = await getAllDestinations()
+  console.log(result)
+  console.log("eufisbf");
+  return result
+} 
 
 const TagGroup = ({ tags }) => (
   <div className="tag-group">
@@ -11,9 +21,46 @@ const TagGroup = ({ tags }) => (
       <Tag key={index} text={tag} />
     ))}
   </div>
-);
+); 
+ 
+ const Profile = () => {
+   
+ 
+  return (
 
-function Profile() {
+    <main className="profile-container">
+        <aside>
+          <ProfileCard/> 
+        </aside>
+
+        <main className='preferences'>
+          <section className="preferences-section">
+            <h2>Mis preferencias</h2>
+            {/* <TagGroup/> */}
+          </section>
+
+          <section className="result-section">
+            <h2>Mis últimos cuestionarios</h2>
+             
+          </section>
+        </main>
+      </main>
+  )
+}
+
+/* async function Profile() {
+   try {
+    const destinations = await getThreeDestinations();
+    console.log(destinations+" prpprprprprpr")
+
+    return destinations;
+  } catch (error) {
+    console.log("WEEEEEEEEEEEE")
+
+    console.error('Error al obtener datos:', error);
+
+  }
+ 
   return (
     <main className="profile-container">
         <aside>
@@ -28,7 +75,7 @@ function Profile() {
 
           <section className="result-section">
             <h2>Mis últimos cuestionarios</h2>
-            <div className="destinations-cards">
+             <div className="destinations-cards">
               {destinations.map((dest, index) => (
                 <DestinationCard key={index} {...dest} />
               ))}
@@ -37,6 +84,6 @@ function Profile() {
         </main>
       </main>
   )
-}
+} */
 
-export default Profile
+export default Profile;
