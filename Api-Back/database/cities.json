@@ -18,7 +18,6 @@
   {"destinationName": "Madrid", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Hong Kong", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "Asia", "experience": "Iconos"},
   {"destinationName": "Las Vegas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Fiesta"},
-  {"destinationName": "San Francisco", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
   {"destinationName": "Miami", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Relax"},
   {"destinationName": "Amsterdam", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Fiesta"},
   {"destinationName": "Seúl", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Asia", "experience": "Cultura"},
@@ -26,7 +25,6 @@
   {"destinationName": "México D.F.", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Sao Paulo", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Venecia", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Viena", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Atenas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Múnich", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
@@ -35,7 +33,6 @@
   {"destinationName": "Bruselas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Copenhague", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
   {"destinationName": "Vancouver", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Aventura"},
-  {"destinationName": "Toronto", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Chicago", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Orlando", "travelers": ["Familia", "En pareja", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Turismo"},
   {"destinationName": "Boston", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
@@ -68,13 +65,11 @@
   {"destinationName": "Windhoek", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
   {"destinationName": "Libreville", "travelers": ["Familia", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
   {"destinationName": "Antananarivo", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "New York", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
   {"destinationName": "Mexico City", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Lima", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Santiago", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Toronto", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Miami", "travelers": ["Grupo", "En pareja", "Familia"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Fiesta"},
   {"destinationName": "Bogota", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Havana", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "San Francisco", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
@@ -103,5 +98,4 @@
   {"destinationName": "Christchurch", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
   {"destinationName": "Las Palmas de Gran Canaria", "travelers": ["Grupo", "Solo", "Familia"], "weather": "Templado", "location": "Playa", "continent": "Europa", "experience": "Turismo"},
   {"destinationName": "Cali", "travelers": ["Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Fiesta"}
-
 ]
