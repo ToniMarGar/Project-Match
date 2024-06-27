@@ -54,6 +54,7 @@
     
 }
 .v-card{
+    color: white;
     display: flex;
     width: 400px;
     height: 400px;
