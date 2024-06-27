@@ -4,8 +4,8 @@ import './DestinationCard.css'
 
 function DestinacionCard({text, img}) {
   return (
-    <div style={{ backgroundImage: `url(${img})` }}>
-      <h2>{text}</h2>
+    <div className="travel-card" style={{ backgroundImage: `url(${img})` }}>
+      <h2 className="final-title" >{text}</h2>
     </div>
   );
 }
