@@ -92,7 +92,6 @@
   {"destinationName": "Port-au-Prince", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Managua", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
   {"destinationName": "Tegucigalpa", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Sydney", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "Oceanía", "experience": "Turismo"},
   {"destinationName": "Melbourne", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
   {"destinationName": "Auckland", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
   {"destinationName": "Brisbane", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Soleado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},

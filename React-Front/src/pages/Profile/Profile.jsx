@@ -30,9 +30,7 @@ import React, { useEffect, useState } from 'react';
        const destinations = await getAllQuizz();
        setDestinationsData(destinations)
        return destinations;
-     } catch (error) {
-       console.log("WEEEEEEEEEEEE")
-   
+     } catch (error) {   
        console.error('Error al obtener datos:', error);
    
      }
