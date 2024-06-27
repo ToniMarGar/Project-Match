@@ -15,7 +15,8 @@ const Quizz = () => {
     experience: '',
     weather: '',
     location: '',
-    continent: ''
+    continent: '',
+    destination: ''
   });
   
   async function prueba() {
@@ -31,10 +32,8 @@ const Quizz = () => {
   
 
   async function prueba2(a) {
-    console.log("HIIIIIIIIIIIII");
-    console.log(formData.travelers)
     const result = await setNewQuizz({ 
-      "QdestinationName": finalResult.destinationName,
+      "QdestinationName": a,
       "Qtravelers": formData.travelers,
       "Qexperience": formData.experience,
       "Qweather": formData.weather,
@@ -51,9 +50,9 @@ const Quizz = () => {
 
   const [destinations, setDestinations] = useState([]);
 
-
   //Manejar el 'cambio de pantallas' entre el cuestionario
   const handleChange = (name, value) => {
+    console.log(name, value)
     setFormData({
       ...formData,
       [name]: value
@@ -66,12 +65,10 @@ const Quizz = () => {
   };
 
   // El final
-  const [finalResult, setFinalResult] = useState("")
-  console.log(finalResult)
+  const [finalResult, setFinalResult] = useState({})
 
    // Submit del formulario una vez acabado
    const handleSubmit = async (e) => {
-    console.log(formData)
     // 
       e.preventDefault();
       
@@ -89,7 +86,8 @@ const Quizz = () => {
 
    const handleSelection = async (e) => {
     try{
-      const result = await prueba2();
+      console.log(e)
+      const result = await prueba2(e.destinationName);
       handleNextScreen()
 
       //console.log(result)
@@ -263,7 +261,7 @@ const Quizz = () => {
                 </div>
                 {destinations.map((d, idx)=>{
                   return <button key={idx} text={d.destination.destinationName} className='tantitno-botones'
-                  onClick={() => {setFinalResult(d.destination); handleSelection()}}>{d.destination.destinationName}</button>
+                  onClick={() => {setFinalResult(d.destination); handleSelection(d.destination)}}>{d.destination.destinationName}</button>
                 })}
           </div>
         )}

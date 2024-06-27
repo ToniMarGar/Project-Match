@@ -35,6 +35,7 @@ async function createQuizz(req, res) {
   const user = await User.findByPk( req.params.id ) // SE USARA EN RESULT
  
     try {
+      console.log(req.body.QdestinationName)
         const quizz = await Quizz.create({
           QdestinationName: req.body.QdestinationName,
           Qtravelers: req.body.Qtravelers,

@@ -62,6 +62,7 @@
     align-items: center;
     flex-shrink: 0;
     border-radius: 16px;
+    color: white;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), lightgray 50% / cover no-repeat;
 }
 .v-card:hover, .h-card:hover{ 
