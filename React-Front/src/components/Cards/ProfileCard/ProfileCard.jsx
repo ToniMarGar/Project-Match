@@ -37,15 +37,16 @@ const cerrarSesion = () => {
       <article className="profile-card">
       <Toaster />
         <div className="profile-header">
-          <img
-            loading="lazy"
-            /* src={profileImg} */
-            src="../../../../src/assets/Default_profile.jpg"
-            alt="Profile picture"
-            className="profile-image"
-          />
+          <div className="headline">
+            <img
+              loading="lazy"
+              src="../../../../src/assets/Default_profile.jpg"
+              alt="Profile picture"
+              className="profile-image"
+            />
+            <ButtonThird text="Cambiar foto de perfil"/>
+          </div>
           <hr></hr>
-          <p><ButtonThird text="Cambiar foto de perfil"/></p>
           <p className="profile-name">{data.firstname} {data.surname}</p>
           <p className="profile-username">{data.username}</p>
         </div>

@@ -4,9 +4,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 120px;
-    color: white;
-    background: #FC8C0C;
+    color: #FC8C0C;
+    background-color: #f4f4f4;
+    border-color: #FC8C0C;
 }
 .button-third:hover{
+    color: white;
     background: #AE5A00;
 }

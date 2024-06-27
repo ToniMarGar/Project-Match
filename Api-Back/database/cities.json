@@ -1,108 +1,946 @@
 [
-  {"destinationName": "París", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Nueva York", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Tokio", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "Asia", "experience": "Cultura"},
-  {"destinationName": "Sídney", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Ciudad del Cabo", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Playa/Montaña", "continent": "África", "experience": "Aventura"},
-  {"destinationName": "Londres", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Iconos"},
-  {"destinationName": "Roma", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Bangkok", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "Asia", "experience": "Fiesta"},
-  {"destinationName": "Dubai", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Soleado", "location": "Ciudad", "continent": "Asia", "experience": "Iconos"},
-  {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Moscú", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Estambul", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Rio de Janeiro", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Fiesta"},
-  {"destinationName": "Singapur", "travelers": ["Solo", "En pareja", "Familia"], "weather": "Soleado", "location": "Ciudad", "continent": "Asia", "experience": "Turismo"},
-  {"destinationName": "Barcelona", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Playa", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Los Ángeles", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Madrid", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Hong Kong", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "Asia", "experience": "Iconos"},
-  {"destinationName": "Las Vegas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Fiesta"},
-  {"destinationName": "San Francisco", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Miami", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Relax"},
-  {"destinationName": "Amsterdam", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Fiesta"},
-  {"destinationName": "Seúl", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Asia", "experience": "Cultura"},
-  {"destinationName": "Delhi", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Caluroso", "location": "Ciudad", "continent": "Asia", "experience": "Cultura"},
-  {"destinationName": "México D.F.", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Sao Paulo", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Venecia", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Viena", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Atenas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Múnich", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Dublín", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Fiesta"},
-  {"destinationName": "Praga", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Bruselas", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Copenhague", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Vancouver", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Aventura"},
-  {"destinationName": "Toronto", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Chicago", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Orlando", "travelers": ["Familia", "En pareja", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Turismo"},
-  {"destinationName": "Boston", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Lisboa", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Zúrich", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Budapest", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Frío", "location": "Ciudad", "continent": "Europa", "experience": "Cultura"},
-  {"destinationName": "Málaga", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Caluroso", "location": "Playa", "continent": "Europa", "experience": "Relax"},
-  {"destinationName": "Cairo", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Nairobi", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Aventura"},
-  {"destinationName": "Marrakech", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Cape Town", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Playa/Montaña", "continent": "África", "experience": "Aventura"},
-  {"destinationName": "Johannesburg", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Casablanca", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Accra", "travelers": ["Familia", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Lagos", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Dakar", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Kigali", "travelers": ["Solo", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Tunis", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Luanda", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Abuja", "travelers": ["Solo", "Familia", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Algiers", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Addis Ababa", "travelers": ["Solo", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Dar es Salaam", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Kampala", "travelers": ["Solo", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Maputo", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Bamako", "travelers": ["Solo", "Familia", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Harare", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Tripoli", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Kigoma", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Windhoek", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Libreville", "travelers": ["Familia", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Antananarivo", "travelers": ["Grupo", "Familia", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "África", "experience": "Cultura"},
-  {"destinationName": "Buenos Aires", "travelers": ["En pareja", "Solo", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "New York", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Mexico City", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Lima", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Santiago", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Toronto", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Frío", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Miami", "travelers": ["Grupo", "En pareja", "Familia"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Fiesta"},
-  {"destinationName": "Bogota", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Havana", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "San Francisco", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Washington, D.C.", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Iconos"},
-  {"destinationName": "Caracas", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Quito", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Montevideo", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Guatemala City", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Panama City", "travelers": ["Grupo", "En pareja", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "San Juan", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Soleado", "location": "Playa", "continent": "América", "experience": "Fiesta"},
-  {"destinationName": "Kingston", "travelers": ["Grupo", "En pareja", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "La Paz", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "San Salvador", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Asuncion", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Port-au-Prince", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Managua", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Tegucigalpa", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Soleado", "location": "Ciudad", "continent": "América", "experience": "Cultura"},
-  {"destinationName": "Sydney", "travelers": ["En pareja", "Familia", "Grupo"], "weather": "Soleado", "location": "Playa", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Melbourne", "travelers": ["Solo", "En pareja", "Grupo"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
-  {"destinationName": "Auckland", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Brisbane", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Soleado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Wellington", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
-  {"destinationName": "Perth", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Soleado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Adelaide", "travelers": ["En pareja", "Grupo", "Familia"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
-  {"destinationName": "Hobart", "travelers": ["Solo", "Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
-  {"destinationName": "Canberra", "travelers": ["En pareja", "Grupo", "Solo"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Cultura"},
-  {"destinationName": "Christchurch", "travelers": ["Grupo", "Solo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "Oceanía", "experience": "Turismo"},
-  {"destinationName": "Las Palmas de Gran Canaria", "travelers": ["Grupo", "Solo", "Familia"], "weather": "Templado", "location": "Playa", "continent": "Europa", "experience": "Turismo"},
-  {"destinationName": "Cali", "travelers": ["Grupo", "En pareja"], "weather": "Templado", "location": "Ciudad", "continent": "América", "experience": "Fiesta"}
-
+  {
+    "destinationName": "Nueva York", 
+    "travelers": "2-5", 
+    "weather": "Templado", 
+    "location": "Ciudad", 
+    "continent": "América", 
+    "experience": "Iconos", 
+    "image": "https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg" 
+  },
+  {"destinationName": "París", 
+  "travelers": "2-4", 
+  "weather": "Templado", 
+  "location": "Ciudad", 
+  "continent": "Europa", 
+  "experience": "Cultura", 
+  "image": "https://imagenes.20minutos.es/files/image_640_auto/uploads/imagenes/2022/10/20/torre-eiffel-y-el-rio-sena-en-paris.jpeg" 
+  },
+  {
+    "destinationName": "Tokio",
+    "travelers": "1-3",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Cultura",
+    "image": "https://discesur.es/wp-content/uploads/2021/01/TOKYO-1-1030x668.jpg"
+  },
+  {
+    "destinationName": "Sídney",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://fotografias.larazon.es/clipping/cmsimages02/2019/08/07/4DA2DAB5-8E42-4872-A15A-4EA75C9CB7F9/98.jpg?crop=1031,580,x0,y50&width=1900&height=1069&optimize=low&format=webply"
+  },
+  {
+    "destinationName": "Ciudad del Cabo",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Playa/Montaña",
+    "continent": "África",
+    "experience": "Aventura",
+    "image": "https://vacacionesenafrica.com/wp-content/uploads/2021/01/beach-sea-coast-ocean-bird-penguin-838124-pxhere.com_-scaled.jpg"
+  },
+  {
+    "destinationName": "Londres",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Iconos",
+    "image": "https://www.universal-assistance.com/uablog/wp-content/uploads/2022/12/big-ben.png"
+  },
+  {
+    "destinationName": "Roma",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://i0.wp.com/cdn.tiqets.com/wordpress/blog/wp-content/uploads/2023/07/10164947/10-things-to-do-in-rome-1-1.jpg?resize=1024%2C683&ssl=1"
+  },
+  {
+    "destinationName": "Bangkok",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Fiesta",
+    "image": "https://unsplash.com/photos/fjB4yUys6tY"
+  },
+  {
+    "destinationName": "Dubai",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Iconos",
+    "image": "https://unsplash.com/photos/FpaU2H3lKjM"
+  },
+  {
+    "destinationName": "Buenos Aires",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/Ns0PXQx-bAE"
+  },
+  {
+    "destinationName": "Moscú",
+    "travelers": "2-4",
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/1Qq3i5r_YFg"
+  },
+  {
+    "destinationName": "Estambul",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/Z0DHS5iQG6g"
+  },
+  {
+    "destinationName": "Rio de Janeiro",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "América",
+    "experience": "Fiesta",
+    "image": "https://unsplash.com/photos/gV5rIWtYGnA"
+  },
+  {
+    "destinationName": "Singapur",
+    "travelers": "1-2",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Turismo",
+    "image": "https://unsplash.com/photos/4HGyqZcDnYY"
+  },
+  {
+    "destinationName": "Barcelona",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Playa",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/v1cgeXwwf-s"
+  },
+  {
+    "destinationName": "Los Ángeles",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://unsplash.com/photos/NmGzVG5Wsg8"
+  },
+  {
+    "destinationName": "Madrid",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/e-_vY2E67So"
+  },
+  {
+    "destinationName": "Hong Kong",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Iconos",
+    "image": "https://unsplash.com/photos/Vkg8hMkVJ94"
+  },
+  {
+    "destinationName": "Las Vegas",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Fiesta",
+    "image": "https://unsplash.com/photos/8K3LNNVRg2o"
+  },
+  {
+    "destinationName": "San Francisco",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://unsplash.com/photos/9OKGEVJiTKk"
+  },
+  {
+    "destinationName": "Miami",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "América",
+    "experience": "Relax",
+    "image": "https://unsplash.com/photos/xII7efH1G6o"
+  },
+  {
+    "destinationName": "Amsterdam",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Fiesta",
+    "image": "https://unsplash.com/photos/Fk4YWvk1s0k"
+  },
+  {
+    "destinationName": "Seúl",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/JTE-9FNOlww"
+  },
+  {
+    "destinationName": "Delhi",
+    "travelers": "2-4",
+    "weather": "Caluroso",
+    "location": "Ciudad",
+    "continent": "Asia",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/gZm6ULIfR3A"
+  },
+  {
+    "destinationName": "México D.F.",
+    "travelers": "2-4",
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/IcI3FizU1Rk"
+  },
+  {
+    "destinationName": "Sao Paulo",
+    "travelers": "2-4",
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/UJ9ErjThpgs"
+  },
+  {
+    "destinationName": "Venecia",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/eBRsxH2cjZU"
+  },
+  {
+    "destinationName": "Buenos Aires",
+    "travelers": ["En pareja", "Solo", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/rqW6IIHv6p8"
+  },
+  {
+    "destinationName": "Viena",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/_dG_GvtzU8Y"
+  },
+  {
+    "destinationName": "Atenas",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/GkcQNaXhpTw"
+  },
+  {
+    "destinationName": "Múnich",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/Y_lOIkF0ebk"
+  },
+  {
+    "destinationName": "Dublín",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Fiesta",
+    "image": "https://unsplash.com/photos/RAZ_iCtOUvY"
+  },
+  {
+    "destinationName": "Praga",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/cnYx0yqiiCY"
+  },
+  {
+    "destinationName": "Bruselas",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/rT5go6WO2Go"
+  },
+  {
+    "destinationName": "Copenhague",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/N6MTu9KVGzI"
+  },
+  {
+    "destinationName": "Vancouver",
+    "travelers": ["En pareja", "Familia", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Aventura",
+    "image": "https://unsplash.com/photos/A4RpHR83luM"
+  },
+  {
+    "destinationName": "Toronto",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/vzX2rgUbQXM"
+  },
+  {
+    "destinationName": "Chicago",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/wxB1f4uO61A"
+  },
+  {
+    "destinationName": "Orlando",
+    "travelers": ["Familia", "En pareja", "Grupo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Turismo",
+    "image": "https://unsplash.com/photos/gdKyAUbZAlI"
+  },
+  {
+    "destinationName": "Boston",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/tGTVxeOr_Rs"
+  },
+  {
+    "destinationName": "Lisboa",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/dZtu9yMp8vw"
+  },
+  {
+    "destinationName": "Zúrich",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/IlvZop_a2zE"
+  },
+  {
+    "destinationName": "Budapest",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "Europa",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/-U3Fhe-OpJo"
+  },
+  {
+    "destinationName": "Málaga",
+    "travelers": ["En pareja", "Familia", "Grupo"],
+    "weather": "Caluroso",
+    "location": "Playa",
+    "continent": "Europa",
+    "experience": "Relax",
+    "image": "https://unsplash.com/photos/kz9DRzZqeiE"
+  },
+  {
+    "destinationName": "Cairo",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/gjlqT0PqvHA"
+  },
+  {
+    "destinationName": "Nairobi",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Aventura",
+    "image": "https://unsplash.com/photos/qefkiZztl0s"
+  },
+  {
+    "destinationName": "Marrakech",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/tjX_sniNzgQ"
+  },
+  {
+    "destinationName": "Cape Town",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Templado",
+    "location": "Playa/Montaña",
+    "continent": "África",
+    "experience": "Aventura",
+    "image": "https://unsplash.com/photos/t2RbN8nKxTA"
+  },
+  {
+    "destinationName": "Johannesburg",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/LcUrQL1A6OY"
+  },
+  {
+    "destinationName": "Casablanca",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/EpVIFq8v8pA"
+  },
+  {
+    "destinationName": "Accra",
+    "travelers": ["Familia", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://unsplash.com/photos/JhhWc3U-cxM"
+  },
+  {
+    "destinationName": "Lagos",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?lagos"
+  },
+  {
+    "destinationName": "Dakar",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?dakar"
+  },
+  {
+    "destinationName": "Kigali",
+    "travelers": ["Solo", "Familia", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?kigali"
+  },
+  {
+    "destinationName": "Tunis",
+    "travelers": ["En pareja", "Solo", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?tunis"
+  },
+  {
+    "destinationName": "Luanda",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?luanda"
+  },
+  {
+    "destinationName": "Abuja",
+    "travelers": ["Solo", "Familia", "Grupo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?abuja"
+  },
+  {
+    "destinationName": "Algiers",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?algiers"
+  },
+  {
+    "destinationName": "Addis Ababa",
+    "travelers": ["Solo", "Familia", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?addis-ababa"
+  },
+  {
+    "destinationName": "Dar es Salaam",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?dar-es-salaam"
+  },
+  {
+    "destinationName": "Kampala",
+    "travelers": ["Solo", "Familia", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?kampala"
+  },
+  {
+    "destinationName": "Maputo",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?maputo"
+  },
+  {
+    "destinationName": "Bamako",
+    "travelers": ["Solo", "Familia", "Grupo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?bamako"
+  },
+  {
+    "destinationName": "Harare",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?harare"
+  },
+  {
+    "destinationName": "Tripoli",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?tripoli"
+  },
+  {
+    "destinationName": "Kigoma",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?kigoma"
+  },
+  {
+    "destinationName": "Windhoek",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?windhoek"
+  },
+  {
+    "destinationName": "Libreville",
+    "travelers": ["Familia", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?libreville"
+  },
+  {
+    "destinationName": "Antananarivo",
+    "travelers": ["Grupo", "Familia", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "África",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?antananarivo"
+  },
+  {
+    "destinationName": "Buenos Aires",
+    "travelers": ["En pareja", "Solo", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?buenos-aires"
+  },
+  {
+    "destinationName": "New York",
+    "travelers": ["Grupo", "Solo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://source.unsplash.com/1600x900/?new-york"
+  },
+  {
+    "destinationName": "Mexico City",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?mexico-city"
+  },
+  {
+    "destinationName": "Lima",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?lima"
+  },
+  {
+    "destinationName": "Santiago",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?santiago"
+  },
+  {
+    "destinationName": "Toronto",
+    "travelers": ["En pareja", "Familia", "Grupo"],
+    "weather": "Frío",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://source.unsplash.com/1600x900/?toronto"
+  },
+  {
+    "destinationName": "Miami",
+    "travelers": ["Grupo", "En pareja", "Familia"],
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "América",
+    "experience": "Fiesta",
+    "image": "https://source.unsplash.com/1600x900/?miami"
+  },
+  {
+    "destinationName": "Bogota",
+    "travelers": ["Solo", "Grupo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?bogota"
+  },
+  {
+    "destinationName": "Havana",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?havana"
+  },
+  {
+    "destinationName": "San Francisco",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://source.unsplash.com/1600x900/?san-francisco"
+  },
+  {
+    "destinationName": "Washington, D.C.",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Iconos",
+    "image": "https://source.unsplash.com/1600x900/?washington-dc"
+  },
+  {
+    "destinationName": "Caracas",
+    "travelers": ["Grupo", "Solo", "En pareja"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?caracas"
+  },
+  {
+    "destinationName": "Quito",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?quito"
+  },
+  {
+    "destinationName": "Montevideo",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?montevideo"
+  },
+  {
+    "destinationName": "Guatemala City",
+    "travelers": ["En pareja", "Familia", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?guatemala-city"
+  },
+  {
+    "destinationName": "Panama City",
+    "travelers": ["Grupo", "En pareja", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?panama-city"
+  },
+  {
+    "destinationName": "San Juan",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "América",
+    "experience": "Fiesta",
+    "image": "https://source.unsplash.com/1600x900/?san-juan"
+  },
+  {
+    "destinationName": "Kingston",
+    "travelers": ["Grupo", "En pareja", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?kingston"
+  },
+  {
+    "destinationName": "La Paz",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?la-paz"
+  },
+  {
+    "destinationName": "San Salvador",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?san-salvador"
+  },
+  {
+    "destinationName": "Asuncion",
+    "travelers": ["Solo", "Grupo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?asuncion"
+  },
+  {
+    "destinationName": "Port-au-Prince",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?port-au-prince"
+  },
+  {
+    "destinationName": "Managua",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?managua"
+  },
+  {
+    "destinationName": "Tegucigalpa",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?tegucigalpa"
+  },
+  {
+    "destinationName": "Sydney",
+    "travelers": ["En pareja", "Familia", "Grupo"],
+    "weather": "Soleado",
+    "location": "Playa",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?sydney"
+  },
+  {
+    "destinationName": "Melbourne",
+    "travelers": ["Solo", "En pareja", "Grupo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?melbourne"
+  },
+  {
+    "destinationName": "Auckland",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?auckland"
+  },
+  {
+    "destinationName": "Brisbane",
+    "travelers": ["Solo", "Grupo", "En pareja"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?brisbane"
+  },
+  {
+    "destinationName": "Wellington",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?wellington"
+  },
+  {
+    "destinationName": "Perth",
+    "travelers": ["Grupo", "Solo", "En pareja"],
+    "weather": "Soleado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?perth"
+  },
+  {
+    "destinationName": "Adelaide",
+    "travelers": ["En pareja", "Grupo", "Familia"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?adelaide"
+  },
+  {
+    "destinationName": "Hobart",
+    "travelers": ["Solo", "Grupo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?hobart"
+  },
+  {
+    "destinationName": "Canberra",
+    "travelers": ["En pareja", "Grupo", "Solo"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Cultura",
+    "image": "https://source.unsplash.com/1600x900/?canberra"
+  },
+  {
+    "destinationName": "Christchurch",
+    "travelers": ["Grupo", "Solo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "Oceanía",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?christchurch"
+  },
+  {
+    "destinationName": "Las Palmas de Gran Canaria",
+    "travelers": ["Grupo", "Solo", "Familia"],
+    "weather": "Templado",
+    "location": "Playa",
+    "continent": "Europa",
+    "experience": "Turismo",
+    "image": "https://source.unsplash.com/1600x900/?las-palmas-de-gran-canaria"
+  },
+  {
+    "destinationName": "Cali",
+    "travelers": ["Grupo", "En pareja"],
+    "weather": "Templado",
+    "location": "Ciudad",
+    "continent": "América",
+    "experience": "Fiesta",
+    "image": "https://source.unsplash.com/1600x900/?cali"
+  }
 ]
