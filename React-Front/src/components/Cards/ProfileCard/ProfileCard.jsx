@@ -44,13 +44,11 @@ const cerrarSesion = () => {
             alt="Profile picture"
             className="profile-image"
           />
-          <hr></hr>
+
           <p><ButtonThird text="Cambiar foto de perfil"/></p>
           <p className="profile-name">{data.firstname} {data.surname}</p>
           <p className="profile-username">{data.username}</p>
         </div>
-
-        <hr/>
 
         <main className="profile-details">
 
@@ -59,7 +57,6 @@ const cerrarSesion = () => {
           <label className="profile-title">Email: {data.email}</label>
           
           <section className="button-group">
-            <label className="profile-title"></label>
             <ButtonThird text="Cambiar contraseña"/>
             <button onClick={cerrarSesion} className="button-close">Cerrar sesion</button>
           </section>

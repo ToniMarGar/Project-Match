@@ -2,7 +2,6 @@
     border-radius: 8px;
     background-color: #f4f4f4;
     display: flex;
-    max-width: 296px;
     flex-direction: column;
     padding: 32px 16px;
     justify-content: center;
@@ -14,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 16px;
 }
 
 .profile-image {
@@ -54,6 +54,8 @@ hr {
 
 .button-group {
     display: flex;
+    flex-direction: column;
+    margin-top: 12px;
     gap: 16px;
 }
 

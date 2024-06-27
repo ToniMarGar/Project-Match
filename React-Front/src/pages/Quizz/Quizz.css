@@ -115,3 +115,31 @@
     border-radius: 12px;
     border: 1px solid #8E8E8E;
 }
+
+.destinations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.div-tantito {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tantitno-botones {
+    align-items: center;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    background-color: #CDE2FF;
+    color: black;
+
+}
+
+.tantitno-botones:hover {
+    background-color: #0969FF;
+    color: white;
+}
