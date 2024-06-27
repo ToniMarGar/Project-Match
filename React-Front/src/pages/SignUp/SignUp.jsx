@@ -99,3 +99,4 @@ export const SignUp=() =>{
   );
 }
 
+export default SignUp;

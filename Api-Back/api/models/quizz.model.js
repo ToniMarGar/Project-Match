@@ -29,7 +29,7 @@ const Quizz = sequelize.define(
       allowNull: false,
      },
      idUser: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
      }
   },

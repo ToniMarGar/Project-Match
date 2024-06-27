@@ -11,7 +11,7 @@ const {
 const {checkAuth} = require("../middleware/index")
 
 router.get('/:id', getOneQuizz)
-router.get('/', getAllQuizz)
+router.get('/', checkAuth, getAllQuizz)
 router.post('/', checkAuth, createQuizz)
 router.put('/:id', updateQuizz)
 router.delete('/:id', deleteQuizz)

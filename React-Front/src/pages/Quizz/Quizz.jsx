@@ -134,11 +134,11 @@ const Quizz = () => {
               >Solo</button>
 
               <button text='En familia' className='h-card' 
-              onClick={() => { handleChange('travelers', 'Familia'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'En familia'); handleNextScreen(); }}
               >En familia</button>
 
               <button text='En pareja' className='h-card' 
-              onClick={() => { handleChange('travelers', 'Pareja'); handleNextScreen(); }}
+              onClick={() => { handleChange('travelers', 'En pareja'); handleNextScreen(); }}
               >En pareja</button>
 
               <button text='Grupo' className='h-card' 
@@ -200,14 +200,11 @@ const Quizz = () => {
               
               onClick={() => { handleChange('location', 'Ciudad'); handleNextScreen(); }}
               >Ciudad</button>
-
-              <button className='h-card' sDestinationtyle={{backgroundImage: "url(/src/assets/quizz-card-images/montana.jpg)", backgroundSize: "cover" }}
-              
-              onClick={() => { handleChange('location', 'Montana'); handleNextScreen(); }}
-              >Montaña</button>
+ 
+              <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/montana.jpg)", backgroundSize: "cover" }}
+              onClick={() => { handleChange('location', 'Montana'); handleNextScreen(); }}>Montaña</button>
 
               <button className='h-card' style={{backgroundImage: "url(/src/assets/quizz-card-images/interior.jpg)", backgroundSize: "cover" }}
-              
               onClick={() => { handleChange('location', 'Interior'); handleNextScreen(); }}
               >Interior</button>
             </div>

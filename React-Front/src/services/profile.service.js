@@ -5,3 +5,9 @@ export const readUsername = async (id) => { // en parentesis ID o username¿?
     console.log(data)
     return data
 }
+
+export const getAllQuizz = async () => {
+    const { data } = await api.get(`quizz/`, {headers:{ authorization: localStorage.token}})
+    console.log(data)
+    return data
+}

@@ -18,7 +18,9 @@ async function getOneQuizz(req, res) {
 
 async function getAllQuizz(req, res) {
   try {
-    const quizz = await Quizz.findAll({ paranoid: false })
+    const quizz = await Quizz.findAll({ where: { idUser: res.locals.user.id },
+       paranoid: false })
+    
     if (quizz) {
       return res.status(200).json(quizz)
     } else {

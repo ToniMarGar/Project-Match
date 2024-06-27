@@ -3,13 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../services/auth";
 import toast, { Toaster } from 'react-hot-toast';
-import './LogIn.css'
-
 import Apple from '../../components/Button/AltLogInButton/AppleButton/AppleButton'
 import Facebook from '../../components/Button/AltLogInButton/FacebookButton/FacebookButton'
 import Google from '../../components/Button/AltLogInButton/GoogleButton/GoogleButton'
 import ButtonMain from '../../components/Button/ButtonMain/ButtonMain'
 import ButtonSecondary from '../../components/Button/ButtonSecondary/ButtonSecondary'
+import './LogIn.css'
 
 function LogIn() {
   const [username, setUsername] = useState('');
@@ -52,22 +51,14 @@ function LogIn() {
           required/>
             </div>
 
-              <div className="input-group">
-                <p>¿Has olvidado tu contraseña? Haz click{" "}
-                <a>aquí</a></p>
-              </div>
-
-              <Link to='/Profile'>
-                <ButtonMain text='Inicia sesión' onClick={(e) => {
-              e.preventDefault();
-              handleLogIn();
-            }}/>
-              </Link>
-
-              <div className="social-buttons">
-                <Apple/> <Facebook/> <Google/>
-              </div>
-            </form>
+              <ButtonMain text='Inicia sesión' func={
+            handleLogIn
+          }/>
+    
+            <div className="social-buttons">
+              <Apple/> <Facebook/> <Google/>
+            </div>
+             </form>
             
             <div className="login-prompt">
               <p className="meta">¿TODAVÍA NO TIENES UNA CUENTA?</p>
