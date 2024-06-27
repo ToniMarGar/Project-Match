@@ -84,7 +84,7 @@ export const SignUp=() =>{
             <p className="meta">¿YA TIENES UNA CUENTA?</p>
              <Link to='/LogIn'>
               <ButtonSecondary text='Inicia Sesión'/>
-            </Link> *
+            </Link>
           </div>
         </section>
 
